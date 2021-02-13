@@ -22,8 +22,12 @@ class SignUp: UIViewController {
     @IBOutlet weak var errorLabel: UILabel!
     @IBOutlet weak var errorImg: UIImageView!
     @IBOutlet weak var checkBoxBtn: UIButton!
+    @IBOutlet weak var loginLbl: UILabel!
     
-    
+    @IBOutlet weak var containerViewOfPasswirdTf: UIView!
+    @IBOutlet weak var containerViewOfEmailTf: UIView!
+    @IBOutlet weak var containerViewOfUserTf: UIView!
+    var isCheckted = false
     let dp  = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -31,71 +35,100 @@ class SignUp: UIViewController {
         self.createCustomTVRegisteration(rightSideBtnTitle: "LOG IN")
         self.tapGestureOnScreen()
         tapGestureInImage()
-        SignUpVM.handleCheckBoxBtn(checkBoxBtn: checkBoxBtn)
-        
     }
     
     @IBAction func UploadImage(_ sender: Any) {
         handleUploadImage()
     }
-
     
-    func validateFields() -> String? {
+    @IBAction func dissmisBtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil
+        )
+    }
+    
+    
+    @IBAction func ShowSignUp(_ sender: Any) {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let signIn = sb.instantiateViewController(withIdentifier: "LogIn")
+        signIn.modalPresentationStyle = .overFullScreen
+        present(signIn, animated: true, completion: nil)
+        
+    }
+    
+    
+    func validateFields() -> Bool {
         guard IdImage.image != UIImage(named: "profile img") else {
-            return "Please upload your ID image"
+            didFailedValidation(text: "Please upload your ID image")
+            return false
         }
-        
         guard IdButton.tintColor == UIColor.blue else {
-            return "Please upload your ID image"
+            didFailedValidation(text: "Please upload your ID image")
+            return false
         }
         
-        if name.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            name.layer.borderColor = UIColor.red.cgColor
-            name.layer.borderWidth = 1
-            return "Please enter your name"
+        guard let nameText = name.text, !nameText.isEmpty else {
+            didFailedValidation(text: "Please enter your name")
+            return false
         }
-        name.layer.borderWidth = 0
         
-        if mail.text?.trimmingCharacters(in: .whitespacesAndNewlines) == "" {
-            mail.layer.borderColor = UIColor.red.cgColor
-            mail.layer.borderWidth = 1
-            return "Please enter your E-mail address"
+        guard let emailText = mail.text, !emailText.isEmpty  else{
+            didFailedValidation(text: "Please enter your E-mail address")
+            return false
         }
-        mail.layer.borderWidth = 0
         
-        let cleanPassword = pass.text!
-        if  UtilityFunctions.isPasswordValid(cleanPassword) == false {
-            pass.layer.borderColor = UIColor.red.cgColor
-            pass.layer.borderWidth = 1
-            return "make sure that your password is at least 8 characters containig special characters and numbers"
+        guard let cleanPassword = pass.text, !cleanPassword.isEmpty  else{
+            didFailedValidation(text: "Please enter your Password address")
+            return false
         }
-        pass.layer.cornerRadius = 0
+        guard  UtilityFunctions.isPasswordValid(cleanPassword) == false else{
+            didFailedValidation(text: "make sure that your password is at least 8 characters containig special characters and numbers")
+            return false
+        }
+        guard isCheckted else {
+            didFailedValidation(text: "We user terms of use to keep you secured, in order to use the app you have to accept these terms")
+            return false
+        }
         
-        guard checkBoxBtn.isSelected else {
-            checkBoxBtn.layer.borderColor = UIColor.red.cgColor
-            return "We user terms of use to keep you secured, in order to use the app you have to accept these terms"
-        }
-        checkBoxBtn.layer.borderColor = UIColor.green.cgColor
-        return nil
+        return true
     }
     
     @IBAction func termsCheckBox(_ sender: UIButton) {
-        SignUpVM.checkCheckBoxStatus(checkBoxBtn: checkBoxBtn)
+        isCheckted = !isCheckted
+        
+        if isCheckted{
+            sender.backgroundColor = #colorLiteral(red: 0.07843137255, green: 0.7647058824, blue: 0.6274509804, alpha: 1)
+            sender.setImage(#imageLiteral(resourceName: "DoneIcon"), for: .normal)
+        }else{
+            sender.backgroundColor = .white
+            sender.setImage(#imageLiteral(resourceName: "DoneIcon"), for: .normal)
+        }
+    }
+    
+    func didFailedValidation(text : String){
+        errorLabel.text = text
+        errorImg.isHidden = false
+        containerViewOfEmailTf.borderColor  = .red
+        containerViewOfPasswirdTf.borderColor = .red
+        containerViewOfUserTf.borderColor = .red
+    }
+    
+    func SuccessValidation() {
+        errorLabel.text = ""
+        errorImg.isHidden = false
+        containerViewOfEmailTf.borderColor  = .green
+        containerViewOfPasswirdTf.borderColor = .green
+        containerViewOfUserTf.borderColor = .green
     }
     
     @IBAction func registerBtn(_ sender: Any) {
-        
-        let error  = validateFields()
-        if  error != nil {
-            errorLabel.text = error!
-            errorImg.image  = UIImage(named: "redExclamation")
+        guard let image = IdImage.image , let data = image.jpegData(compressionQuality: 1.0 ) else{
+            self.showAlert(title: "Error", message: "Something went wrong uploading image")
+            return
         }
-        else {
+        if validateFields(){
             let validName  = name.text!.trimmingCharacters(in: .whitespaces)
             let validEmail = mail.text!.trimmingCharacters(in: .whitespaces)
             let validPass  = pass.text!
-            self.errorLabel.text = ""
-            self.errorImg.image  = nil
             Auth.auth().createUser(withEmail: validEmail, password: validPass) { (result, error) in
                 if error == nil {
                     if let result = result {
@@ -106,15 +139,25 @@ class SignUp: UIViewController {
                                 self.showAlert(title: "Error", message: er!.localizedDescription)
                                 return
                             }
-                            self.uploadImage(userUid: "\(result.user.uid)")
+                            UserRepositoryManger.uploadImage(userUid: result.user.uid, Image: data) { (error, secsess) in
+                                if secsess{
+                                    let vc = HomeViewController()
+                                    vc.modalPresentationStyle = .overFullScreen
+                                    self.present(vc, animated: true, completion: nil)
+                                }else{
+                                    self.showAlert(title: "Sign Up Error", message: "\(error)")
+                                }
+                            }
                         }
                     }else { print("error with result \(String(describing: result))") }
                 }else { self.showAlert(title: "First Error is Not nil!", message: error!.localizedDescription) ; }
             }
+        }else{
+            
         }
-        print("Done registeration cycle")
         
     }
+    
     
     func waitUntilFinishRegisteration(){
         showLoadingView()
@@ -146,57 +189,6 @@ extension SignUp : UIImagePickerControllerDelegate & UINavigationControllerDeleg
         imagepicker.delegate      = self
         present(imagepicker, animated: true, completion: nil)
     }
-    
-    @objc func uploadImage(userUid : String){
-        guard let image = IdImage.image , let data = image.jpegData(compressionQuality: 1.0 ) else{
-            self.showAlert(title: "Error", message: "Something went wrong uploading image")
-            return
-        }
-        
-        let imageName    = UUID().uuidString
-        let imgReference = Storage.storage().reference().child("UsersRefs").child(imageName)
-        
-        imgReference.putData(data, metadata: nil) { (metaData, error) in
-            if let error = error {
-                self.showAlert(title: "Error", message: error.localizedDescription)
-                return
-            }
-            
-            imgReference.downloadURL { (url, error) in
-                if let error = error {
-                    self.showAlert(title: "Error", message: error.localizedDescription)
-                    return
-                }
-                
-                guard let url = url else {
-                    self.showAlert(title: "Error", message: "Something wrong with url!")
-                    return
-                }
-                
-                let urlString = url.absoluteString
-                
-                
-                let dataref = Firestore.firestore().collection("user").document(userUid)
-                
-                let data = ["profilPic" :  urlString]
-                
-                dataref.setData(data, merge: true) { (error) in
-                    if let error = error {
-                        self.showAlert(title: "Error", message: error.localizedDescription)
-                        return
-                    }
-                }
-                self.terminateRegisteration()
-                //self.showAlert(title: "Success", message: "User Created!")
-                let headToQuit = RegisterationCompletedViewController()
-                self.present(headToQuit, animated: true)
-                UserDefaults.standard.setValue(userUid, forKey: "imgUid")
-                
-            }
-            
-        }
-    }
-
     
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         

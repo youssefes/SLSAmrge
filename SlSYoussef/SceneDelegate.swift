@@ -12,20 +12,19 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
 
     var window: UIWindow?
 
-
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
-        
         print("USER IN SCEEEEEENEE DELEGATE")
-        if UtilityFunctions.isLoggedIn == true {
-            DispatchQueue.main.async {
-                print("USER IS SIGNING IN AND HEADING TO NEW FEEDS")
-                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let vc = sb.instantiateViewController(withIdentifier: "Feeds")
-                self.window?.rootViewController = vc
-                self.window?.makeKeyAndVisible()
-            }
-
+        if UtilityFunctions.isLoggedIn == false {
+            let vc = HomeViewController()
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            
+        }else{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "FirstView")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
         }
         guard let _ = (scene as? UIWindowScene) else { return }
     }

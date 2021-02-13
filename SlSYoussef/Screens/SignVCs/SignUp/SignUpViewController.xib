@@ -19,8 +19,9 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="SLS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="SignUpViewController" customModule="SlSYoussef" customModuleProvider="target">
             <connections>
+                <outlet property="loadingView" destination="3QT-Re-yWS" id="vBr-hk-hbF"/>
                 <outlet property="loginLbl" destination="Dsv-BO-D2x" id="V65-YJ-eCA"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -199,6 +200,14 @@
                         </view>
                     </subviews>
                 </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="3QT-Re-yWS" customClass="LoadingView" customModule="SlSYoussef" customModuleProvider="target">
+                    <rect key="frame" x="192" y="433" width="30" height="30"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="30" id="0yK-JC-5ED"/>
+                        <constraint firstAttribute="width" constant="30" id="X2e-Au-95G"/>
+                    </constraints>
+                </view>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -209,6 +218,8 @@
                 <constraint firstItem="jZJ-ud-yNu" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="YFP-R3-6iS"/>
                 <constraint firstItem="jZJ-ud-yNu" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" constant="-100" id="cE8-l5-xMP"/>
                 <constraint firstItem="SGs-0u-I2V" firstAttribute="trailing" secondItem="jZJ-ud-yNu" secondAttribute="trailing" id="fUX-LS-eMK"/>
+                <constraint firstItem="3QT-Re-yWS" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="jAk-K3-Gbj"/>
+                <constraint firstItem="3QT-Re-yWS" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="jO8-Be-GFo"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="-262.31884057971018" y="83.705357142857139"/>

@@ -22,30 +22,38 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
     func application(_ application: UIApplication, didFinishLaunchingWithOptions launchOptions: [UIApplication.LaunchOptionsKey: Any]?) -> Bool {
         
         ApplicationDelegate.shared.application( application,  didFinishLaunchingWithOptions: launchOptions )
-        
-        
-        
         print("USER IN SCEEEEEENEE DELEGATE")
-        if UtilityFunctions.isLoggedIn == true {
-            DispatchQueue.main.async {
-//                print("USER IS SIGNING IN AND HEADING TO NEW FEEDS")
-//                let sb = UIStoryboard(name: "Main", bundle: nil)
-                let vc = HomeViewController()
-                self.window?.rootViewController = vc
-                self.window?.makeKeyAndVisible()
-            }
+        if UtilityFunctions.isLoggedIn == false {
+            let vc = HomeViewController()
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
+            
+        }else{
+            let sb = UIStoryboard(name: "Main", bundle: nil)
+            let vc = sb.instantiateViewController(withIdentifier: "FirstView")
+            self.window?.rootViewController = vc
+            self.window?.makeKeyAndVisible()
         }
+        
         IQKeyboardManager.shared.enable = true
         //MARK: - Firebase Google Authintaication
         // Override point for customization after application launch.
         FirebaseApp.configure()
-        
+      
         GIDSignIn.sharedInstance().clientID = FirebaseApp.app()?.options.clientID
         print("This is the client ID \(FirebaseApp.app()?.options.clientID ?? "NO id here.......")")
         GIDSignIn.sharedInstance().delegate = self
         GIDSignIn.sharedInstance()?.restorePreviousSignIn() // if the user is signed in go to New feeds
         
-        //check if the user now is logged in breviously
+        
+        chechisloginOrNot()
+        //MARK: - Firebase Facebook Authentication
+        
+        return true
+    }
+    
+    //check if the user now is logged in breviously
+    func chechisloginOrNot(){
         if GIDSignIn.sharedInstance()?.currentUser != nil{
             UtilityFunctions.isLoggedIn = true
         }else if let token = AccessToken.current, !token.isExpired {
@@ -53,15 +61,11 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
             UtilityFunctions.isLoggedIn = true
             // User is logged in, do work such as go to next view controller.
         }else if Auth.auth().currentUser != nil {
-           print("LOGED IN WITH E-MAIL")
+            print("LOGED IN WITH E-MAIL")
             UtilityFunctions.isLoggedIn = true
         }else{
             print("Is signed in with apple")
         }
-        
-        //MARK: - Firebase Facebook Authentication
-        
-        return true
     }
     
     //  Facebook Firebase Authentication

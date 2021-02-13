@@ -141,7 +141,11 @@
 		E83BC01325D75ED500F26E2F /* mageCellOfPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BC01125D75ED300F26E2F /* mageCellOfPostCollectionViewCell.swift */; };
 		E83BC01425D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83BC01225D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib */; };
 		E83BC01625D75FFB00F26E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83BC01525D75FFB00F26E2F /* Main.storyboard */; };
-		E83BC01A25D769D000F26E2F /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E83BC01925D769D000F26E2F /* GoogleService-Info.plist */; };
+		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
+		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
+		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
+		E8A1F0C525D881E500E0F1A8 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */; };
+		E8A1F0C625D881E500E0F1A8 /* AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -283,7 +287,11 @@
 		E83BC01125D75ED300F26E2F /* mageCellOfPostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mageCellOfPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		E83BC01225D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mageCellOfPostCollectionViewCell.xib; sourceTree = "<group>"; };
 		E83BC01525D75FFB00F26E2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
-		E83BC01925D769D000F26E2F /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
+		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
+		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
+		E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminViewController.xib; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -336,6 +344,7 @@
 		E83749ED25D74B7600809B4E /* SlSYoussef */ = {
 			isa = PBXGroup;
 			children = (
+				E841FA8C25D8261000EED598 /* Repositoty */,
 				E83749EE25D74B7600809B4E /* AppDelegate.swift */,
 				E83749F025D74B7600809B4E /* SceneDelegate.swift */,
 				E83BC01525D75FFB00F26E2F /* Main.storyboard */,
@@ -347,8 +356,8 @@
 				E83BBF2B25D758C900F26E2F /* Extensions */,
 				E83749F725D74B7B00809B4E /* Assets.xcassets */,
 				E83749F925D74B7B00809B4E /* LaunchScreen.storyboard */,
+				E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */,
 				E83749FC25D74B7B00809B4E /* Info.plist */,
-				E83BC01925D769D000F26E2F /* GoogleService-Info.plist */,
 			);
 			path = SlSYoussef;
 			sourceTree = "<group>";
@@ -356,6 +365,7 @@
 		E8374A0225D74C6500809B4E /* Screens */ = {
 			isa = PBXGroup;
 			children = (
+				E8A1F0C225D8807A00E0F1A8 /* Admin */,
 				E8451326204F344500B0E8D9 /* SignVCs */,
 				E8374A0625D74C6500809B4E /* FullImageController */,
 				E8374A0C25D74C6500809B4E /* VideoRecording */,
@@ -719,6 +729,7 @@
 			isa = PBXGroup;
 			children = (
 				E83BBFA325D75C6F00F26E2F /* SignUpVM.swift */,
+				E844D99325D7F0E0008DEFD7 /* LogIn.swift */,
 				E83BBFAD25D75CC500F26E2F /* FirstView.swift */,
 				E83BBFA425D75C6F00F26E2F /* SignUp.swift */,
 			);
@@ -924,12 +935,29 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		E841FA8C25D8261000EED598 /* Repositoty */ = {
+			isa = PBXGroup;
+			children = (
+				E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */,
+			);
+			path = Repositoty;
+			sourceTree = "<group>";
+		};
 		E8451326204F344500B0E8D9 /* SignVCs */ = {
 			isa = PBXGroup;
 			children = (
 				E8374A0325D74C6500809B4E /* SignUp */,
 			);
 			path = SignVCs;
+			sourceTree = "<group>";
+		};
+		E8A1F0C225D8807A00E0F1A8 /* Admin */ = {
+			isa = PBXGroup;
+			children = (
+				E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */,
+				E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */,
+			);
+			path = Admin;
 			sourceTree = "<group>";
 		};
 /* End PBXGroup section */
@@ -1017,6 +1045,7 @@
 				E8374A5225D74C6600809B4E /* OederToSellerViewController.xib in Resources */,
 				E83BBF6125D7592900F26E2F /* Montserrat-Bold.ttf in Resources */,
 				E83BBF5B25D7592900F26E2F /* Montserrat-Medium.ttf in Resources */,
+				E8A1F0C625D881E500E0F1A8 /* AdminViewController.xib in Resources */,
 				E83BBFCF25D75CED00F26E2F /* PaymentMethods.xib in Resources */,
 				E83BBF6C25D7592900F26E2F /* Montserrat-ExtraBoldItalic.ttf in Resources */,
 				E83BBF6025D7592900F26E2F /* Montserrat-Thin.ttf in Resources */,
@@ -1034,7 +1063,7 @@
 				E83BC01425D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib in Resources */,
 				E83BBF6425D7592900F26E2F /* Montserrat-SemiBold.ttf in Resources */,
 				E83BBF6A25D7592900F26E2F /* Montserrat-Italic.ttf in Resources */,
-				E83BC01A25D769D000F26E2F /* GoogleService-Info.plist in Resources */,
+				E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */,
 				E8374A6C25D74C6600809B4E /* OptionVCViewController.xib in Resources */,
 				E83BBF6725D7592900F26E2F /* OFL.txt in Resources */,
 				E83BBFDB25D75CEE00F26E2F /* ShippingAdress.xib in Resources */,
@@ -1123,6 +1152,7 @@
 				E83BBF5625D7592900F26E2F /* Color.swift in Sources */,
 				E8374A6A25D74C6600809B4E /* CommentsOfPostViewController.swift in Sources */,
 				E83BBFCC25D75CED00F26E2F /* MessagesVC.swift in Sources */,
+				E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */,
 				E8374A6B25D74C6600809B4E /* OptionVCViewController.swift in Sources */,
 				E8374A6125D74C6600809B4E /* StoresCollectionViewCell.swift in Sources */,
 				E8374A7D25D74CEE00809B4E /* ImagesViewCell.swift in Sources */,
@@ -1162,6 +1192,7 @@
 				E83BC00625D75E3C00F26E2F /* ChatCell.swift in Sources */,
 				E8374A4E25D74C6600809B4E /* CommentCollectionViewCell.swift in Sources */,
 				E83BC00E25D75E3C00F26E2F /* BodyLabel.swift in Sources */,
+				E8A1F0C525D881E500E0F1A8 /* AdminViewController.swift in Sources */,
 				E83BBF9A25D75B9000F26E2F /* UserDataModel.swift in Sources */,
 				E83BBFDF25D75CEE00F26E2F /* ChatVC.swift in Sources */,
 				E83BBFAB25D75C6F00F26E2F /* Feeds.swift in Sources */,
@@ -1186,6 +1217,7 @@
 				E8374A4A25D74C6600809B4E /* FullScreenViewController.swift in Sources */,
 				E8374A4C25D74C6600809B4E /* LiveEndViewController.swift in Sources */,
 				E83BBF5925D7592900F26E2F /* Font.swift in Sources */,
+				E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */,
 				E83BBF8C25D75AE900F26E2F /* VController BarBtn+Ext.swift in Sources */,
 				E83BC00D25D75E3C00F26E2F /* TitleLabel.swift in Sources */,
 				E83BBFCE25D75CED00F26E2F /* PaymentMethods.swift in Sources */,
