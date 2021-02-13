@@ -1,0 +1,181 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina4_7" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationSettings" customModule="SLS" customModuleProvider="target">
+            <connections>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHv-qJ-Wep" userLabel="Allow post noti">
+                    <rect key="frame" x="20" y="20" width="335" height="70"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-gJ-hWb">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow post notification of following profiles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpw-Gv-zwE">
+                            <rect key="frame" x="0.0" y="12" width="270" height="46.5"/>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ns8-gJ-hWb" firstAttribute="centerY" secondItem="EHv-qJ-Wep" secondAttribute="centerY" id="6jS-8b-UGb"/>
+                        <constraint firstItem="jpw-Gv-zwE" firstAttribute="centerY" secondItem="EHv-qJ-Wep" secondAttribute="centerY" id="PDh-xB-FVW"/>
+                        <constraint firstItem="ns8-gJ-hWb" firstAttribute="leading" secondItem="jpw-Gv-zwE" secondAttribute="trailing" constant="16" id="Ri2-QR-Szj"/>
+                        <constraint firstItem="jpw-Gv-zwE" firstAttribute="leading" secondItem="EHv-qJ-Wep" secondAttribute="leading" id="ZHA-1f-sks"/>
+                        <constraint firstAttribute="trailing" secondItem="ns8-gJ-hWb" secondAttribute="trailing" id="fMp-iP-m3V"/>
+                        <constraint firstAttribute="height" constant="70" id="gu8-G3-i3F"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32y-8w-NpZ" userLabel="Allow life noti">
+                    <rect key="frame" x="20" y="98" width="335" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow life notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-jn-b5l">
+                            <rect key="frame" x="0.0" y="23.5" width="196" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-gB-Nk9">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="9Ol-jn-b5l" firstAttribute="centerY" secondItem="32y-8w-NpZ" secondAttribute="centerY" id="PLf-WQ-Mv8"/>
+                        <constraint firstItem="9Ol-jn-b5l" firstAttribute="leading" secondItem="32y-8w-NpZ" secondAttribute="leading" id="ZLP-9Z-McG"/>
+                        <constraint firstAttribute="trailing" secondItem="wPB-gB-Nk9" secondAttribute="trailing" id="mNF-SB-UzK"/>
+                        <constraint firstAttribute="height" constant="70" id="nTo-fL-eVh"/>
+                        <constraint firstItem="wPB-gB-Nk9" firstAttribute="centerY" secondItem="32y-8w-NpZ" secondAttribute="centerY" id="z41-LI-wr8"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHo-6d-q75" userLabel="Allow deliver noti">
+                    <rect key="frame" x="20" y="176" width="335" height="70"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-Tz-cPM">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow deliverd orders notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-Eg-mAC">
+                            <rect key="frame" x="0.0" y="3" width="270" height="64.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="64.5" id="f8i-ex-c5B"/>
+                                <constraint firstAttribute="width" constant="270" id="vTy-kO-khZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="Mmy-Eg-mAC" firstAttribute="leading" secondItem="sHo-6d-q75" secondAttribute="leading" id="CLX-KS-9ej"/>
+                        <constraint firstAttribute="trailing" secondItem="Gu6-Tz-cPM" secondAttribute="trailing" id="LVz-u9-s2e"/>
+                        <constraint firstItem="Mmy-Eg-mAC" firstAttribute="centerY" secondItem="sHo-6d-q75" secondAttribute="centerY" id="RGB-3R-8JU"/>
+                        <constraint firstItem="Gu6-Tz-cPM" firstAttribute="centerY" secondItem="sHo-6d-q75" secondAttribute="centerY" id="mNb-jl-c0w"/>
+                        <constraint firstAttribute="height" constant="70" id="ykQ-7z-myw"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-qG-dv5" userLabel="Allow cancel noti">
+                    <rect key="frame" x="20" y="254" width="335" height="70"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow canceled orders notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9e-u4-ybV">
+                            <rect key="frame" x="0.0" y="11" width="290" height="48"/>
+                            <constraints>
+                                <constraint firstAttribute="width" constant="290" id="MSz-1B-cU2"/>
+                                <constraint firstAttribute="height" constant="48" id="ZdH-Lg-FNZ"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pNV-ON-Qh7">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="pNV-ON-Qh7" firstAttribute="centerY" secondItem="NBD-qG-dv5" secondAttribute="centerY" id="9bN-Ib-G7L"/>
+                        <constraint firstAttribute="height" constant="70" id="b6e-27-4ws"/>
+                        <constraint firstItem="d9e-u4-ybV" firstAttribute="leading" secondItem="NBD-qG-dv5" secondAttribute="leading" id="dQR-bL-qra"/>
+                        <constraint firstItem="d9e-u4-ybV" firstAttribute="centerY" secondItem="NBD-qG-dv5" secondAttribute="centerY" id="tVo-S5-xvj"/>
+                        <constraint firstAttribute="trailing" secondItem="pNV-ON-Qh7" secondAttribute="trailing" id="uZj-TH-rnE"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="De1-Dz-EVH" userLabel="Allow msg noti">
+                    <rect key="frame" x="20" y="332" width="335" height="70"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-Kw-nsu">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow new messages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ei-lt-k66">
+                            <rect key="frame" x="0.0" y="23.5" width="185" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="1Ei-lt-k66" firstAttribute="leading" secondItem="De1-Dz-EVH" secondAttribute="leading" id="2V0-4i-QqS"/>
+                        <constraint firstAttribute="trailing" secondItem="l2z-Kw-nsu" secondAttribute="trailing" id="Ai2-hm-t5G"/>
+                        <constraint firstAttribute="height" constant="70" id="KDR-fs-KDD"/>
+                        <constraint firstItem="1Ei-lt-k66" firstAttribute="centerY" secondItem="De1-Dz-EVH" secondAttribute="centerY" id="dXo-FU-TkG"/>
+                        <constraint firstItem="l2z-Kw-nsu" firstAttribute="centerY" secondItem="De1-Dz-EVH" secondAttribute="centerY" id="xBV-nv-dIo"/>
+                    </constraints>
+                </view>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-QE-PPr" userLabel="Allow reply comments">
+                    <rect key="frame" x="20" y="410" width="335" height="70"/>
+                    <subviews>
+                        <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-UR-faO">
+                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                        </switch>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow reply comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC9-3p-5Gu">
+                            <rect key="frame" x="0.0" y="23.5" width="200.5" height="23.5"/>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="kC9-3p-5Gu" firstAttribute="leading" secondItem="V9b-QE-PPr" secondAttribute="leading" id="Mr6-M7-90b"/>
+                        <constraint firstItem="kC9-3p-5Gu" firstAttribute="centerY" secondItem="V9b-QE-PPr" secondAttribute="centerY" id="eul-9M-KkY"/>
+                        <constraint firstAttribute="height" constant="70" id="kNX-ew-4eH"/>
+                        <constraint firstAttribute="trailing" secondItem="XdK-UR-faO" secondAttribute="trailing" id="ttr-GH-4nv"/>
+                        <constraint firstItem="XdK-UR-faO" firstAttribute="centerY" secondItem="V9b-QE-PPr" secondAttribute="centerY" id="vpZ-Qe-GjM"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="NBD-qG-dv5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2UH-c7-cap"/>
+                <constraint firstItem="EHv-qJ-Wep" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="H02-R0-kLS"/>
+                <constraint firstItem="32y-8w-NpZ" firstAttribute="top" secondItem="EHv-qJ-Wep" secondAttribute="bottom" constant="8" id="Luh-Ch-tKy"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="De1-Dz-EVH" secondAttribute="trailing" constant="20" id="Mhb-rw-vAE"/>
+                <constraint firstItem="32y-8w-NpZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="S18-JN-xBZ"/>
+                <constraint firstItem="NBD-qG-dv5" firstAttribute="top" secondItem="sHo-6d-q75" secondAttribute="bottom" constant="8" id="Sia-kb-iJu"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NBD-qG-dv5" secondAttribute="trailing" constant="20" id="X8B-5v-3xu"/>
+                <constraint firstItem="V9b-QE-PPr" firstAttribute="top" secondItem="De1-Dz-EVH" secondAttribute="bottom" constant="8" id="ZS3-se-k3a"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="32y-8w-NpZ" secondAttribute="trailing" constant="20" id="aoU-wI-Nax"/>
+                <constraint firstItem="EHv-qJ-Wep" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="d6V-KV-BfS"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="EHv-qJ-Wep" secondAttribute="trailing" constant="20" id="ddL-U8-Nc9"/>
+                <constraint firstItem="V9b-QE-PPr" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="dvL-mH-UIo"/>
+                <constraint firstItem="De1-Dz-EVH" firstAttribute="top" secondItem="NBD-qG-dv5" secondAttribute="bottom" constant="8" id="erV-94-JDS"/>
+                <constraint firstItem="sHo-6d-q75" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iV1-e2-tub"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V9b-QE-PPr" secondAttribute="trailing" constant="20" id="lEg-F8-4sF"/>
+                <constraint firstItem="sHo-6d-q75" firstAttribute="top" secondItem="32y-8w-NpZ" secondAttribute="bottom" constant="8" id="mrA-ld-IIw"/>
+                <constraint firstItem="De1-Dz-EVH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sR1-n4-r44"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sHo-6d-q75" secondAttribute="trailing" constant="20" id="t3l-qI-JH1"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="140" y="85.007496251874073"/>
+        </view>
+    </objects>
+</document>

@@ -1,0 +1,75 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+    </customFonts>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner"/>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <collectionViewCell opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center" reuseIdentifier="ImagesViewCell" id="gTV-IL-0wX" customClass="ImagesViewCell" customModule="SLS" customModuleProvider="target">
+            <rect key="frame" x="0.0" y="0.0" width="321" height="143"/>
+            <autoresizingMask key="autoresizingMask"/>
+            <view key="contentView" opaque="NO" clipsSubviews="YES" multipleTouchEnabled="YES" contentMode="center">
+                <rect key="frame" x="0.0" y="0.0" width="321" height="143"/>
+                <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                <subviews>
+                    <imageView userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="ppp" translatesAutoresizingMaskIntoConstraints="NO" id="Imc-Hd-BQv" userLabel="Selected Image">
+                        <rect key="frame" x="0.0" y="0.0" width="321" height="143"/>
+                        <userDefinedRuntimeAttributes>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="5"/>
+                            </userDefinedRuntimeAttribute>
+                        </userDefinedRuntimeAttributes>
+                    </imageView>
+                    <view hidden="YES" contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="OBY-pN-vJC">
+                        <rect key="frame" x="0.0" y="0.0" width="321" height="143"/>
+                        <color key="backgroundColor" white="0.0" alpha="0.5" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </view>
+                    <label hidden="YES" opaque="NO" userInteractionEnabled="NO" alpha="0.5" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="+5" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="xW4-EA-uiJ">
+                        <rect key="frame" x="0.0" y="60" width="321" height="23"/>
+                        <constraints>
+                            <constraint firstAttribute="width" constant="321" id="6OM-bN-6jV"/>
+                        </constraints>
+                        <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                        <color key="textColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                        <nil key="highlightedColor"/>
+                    </label>
+                </subviews>
+            </view>
+            <constraints>
+                <constraint firstItem="xW4-EA-uiJ" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="1Vk-Ma-vOt"/>
+                <constraint firstItem="Imc-Hd-BQv" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="D2V-sM-ufH"/>
+                <constraint firstAttribute="bottom" secondItem="OBY-pN-vJC" secondAttribute="bottom" id="DB4-IQ-clT"/>
+                <constraint firstItem="OBY-pN-vJC" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="F0a-CZ-bZ3"/>
+                <constraint firstItem="Imc-Hd-BQv" firstAttribute="top" secondItem="gTV-IL-0wX" secondAttribute="top" id="GZi-Qr-DQE"/>
+                <constraint firstAttribute="trailing" secondItem="OBY-pN-vJC" secondAttribute="trailing" id="Owc-go-glk"/>
+                <constraint firstAttribute="bottom" secondItem="Imc-Hd-BQv" secondAttribute="bottom" id="POs-4a-zY6"/>
+                <constraint firstItem="OBY-pN-vJC" firstAttribute="leading" secondItem="gTV-IL-0wX" secondAttribute="leading" id="ZlJ-m1-9dl"/>
+                <constraint firstAttribute="trailing" secondItem="Imc-Hd-BQv" secondAttribute="trailing" id="fxQ-U5-4ib"/>
+                <constraint firstItem="xW4-EA-uiJ" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="gOt-V8-FCT"/>
+                <constraint firstItem="Imc-Hd-BQv" firstAttribute="centerX" secondItem="gTV-IL-0wX" secondAttribute="centerX" id="q7n-bY-CcT"/>
+                <constraint firstItem="Imc-Hd-BQv" firstAttribute="centerY" secondItem="gTV-IL-0wX" secondAttribute="centerY" id="tNY-JL-Igs"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="ZTg-uK-7eu"/>
+            <size key="customSize" width="321" height="143"/>
+            <connections>
+                <outlet property="idk" destination="xW4-EA-uiJ" id="5Cp-Zx-0Vw"/>
+                <outlet property="numberOfImage" destination="xW4-EA-uiJ" id="CZt-RE-b6g"/>
+                <outlet property="photeView" destination="Imc-Hd-BQv" id="ZWi-Yy-1B4"/>
+                <outlet property="viewAlphe" destination="OBY-pN-vJC" id="lnT-PL-wqm"/>
+            </connections>
+            <point key="canvasLocation" x="12.318840579710146" y="22.433035714285712"/>
+        </collectionViewCell>
+    </objects>
+    <resources>
+        <image name="ppp" width="1000" height="750"/>
+    </resources>
+</document>

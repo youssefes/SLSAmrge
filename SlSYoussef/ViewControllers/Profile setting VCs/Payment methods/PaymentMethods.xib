@@ -1,0 +1,177 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="PaymentMethods" customModule="SLS" customModuleProvider="target">
+            <connections>
+                <outlet property="creditCardBtn" destination="fYC-XO-YGv" id="ZCE-cu-fLH"/>
+                <outlet property="payPalBtn" destination="ehx-pf-VAQ" id="LIM-lY-O7a"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="99" translatesAutoresizingMaskIntoConstraints="NO" id="yUe-bZ-11a">
+                    <rect key="frame" x="13.5" y="114" width="387" height="60"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fYC-XO-YGv" userLabel="Credit card">
+                            <rect key="frame" x="0.0" y="0.0" width="144" height="60"/>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                            <state key="normal" title=" Credit card" image="payment-1">
+                                <color key="titleColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            </state>
+                        </button>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="ehx-pf-VAQ">
+                            <rect key="frame" x="243" y="0.0" width="144" height="60"/>
+                            <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="60" id="ke7-cr-0L4"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="17"/>
+                            <state key="normal" title=" Paypal" image="paypal">
+                                <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                            </state>
+                        </button>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="ehx-pf-VAQ" firstAttribute="width" secondItem="fYC-XO-YGv" secondAttribute="width" id="eZN-e3-CkC"/>
+                    </constraints>
+                </stackView>
+                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="mse-eG-0Zp">
+                    <rect key="frame" x="30" y="780" width="354" height="42"/>
+                    <color key="backgroundColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <fontDescription key="fontDescription" type="boldSystem" pointSize="25"/>
+                    <state key="normal" title="SAVE">
+                        <color key="titleColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    </state>
+                </button>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="k7U-bX-U8M" userLabel="Add info">
+                    <rect key="frame" x="20" y="318" width="374" height="260"/>
+                    <subviews>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="nIN-tk-VQH" userLabel="Number on card">
+                            <rect key="frame" x="0.0" y="0.0" width="374" height="62.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Number on card" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="5k4-SB-uya">
+                                    <rect key="frame" x="0.0" y="0.0" width="124" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number on card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="ztI-e1-bPd">
+                                    <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="ztI-e1-bPd" firstAttribute="leading" secondItem="nIN-tk-VQH" secondAttribute="leading" id="9jA-93-00E"/>
+                                <constraint firstAttribute="trailing" secondItem="ztI-e1-bPd" secondAttribute="trailing" id="Zb0-gI-Tmy"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" alignment="top" spacing="8" translatesAutoresizingMaskIntoConstraints="NO" id="TqD-fy-gyj" userLabel="Card number">
+                            <rect key="frame" x="0.0" y="77.5" width="374" height="62.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Card number" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WrN-kW-cyC">
+                                    <rect key="frame" x="0.0" y="0.0" width="100" height="20.5"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="Number on card" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="oCM-f9-jJ7">
+                                    <rect key="frame" x="0.0" y="28.5" width="374" height="34"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                            <constraints>
+                                <constraint firstItem="oCM-f9-jJ7" firstAttribute="leading" secondItem="TqD-fy-gyj" secondAttribute="leading" id="Js8-Of-K9h"/>
+                                <constraint firstAttribute="trailing" secondItem="oCM-f9-jJ7" secondAttribute="trailing" id="QA6-ls-WqG"/>
+                            </constraints>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="Vlh-c3-tiz" userLabel="Expire date">
+                            <rect key="frame" x="0.0" y="155" width="140" height="61.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Expier date" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="5iE-9F-87s">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="MM/YY" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="OAP-8h-9wH">
+                                    <rect key="frame" x="0.0" y="27.5" width="140" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="140" id="o5n-fQ-itU"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                        <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" spacing="7" translatesAutoresizingMaskIntoConstraints="NO" id="BTO-1T-t2O">
+                            <rect key="frame" x="234" y="155" width="140" height="61.5"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="CCV" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" id="UNc-8t-h2t">
+                                    <rect key="frame" x="0.0" y="0.0" width="140" height="20.5"/>
+                                    <autoresizingMask key="autoresizingMask" flexibleMaxX="YES" flexibleMaxY="YES"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <textField opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="left" contentVerticalAlignment="center" borderStyle="roundedRect" placeholder="CCV" textAlignment="natural" minimumFontSize="17" translatesAutoresizingMaskIntoConstraints="NO" id="XC4-o0-4qx">
+                                    <rect key="frame" x="0.0" y="27.5" width="140" height="34"/>
+                                    <constraints>
+                                        <constraint firstAttribute="width" constant="140" id="SVS-ID-iKH"/>
+                                    </constraints>
+                                    <fontDescription key="fontDescription" type="system" pointSize="14"/>
+                                    <textInputTraits key="textInputTraits"/>
+                                </textField>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <constraints>
+                        <constraint firstItem="nIN-tk-VQH" firstAttribute="top" secondItem="k7U-bX-U8M" secondAttribute="top" id="2xe-jT-hT8"/>
+                        <constraint firstItem="TqD-fy-gyj" firstAttribute="top" secondItem="nIN-tk-VQH" secondAttribute="bottom" constant="15" id="Aka-Nb-AJA"/>
+                        <constraint firstAttribute="trailing" secondItem="nIN-tk-VQH" secondAttribute="trailing" id="bTS-Fu-TGl"/>
+                        <constraint firstItem="Vlh-c3-tiz" firstAttribute="top" secondItem="TqD-fy-gyj" secondAttribute="bottom" constant="15" id="cL0-6x-jxg"/>
+                        <constraint firstAttribute="trailing" secondItem="TqD-fy-gyj" secondAttribute="trailing" id="gjd-Mb-hrD"/>
+                        <constraint firstItem="Vlh-c3-tiz" firstAttribute="leading" secondItem="k7U-bX-U8M" secondAttribute="leading" id="ixh-mv-HCQ"/>
+                        <constraint firstItem="TqD-fy-gyj" firstAttribute="leading" secondItem="k7U-bX-U8M" secondAttribute="leading" id="keL-Y9-Qli"/>
+                        <constraint firstAttribute="trailing" secondItem="BTO-1T-t2O" secondAttribute="trailing" id="lxY-1d-51O"/>
+                        <constraint firstItem="nIN-tk-VQH" firstAttribute="leading" secondItem="k7U-bX-U8M" secondAttribute="leading" id="nnS-rv-Xd0"/>
+                        <constraint firstAttribute="height" constant="260" id="uaB-zI-DFG"/>
+                        <constraint firstItem="BTO-1T-t2O" firstAttribute="top" secondItem="TqD-fy-gyj" secondAttribute="bottom" constant="15" id="xK4-GN-mhv"/>
+                    </constraints>
+                </view>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="mse-eG-0Zp" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="30" id="5Vz-KS-Reh"/>
+                <constraint firstItem="yUe-bZ-11a" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="Ecp-wy-UkG"/>
+                <constraint firstItem="yUe-bZ-11a" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="70" id="QeV-ap-YGf"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="yUe-bZ-11a" secondAttribute="trailing" constant="13.5" id="Trw-by-VcY"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="bottom" secondItem="mse-eG-0Zp" secondAttribute="bottom" constant="40" id="ZWm-H4-zG6"/>
+                <constraint firstItem="k7U-bX-U8M" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="bY5-qy-44K"/>
+                <constraint firstItem="k7U-bX-U8M" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="dSV-fA-hQp"/>
+                <constraint firstItem="yUe-bZ-11a" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="13.5" id="hYr-T5-wJV"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="k7U-bX-U8M" secondAttribute="trailing" constant="20" id="jBo-tT-Xv0"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="mse-eG-0Zp" secondAttribute="trailing" constant="30" id="tOp-Oy-pTc"/>
+                <constraint firstItem="k7U-bX-U8M" firstAttribute="centerY" secondItem="i5M-Pr-FkT" secondAttribute="centerY" id="xmo-gw-LwM"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="136.80000000000001" y="85.907046476761622"/>
+        </view>
+    </objects>
+    <resources>
+        <image name="payment-1" width="25" height="25"/>
+        <image name="paypal" width="25" height="25"/>
+    </resources>
+</document>
