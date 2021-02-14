@@ -19,7 +19,7 @@
         </array>
     </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="liveView" customModule="SLS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="liveView" customModule="SlSYoussef" customModuleProvider="target">
             <connections>
                 <outlet property="TimeLbl" destination="gQl-Vq-TCX" id="HNW-Bk-QDM"/>
                 <outlet property="iamgeOfVidew" destination="cuw-KD-DYE" id="J42-Hk-IHF"/>

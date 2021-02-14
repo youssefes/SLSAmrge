@@ -12,9 +12,19 @@ class NotificationSettings: UIViewController {
 
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createCustomTitleViewInEditProfile(with: "Notification settings")
         
     }
 
+    @IBAction func dismiss(_ sender: Any) {
+          navigationController?.popViewController(animated: true)
+      }
+      
+      @IBAction func canselBtn(_ sender: Any) {
+      }
+    
+      override func viewWillAppear(_ animated: Bool) {
+          super.viewWillAppear(animated)
+          navigationController?.setNavigationBarHidden(true, animated: true)
+      }
 
 }

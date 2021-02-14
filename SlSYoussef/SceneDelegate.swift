@@ -15,9 +15,10 @@ class SceneDelegate: UIResponder, UIWindowSceneDelegate {
     @available(iOS 13.0, *)
     func scene(_ scene: UIScene, willConnectTo session: UISceneSession, options connectionOptions: UIScene.ConnectionOptions) {
         print("USER IN SCEEEEEENEE DELEGATE")
-        if UtilityFunctions.isLoggedIn == false {
+        if UtilityFunctions.isLoggedIn == true {
             let vc = HomeViewController()
-            self.window?.rootViewController = vc
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
             
         }else{

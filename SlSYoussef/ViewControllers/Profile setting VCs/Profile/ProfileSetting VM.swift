@@ -11,7 +11,7 @@ import UIKit
 public struct  ProfileSettingVM {
     public let settingNames = ["Edit profile" , "Shipping address" , "Payment methods" , "My orders" , "Notifications setting" , "Customer support"]
     
-    let settingImages  = ["edit" ,"shipping","payment","orders","notification profile","support"]
+    let settingImages : [UIImage]  = [#imageLiteral(resourceName: "suggest"), #imageLiteral(resourceName: "shipping-1"), #imageLiteral(resourceName: "payment-1"),#imageLiteral(resourceName: "finished"), #imageLiteral(resourceName: "005-bell"), #imageLiteral(resourceName: "support-1")]
     let editVC         = EditProfile()
     let shippingVc     = ShippingAdress()
     let paymentVc      = PaymentMethods()
@@ -22,17 +22,5 @@ public struct  ProfileSettingVM {
          return  [editVC , shippingVc , paymentVc , myOrder , notificationVc , customerVC]
     }
 
-
-    public func configureBecomeSellerButton(btn : UIButton){
-        btn.layer.cornerRadius = 7
-        btn.clipsToBounds      = true
-        btn.layer.borderColor  = UIColor.darkGray.cgColor
-        btn.layer.borderWidth  = 1
-    }
-    
-    public mutating func configureUserImage(img : UIImageView){
-        img.layer.cornerRadius = 50
-        img.clipsToBounds      = true
-    }
     
 }

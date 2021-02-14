@@ -14,15 +14,22 @@ class MyOrders: UIViewController , UITableViewDelegate , UITableViewDataSource{
     
     override func viewDidLoad() {
         super.viewDidLoad()
-        
-        self.createCustomTitleViewInEditProfile(with: "My orders")
         tableView.register(UINib(nibName: OrderCell.cellNibName, bundle: nil), forCellReuseIdentifier: OrderCell.orderCellId)
         tableView.tableFooterView = .none
-        tableView.rowHeight       = 60
         tableView.delegate        = self
         tableView.dataSource      = self
     }
     
+    @IBAction func dismiss(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
+    
+    @IBAction func canselBtn(_ sender: Any) {
+    }
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
     
     // MARK: - Table view data source
     
@@ -51,17 +58,11 @@ class MyOrders: UIViewController , UITableViewDelegate , UITableViewDataSource{
      func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         
         let cell = tableView.dequeueReusableCell(withIdentifier: OrderCell.orderCellId, for: indexPath) as! OrderCell
-        
-        // note that indexPath.section is used rather than indexPath.row
-        
-        // add border and color
-        cell.backgroundColor = UIColor.white
-        cell.layer.borderColor = UIColor.systemTeal.cgColor
-        cell.layer.borderWidth = 1
-        cell.layer.cornerRadius = 8
-        cell.clipsToBounds = true
-        
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 80
     }
     
     

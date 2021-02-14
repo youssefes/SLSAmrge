@@ -170,9 +170,9 @@ class StreamCell: UICollectionViewCell {
         profileImage.anchor(top: topAnchor, bottom: nil , left: leftAnchor, right: nil, padingTop: 20, padingBotton: 0, padingLeft: 18, padingRight: 0, width: 40, height: 40)
         profileImage.layer.cornerRadius = 40 / 2
         
-        userNameLbl.anchor(top: profileImage.topAnchor, bottom: nil, left: profileImage.rightAnchor, right: optionButton.leftAnchor, padingTop: 0, padingBotton: 0, padingLeft: 8, padingRight: 0, width: 0, height: 0)
+        userNameLbl.anchor(top: profileImage.topAnchor, bottom: nil, left: profileImage.rightAnchor, right: followBtn.leftAnchor, padingTop: 0, padingBotton: 0, padingLeft: 8, padingRight: 0, width: 0, height: 0)
         
-        timaCreationLbl.anchor(top:  userNameLbl.bottomAnchor, bottom: profileImage.bottomAnchor, left: profileImage.rightAnchor, right: optionButton.leftAnchor, padingTop: 5, padingBotton: 0, padingLeft: 8, padingRight: 0, width: 0, height: 0)
+        timaCreationLbl.anchor(top:  nil, bottom: profileImage.bottomAnchor, left: profileImage.rightAnchor, right: followBtn.leftAnchor, padingTop: 0, padingBotton: 0, padingLeft: 8, padingRight: 0, width: 0, height: 0)
         
         optionButton.anchor(top: topAnchor, bottom: profileImage.bottomAnchor, left: nil, right: rightAnchor, padingTop: 0, padingBotton: 0, padingLeft: 0, padingRight: 0, width: 44, height: 0)
         

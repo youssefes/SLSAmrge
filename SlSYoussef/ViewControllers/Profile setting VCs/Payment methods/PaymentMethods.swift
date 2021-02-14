@@ -12,13 +12,23 @@ class PaymentMethods: UIViewController {
 
     @IBOutlet weak var payPalBtn: UIButton!
     @IBOutlet weak var creditCardBtn: UIButton!
-    let paymentMethodsVM = PaymentModelVM()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createCustomTitleViewInEditProfile(with: "Payment methods")
-        self.tapGestureOnScreen()
-        paymentMethodsVM.configurePaymentMethods(btn: payPalBtn)
-        paymentMethodsVM.configurePaymentMethods(btn: creditCardBtn)
+        
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+           super.viewWillAppear(animated)
+           navigationController?.setNavigationBarHidden(true, animated: true)
+       }
+
+       
+       @IBAction func classBtn(_ sender: Any) {
+       }
+       
+       @IBAction func dismissBtn(_ sender: Any) {
+           navigationController?.popViewController(animated: true)
+       }
+    
 
 }

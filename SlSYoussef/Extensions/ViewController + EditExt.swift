@@ -15,8 +15,8 @@ enum ExitBack : String {
 
 extension UIViewController {
     func createCustomTitleViewInEditProfile(with title : String){
-      let exitButton =  createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "xmark", type: nil))
-      let backButton =  createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "arrow.left", type: nil))
+        let exitButton =  createSystemBarButton(sideBtn: createSideUIButton(image: #imageLiteral(resourceName: "Layer 24"), type: nil))
+        let backButton =  createSystemBarButton(sideBtn: createSideUIButton(image: #imageLiteral(resourceName: "Arrow   Left 2"), type: nil))
         
         navigationItem.leftBarButtonItems  = [backButton]
         navigationItem.rightBarButtonItems = [exitButton]
@@ -31,7 +31,7 @@ extension UIViewController {
     
     
     func createCustomTVRegisteration(rightSideBtnTitle : String){
-        let backButton =  createSystemBarButton(sideBtn: createUIButton(imageName: "backBtn", type: .back))
+        let backButton =  createSystemBarButton(sideBtn: createUIButton(image: #imageLiteral(resourceName: "BackBtnIcon"), type: .back))
         
         let view = UIView()
         let button = UIButton(type: .system)

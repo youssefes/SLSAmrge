@@ -23,9 +23,10 @@ class AppDelegate: UIResponder, UIApplicationDelegate, GIDSignInDelegate  {
         
         ApplicationDelegate.shared.application( application,  didFinishLaunchingWithOptions: launchOptions )
         print("USER IN SCEEEEEENEE DELEGATE")
-        if UtilityFunctions.isLoggedIn == false {
+        if UtilityFunctions.isLoggedIn == true {
             let vc = HomeViewController()
-            self.window?.rootViewController = vc
+            let navigationController = UINavigationController(rootViewController: vc)
+            self.window?.rootViewController = navigationController
             self.window?.makeKeyAndVisible()
             
         }else{

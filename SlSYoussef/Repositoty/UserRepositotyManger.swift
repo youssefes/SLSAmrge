@@ -19,7 +19,7 @@ class UserRepositoryManger {
         Auth.auth().createUser(withEmail: withEmail, password: WithUsername) { (result, error) in
             if error == nil {
                 if let result = result {
-                    dp.collection("user").document("\(result.user.uid)").setData(["uid" : result.user.uid,"userName" : withEmail , "email" : withEmail]){ (er) in
+                    dp.collection("User").document("\(result.user.uid)").setData(["uid" : result.user.uid,"userName" : withEmail , "email" : withEmail]){ (er) in
                         guard er != nil else {
                             copmlatiomHandler(er?.localizedDescription,false)
                             return

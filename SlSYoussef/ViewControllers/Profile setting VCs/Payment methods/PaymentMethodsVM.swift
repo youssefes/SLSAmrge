@@ -10,10 +10,4 @@ import UIKit
 
 struct PaymentModelVM {
    
-    public func configurePaymentMethods(btn : UIButton){
-        btn.layer.cornerRadius = 7
-        btn.clipsToBounds      = true
-        btn.layer.borderColor  = UIColor.darkGray.cgColor
-        btn.layer.borderWidth  = 1
-    }
 }

@@ -23,18 +23,26 @@ class EditProfile: UIViewController  {
     let editProfileVM = EditProfileVM()
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createCustomTitleViewInEditProfile(with: "Edit profile")
-        editProfileVM.configureImageView(userImage: userImage)
         editProfileVM.tapGestureOnScreen(view: self.view)
         Utility.designSingsButtons(saveBtn)
         tapGestureInImage()
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
     
     @IBAction func uploadImageButton(_ sender: Any) {
         handleUploadImage()
     }
     
+    @IBAction func classBtn(_ sender: Any) {
+    }
     
+    @IBAction func dismissBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+    }
     
     @IBAction func save(_ sender: Any) {
     }

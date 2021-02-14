@@ -9,10 +9,6 @@
 import UIKit
 
 class EditProfileVM {
-    func configureImageView(userImage : UIImageView){
-           userImage.layer.cornerRadius = 50
-           userImage.clipsToBounds = true
-       }
     
     //MARK: - VC Gestures on screen
     func tapGestureOnScreen(view : UIView){

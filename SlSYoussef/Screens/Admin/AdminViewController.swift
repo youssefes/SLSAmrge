@@ -10,21 +10,40 @@ import UIKit
 
 class AdminViewController: UIViewController {
 
+    @IBOutlet weak var adminTableView: UITableView!
+    
+    let cellIdentifiers = "adminTableViewCell"
     override func viewDidLoad() {
         super.viewDidLoad()
-
+        configrationTableVuew()
         // Do any additional setup after loading the view.
     }
-
-
-    /*
-    // MARK: - Navigation
-
-    // In a storyboard-based application, you will often want to do a little preparation before navigation
-    override func prepare(for segue: UIStoryboardSegue, sender: Any?) {
-        // Get the new view controller using segue.destination.
-        // Pass the selected object to the new view controller.
+    func configrationTableVuew(){
+        adminTableView.delegate = self
+        adminTableView.dataSource = self
+        
+        adminTableView.register(UINib(nibName: "adminTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifiers)
     }
-    */
+    @IBAction func dissmisbtn(_ sender: Any) {
+        dismiss(animated: true, completion: nil)
+    }
+    
+    
+    @IBAction func closeBtn(_ sender: Any) {
+    }
+    
+}
 
+extension AdminViewController : UITableViewDelegate, UITableViewDataSource{
+    func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
+        return 3
+    }
+    
+    func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
+        let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers, for: indexPath) as! adminTableViewCell
+        
+        return cell
+    }
+    
+    
 }

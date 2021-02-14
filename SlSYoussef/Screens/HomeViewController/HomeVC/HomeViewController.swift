@@ -21,6 +21,7 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpTableView()
+        creatNavigationBarButtons()
         
     }
     

@@ -1,13 +1,22 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_7" orientation="portrait" appearance="light"/>
     <dependencies>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
+    <customFonts key="customFonts">
+        <array key="Montserrat-Bold.ttf">
+            <string>Montserrat-Bold</string>
+        </array>
+        <array key="Montserrat-Medium.ttf">
+            <string>Montserrat-Medium</string>
+        </array>
+    </customFonts>
     <objects>
-        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationSettings" customModule="SLS" customModuleProvider="target">
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="NotificationSettings" customModule="SlSYoussef" customModuleProvider="target">
             <connections>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
@@ -17,16 +26,56 @@
             <rect key="frame" x="0.0" y="0.0" width="375" height="667"/>
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
+                <stackView opaque="NO" contentMode="scaleToFill" spacing="5" translatesAutoresizingMaskIntoConstraints="NO" id="UbO-hb-o9Y">
+                    <rect key="frame" x="20" y="20" width="335" height="30"/>
+                    <subviews>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="jeA-K7-aVP">
+                            <rect key="frame" x="0.0" y="0.0" width="30" height="30"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30" id="60N-Y8-UPX"/>
+                                <constraint firstAttribute="width" constant="30" id="u1z-io-Bpb"/>
+                            </constraints>
+                            <state key="normal" image="Group 16012"/>
+                            <connections>
+                                <action selector="dismiss:" destination="-1" eventType="touchUpInside" id="ogH-xC-OvU"/>
+                            </connections>
+                        </button>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Notification Settings" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="WaK-B4-M3N">
+                            <rect key="frame" x="35" y="0.0" width="277" height="30"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="20"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="trailing" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="QBk-9u-vI0">
+                            <rect key="frame" x="317" y="0.0" width="18" height="30"/>
+                            <state key="normal" image="closeBlue"/>
+                            <connections>
+                                <action selector="canselBtn:" destination="-1" eventType="touchUpInside" id="VBA-xJ-BYe"/>
+                            </connections>
+                        </button>
+                    </subviews>
+                </stackView>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="y40-sg-h7V" userLabel="BotSeperatorView">
+                    <rect key="frame" x="20" y="79.5" width="335" height="0.5"/>
+                    <color key="backgroundColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="0.5" id="qpM-no-qbL"/>
+                    </constraints>
+                </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="EHv-qJ-Wep" userLabel="Allow post noti">
-                    <rect key="frame" x="20" y="20" width="335" height="70"/>
+                    <rect key="frame" x="20" y="110" width="335" height="70"/>
                     <subviews>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="ns8-gJ-hWb">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="lI2-VE-yEk"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow post notification of following profiles" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="jpw-Gv-zwE">
-                            <rect key="frame" x="0.0" y="12" width="270" height="46.5"/>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="0.0" y="13" width="270" height="44"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -40,16 +89,20 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="32y-8w-NpZ" userLabel="Allow life noti">
-                    <rect key="frame" x="20" y="98" width="335" height="70"/>
+                    <rect key="frame" x="20" y="188" width="335" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow life notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="9Ol-jn-b5l">
-                            <rect key="frame" x="0.0" y="23.5" width="196" height="23.5"/>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="0.0" y="24" width="194" height="22"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="wPB-gB-Nk9">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="Tr0-DS-pz6"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                     </subviews>
                     <constraints>
@@ -61,10 +114,14 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="sHo-6d-q75" userLabel="Allow deliver noti">
-                    <rect key="frame" x="20" y="176" width="335" height="70"/>
+                    <rect key="frame" x="20" y="266" width="335" height="70"/>
                     <subviews>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="Gu6-Tz-cPM">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="pUS-39-i4j"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow deliverd orders notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Mmy-Eg-mAC">
                             <rect key="frame" x="0.0" y="3" width="270" height="64.5"/>
@@ -72,8 +129,8 @@
                                 <constraint firstAttribute="height" constant="64.5" id="f8i-ex-c5B"/>
                                 <constraint firstAttribute="width" constant="270" id="vTy-kO-khZ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -86,7 +143,7 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="NBD-qG-dv5" userLabel="Allow cancel noti">
-                    <rect key="frame" x="20" y="254" width="335" height="70"/>
+                    <rect key="frame" x="20" y="344" width="335" height="70"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow canceled orders notification" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="d9e-u4-ybV">
                             <rect key="frame" x="0.0" y="11" width="290" height="48"/>
@@ -94,12 +151,16 @@
                                 <constraint firstAttribute="width" constant="290" id="MSz-1B-cU2"/>
                                 <constraint firstAttribute="height" constant="48" id="ZdH-Lg-FNZ"/>
                             </constraints>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" translatesAutoresizingMaskIntoConstraints="NO" id="pNV-ON-Qh7">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="CHu-Vc-6Ih"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                     </subviews>
                     <constraints>
@@ -111,15 +172,19 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="De1-Dz-EVH" userLabel="Allow msg noti">
-                    <rect key="frame" x="20" y="332" width="335" height="70"/>
+                    <rect key="frame" x="20" y="422" width="335" height="70"/>
                     <subviews>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="l2z-Kw-nsu">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="6rT-FJ-IRp"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow new messages" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="1Ei-lt-k66">
-                            <rect key="frame" x="0.0" y="23.5" width="185" height="23.5"/>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="0.0" y="24" width="191" height="22"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -132,15 +197,19 @@
                     </constraints>
                 </view>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="V9b-QE-PPr" userLabel="Allow reply comments">
-                    <rect key="frame" x="20" y="410" width="335" height="70"/>
+                    <rect key="frame" x="20" y="500" width="335" height="70"/>
                     <subviews>
                         <switch opaque="NO" contentMode="scaleToFill" horizontalHuggingPriority="750" verticalHuggingPriority="750" contentHorizontalAlignment="center" contentVerticalAlignment="center" on="YES" translatesAutoresizingMaskIntoConstraints="NO" id="XdK-UR-faO">
-                            <rect key="frame" x="286" y="19.5" width="51" height="31"/>
+                            <rect key="frame" x="286" y="23.5" width="51" height="23"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="23" id="lIo-G8-Z9g"/>
+                            </constraints>
+                            <color key="onTintColor" red="0.20784313730000001" green="0.57647058819999997" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                         </switch>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Allow reply comments" textAlignment="natural" lineBreakMode="tailTruncation" numberOfLines="2" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="kC9-3p-5Gu">
-                            <rect key="frame" x="0.0" y="23.5" width="200.5" height="23.5"/>
-                            <fontDescription key="fontDescription" name="Kefa-Regular" family="Kefa" pointSize="20"/>
-                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <rect key="frame" x="0.0" y="24" width="205.5" height="22"/>
+                            <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="18"/>
+                            <color key="textColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                     </subviews>
@@ -155,12 +224,15 @@
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
+                <constraint firstItem="y40-sg-h7V" firstAttribute="bottom" secondItem="UbO-hb-o9Y" secondAttribute="bottom" constant="30" id="0Mp-lD-VN0"/>
                 <constraint firstItem="NBD-qG-dv5" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="2UH-c7-cap"/>
-                <constraint firstItem="EHv-qJ-Wep" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="H02-R0-kLS"/>
+                <constraint firstItem="EHv-qJ-Wep" firstAttribute="top" secondItem="y40-sg-h7V" secondAttribute="bottom" constant="30" id="2qx-SB-m3i"/>
+                <constraint firstItem="y40-sg-h7V" firstAttribute="leading" secondItem="UbO-hb-o9Y" secondAttribute="leading" id="5SL-YG-xhe"/>
                 <constraint firstItem="32y-8w-NpZ" firstAttribute="top" secondItem="EHv-qJ-Wep" secondAttribute="bottom" constant="8" id="Luh-Ch-tKy"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="De1-Dz-EVH" secondAttribute="trailing" constant="20" id="Mhb-rw-vAE"/>
                 <constraint firstItem="32y-8w-NpZ" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="S18-JN-xBZ"/>
                 <constraint firstItem="NBD-qG-dv5" firstAttribute="top" secondItem="sHo-6d-q75" secondAttribute="bottom" constant="8" id="Sia-kb-iJu"/>
+                <constraint firstItem="UbO-hb-o9Y" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Vnk-iZ-HWu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="NBD-qG-dv5" secondAttribute="trailing" constant="20" id="X8B-5v-3xu"/>
                 <constraint firstItem="V9b-QE-PPr" firstAttribute="top" secondItem="De1-Dz-EVH" secondAttribute="bottom" constant="8" id="ZS3-se-k3a"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="32y-8w-NpZ" secondAttribute="trailing" constant="20" id="aoU-wI-Nax"/>
@@ -170,12 +242,19 @@
                 <constraint firstItem="De1-Dz-EVH" firstAttribute="top" secondItem="NBD-qG-dv5" secondAttribute="bottom" constant="8" id="erV-94-JDS"/>
                 <constraint firstItem="sHo-6d-q75" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="iV1-e2-tub"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="V9b-QE-PPr" secondAttribute="trailing" constant="20" id="lEg-F8-4sF"/>
+                <constraint firstItem="UbO-hb-o9Y" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="lIm-tV-zLy"/>
                 <constraint firstItem="sHo-6d-q75" firstAttribute="top" secondItem="32y-8w-NpZ" secondAttribute="bottom" constant="8" id="mrA-ld-IIw"/>
                 <constraint firstItem="De1-Dz-EVH" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" constant="20" id="sR1-n4-r44"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="sHo-6d-q75" secondAttribute="trailing" constant="20" id="t3l-qI-JH1"/>
+                <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="UbO-hb-o9Y" secondAttribute="trailing" constant="20" id="xQR-NB-82B"/>
+                <constraint firstItem="y40-sg-h7V" firstAttribute="trailing" secondItem="UbO-hb-o9Y" secondAttribute="trailing" id="zcM-Bj-WhC"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
             <point key="canvasLocation" x="140" y="85.007496251874073"/>
         </view>
     </objects>
+    <resources>
+        <image name="Group 16012" width="10" height="18"/>
+        <image name="closeBlue" width="18" height="18"/>
+    </resources>
 </document>

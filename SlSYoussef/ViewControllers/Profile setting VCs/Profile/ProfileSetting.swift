@@ -7,6 +7,7 @@
 //
 
 import UIKit
+import Firebase
 
 class ProfileSetting: UIViewController {
     
@@ -18,19 +19,31 @@ class ProfileSetting: UIViewController {
     var profileSettingVM  = ProfileSettingVM()
     override func viewDidLoad() {
         super.viewDidLoad()
-        
         configureTableView()
-        profileSettingVM.configureBecomeSellerButton(btn: becomeSeller)
-        profileSettingVM.configureUserImage(img: userImage)
+      
+    }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
+    override func viewWillDisappear(_ animated: Bool) {
+        super.viewWillDisappear(animated)
+        navigationController?.setNavigationBarHidden(false, animated: true)
+    }
+    //MARK: - Bot stack
+    @IBAction func becomeSeller(_ sender: Any) {
+
     }
     
     
-    //MARK: - Bot stack
-    @IBAction func becomeSeller(_ sender: Any) {
+    @IBAction func dismiswbtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
     }
     
     @IBAction func logOut(_ sender: Any) {
-        #warning("Log out")
+        UtilityFunctions.signOut(self)
     }
 }
 
@@ -41,7 +54,7 @@ extension ProfileSetting :  UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ProfileSettingCell.cellID , for: indexPath) as! ProfileSettingCell
-        cell.settingImage.image = UIImage(named: profileSettingVM.settingImages[indexPath.row])
+        cell.settingImage.image = profileSettingVM.settingImages[indexPath.row]
         cell.settingName.text   = profileSettingVM.settingNames[indexPath.row]
         return cell
     }

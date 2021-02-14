@@ -20,6 +20,9 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     
     let loginMangerOfFaceBook = LoginManager()
     
+    let dp  = Firestore.firestore()
+    
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setUpLable()
@@ -41,7 +44,7 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
     }
     
     @IBAction func signInWithFacebook(_ sender: Any) {
-       self.loadingView.loadingView.startAnimating()
+        self.loadingView.loadingView.startAnimating()
         loginMangerOfFaceBook.logIn(permissions: [], from: self) { [weak self](resulte, error) in
             guard let self = self else {return}
             if error != nil{
@@ -54,22 +57,25 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
                 let creadinatial = FacebookAuthProvider.credential(withAccessToken: acccestokenString)
                 Auth.auth().signIn(with: creadinatial) { (authresult, error) in
                     if error != nil{
-                       self.showAlert(title: "using Facebook", message: "error in Login With Facebook")
+                        self.showAlert(title: "using Facebook", message: "error in Login With Facebook")
                     }else{
                         guard let userData = authresult?.user else{return}
                         guard let photoUrl = userData.photoURL?.absoluteString else {return}
-                        guard let userName = userData.displayName, let email = userData.email else {return}
-                        self.createUser(withEmail: email, WithUsername: userName, ImageUrl: photoUrl) { (error, seccess) in
-                            if seccess{
+                        self.dp.collection("Users").document(userData.uid).setData(["userName" : userData.displayName ?? "" , "email" : userData.email ?? "", "profileImg" : photoUrl, "DOB": Date().timeIntervalSince1970]){ (er) in
+                            if er == nil {
                                 let home = HomeViewController()
-                                home.modalPresentationStyle = .overFullScreen
-                                self.present(home, animated: true, completion: nil)
+                                let navigation = UINavigationController(rootViewController: home)
+                                navigation.modalPresentationStyle = .overFullScreen
+                                self.present(navigation, animated: true, completion: nil)
                                 UtilityFunctions.isLoggedIn = true
+                             
                             }else{
                                 self.loadingView.loadingView.stopAnimating()
-                                guard let err = error else {return}
-                                self.showAlert(title: "error in SignIn", message: err)
+                                self.showAlert(title: "error in SignIn", message: er?.localizedDescription ?? "unKonw error")
                             }
+                           
+                            
+                            
                         }
                     }
                 }
@@ -107,18 +113,29 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
                 return
             }else{
                 guard let imageUrl = user.profile.imageURL(withDimension: .min),let data = try? Data(contentsOf: imageUrl) else{return}
-                UserRepositoryManger.createUser(withEmail: user.profile.email, WithUsername: user.profile.name, data: data) { (error, seccess) in
-                    if seccess{
-                        let home = HomeViewController()
-                        home.modalPresentationStyle = .overFullScreen
-                        self.present(home, animated: true, completion: nil)
-                        UtilityFunctions.isLoggedIn = true
+                guard let uid = user.userID else {return}
+                self.dp.collection("User").document(uid).setData(["userName" : user.profile.name ?? " " , "email" : user.profile.email ?? "", "DOB": Date().timeIntervalSince1970]){ (er) in
+                    print(er?.localizedDescription)
+                    if er == nil{
+                        UserRepositoryManger.uploadImage(userUid: user.userID, Image: data) { (error, secsess) in
+                            if secsess{
+                               let home = HomeViewController()
+                                let navigation = UINavigationController(rootViewController: home)
+                                navigation.modalPresentationStyle = .overFullScreen
+                                self.present(navigation, animated: true, completion: nil)
+                                UtilityFunctions.isLoggedIn = true
+                            }else{
+                                self.loadingView.loadingView.stopAnimating()
+                                guard let err = error else {return}
+                                self.showAlert(title: "error in SignIn", message: err)
+                            }
+                        }
                     }else{
                         self.loadingView.loadingView.stopAnimating()
-                        guard let err = error else {return}
-                        self.showAlert(title: "error in SignIn", message: err)
-                        
+                        guard let err = er else {return}
+                        self.showAlert(title: "error in SignIn", message: err.localizedDescription)
                     }
+                    
                 }
                 
             }
@@ -134,22 +151,4 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
         
     }
     
-    
-    func createUser(withEmail: String, WithUsername : String, ImageUrl : String, copmlatiomHandler  :@escaping(_ error : String?,_ Seccess :Bool) -> Void){
-        let dp  = Firestore.firestore()
-        Auth.auth().createUser(withEmail: withEmail, password: WithUsername) { (result, error) in
-            if error == nil {
-                if let result = result {
-                    dp.collection("Users").document("\(result.user.uid)").setData(["userName" : withEmail , "email" : withEmail, "profileImg" : ImageUrl, "DOB": Date().timeIntervalSince1970]){ (er) in
-                        guard er != nil else {
-                            copmlatiomHandler(er?.localizedDescription,false)
-                            return
-                        }
-                    }
-                }else { print("error with result \(String(describing: result))") }
-            }else {
-                copmlatiomHandler(error?.localizedDescription, false)
-            }
-        }
-    }
 }

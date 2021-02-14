@@ -15,6 +15,7 @@
     <objects>
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="AdminViewController" customModule="SlSYoussef" customModuleProvider="target">
             <connections>
+                <outlet property="adminTableView" destination="x3X-gK-Ytq" id="eMi-OR-L4N"/>
                 <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
             </connections>
         </placeholder>
@@ -30,6 +31,9 @@
                         <constraint firstAttribute="width" constant="30" id="rkC-Kn-DFt"/>
                     </constraints>
                     <state key="normal" image="Arrow   Left 2"/>
+                    <connections>
+                        <action selector="dissmisbtn:" destination="-1" eventType="touchUpInside" id="6kv-1o-j2X"/>
+                    </connections>
                 </button>
                 <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="nSs-Y6-kLK">
                     <rect key="frame" x="364" y="64" width="30" height="30"/>
@@ -38,6 +42,9 @@
                         <constraint firstAttribute="height" constant="30" id="UhN-L3-28H"/>
                     </constraints>
                     <state key="normal" image="Group 643"/>
+                    <connections>
+                        <action selector="closeBtn:" destination="-1" eventType="touchUpInside" id="Vv8-78-c5E"/>
+                    </connections>
                 </button>
                 <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="New Members" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="VKO-dE-smQ">
                     <rect key="frame" x="131.5" y="67" width="151.5" height="24.5"/>

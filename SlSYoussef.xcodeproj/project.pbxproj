@@ -97,7 +97,6 @@
 		E83BBFA825D75C6F00F26E2F /* SignUpVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFA325D75C6F00F26E2F /* SignUpVM.swift */; };
 		E83BBFA925D75C6F00F26E2F /* SignUp.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFA425D75C6F00F26E2F /* SignUp.swift */; };
 		E83BBFAA25D75C6F00F26E2F /* Profile.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFA525D75C6F00F26E2F /* Profile.swift */; };
-		E83BBFAB25D75C6F00F26E2F /* Feeds.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFA625D75C6F00F26E2F /* Feeds.swift */; };
 		E83BBFAC25D75C6F00F26E2F /* postcell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFA725D75C6F00F26E2F /* postcell.swift */; };
 		E83BBFAE25D75CC600F26E2F /* FirstView.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFAD25D75CC500F26E2F /* FirstView.swift */; };
 		E83BBFCC25D75CED00F26E2F /* MessagesVC.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BBFB025D75CED00F26E2F /* MessagesVC.swift */; };
@@ -144,6 +143,8 @@
 		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
 		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
 		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
+		E8483E7A25D91FCA001903FD /* adminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8483E7825D91FCA001903FD /* adminTableViewCell.swift */; };
+		E8483E7B25D91FCA001903FD /* adminTableViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8483E7925D91FCA001903FD /* adminTableViewCell.xib */; };
 		E8A1F0C525D881E500E0F1A8 /* AdminViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */; };
 		E8A1F0C625D881E500E0F1A8 /* AdminViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */; };
 /* End PBXBuildFile section */
@@ -243,7 +244,6 @@
 		E83BBFA325D75C6F00F26E2F /* SignUpVM.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUpVM.swift; sourceTree = "<group>"; };
 		E83BBFA425D75C6F00F26E2F /* SignUp.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SignUp.swift; sourceTree = "<group>"; };
 		E83BBFA525D75C6F00F26E2F /* Profile.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Profile.swift; sourceTree = "<group>"; };
-		E83BBFA625D75C6F00F26E2F /* Feeds.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Feeds.swift; sourceTree = "<group>"; };
 		E83BBFA725D75C6F00F26E2F /* postcell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = postcell.swift; sourceTree = "<group>"; };
 		E83BBFAD25D75CC500F26E2F /* FirstView.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FirstView.swift; sourceTree = "<group>"; };
 		E83BBFB025D75CED00F26E2F /* MessagesVC.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = MessagesVC.swift; sourceTree = "<group>"; };
@@ -290,8 +290,11 @@
 		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
 		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
+		E8483E7825D91FCA001903FD /* adminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminTableViewCell.swift; sourceTree = "<group>"; };
+		E8483E7925D91FCA001903FD /* adminTableViewCell.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = adminTableViewCell.xib; sourceTree = "<group>"; };
 		E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AdminViewController.swift; sourceTree = "<group>"; };
 		E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = AdminViewController.xib; sourceTree = "<group>"; };
+		E8CA34FC25D9AC8800192582 /* SlSYoussef.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = SlSYoussef.entitlements; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -344,6 +347,7 @@
 		E83749ED25D74B7600809B4E /* SlSYoussef */ = {
 			isa = PBXGroup;
 			children = (
+				E8CA34FC25D9AC8800192582 /* SlSYoussef.entitlements */,
 				E841FA8C25D8261000EED598 /* Repositoty */,
 				E83749EE25D74B7600809B4E /* AppDelegate.swift */,
 				E83749F025D74B7600809B4E /* SceneDelegate.swift */,
@@ -711,7 +715,6 @@
 			children = (
 				E83BBFA125D75C6F00F26E2F /* Auth */,
 				E83BBFA525D75C6F00F26E2F /* Profile.swift */,
-				E83BBFA625D75C6F00F26E2F /* Feeds.swift */,
 				E83BBFA725D75C6F00F26E2F /* postcell.swift */,
 			);
 			path = Abanoub;
@@ -775,6 +778,7 @@
 		E83BBFB725D75CED00F26E2F /* Profile */ = {
 			isa = PBXGroup;
 			children = (
+				E83BBFEC25D75E3B00F26E2F /* Profile setting Cell */,
 				E83BBFB825D75CED00F26E2F /* ProfileSetting.xib */,
 				E83BBFB925D75CED00F26E2F /* ProfileSetting VM.swift */,
 				E83BBFBA25D75CED00F26E2F /* ProfileSetting.swift */,
@@ -803,6 +807,7 @@
 		E83BBFC225D75CED00F26E2F /* My orders */ = {
 			isa = PBXGroup;
 			children = (
+				E83BBFE625D75E3B00F26E2F /* Order Cell */,
 				E83BBFC325D75CED00F26E2F /* MyOrders.swift */,
 				E83BBFC425D75CED00F26E2F /* MyOrders.xib */,
 			);
@@ -845,9 +850,7 @@
 		E83BBFE525D75E3B00F26E2F /* Custom Cells */ = {
 			isa = PBXGroup;
 			children = (
-				E83BBFE625D75E3B00F26E2F /* Order Cell */,
 				E83BBFE925D75E3B00F26E2F /* MessagesCell */,
-				E83BBFEC25D75E3B00F26E2F /* Profile setting Cell */,
 				E83BBFEF25D75E3B00F26E2F /* Images Cell */,
 				E83BBFF025D75E3B00F26E2F /* Chat Cell */,
 			);
@@ -951,11 +954,21 @@
 			path = SignVCs;
 			sourceTree = "<group>";
 		};
+		E8483E7C25D91FD4001903FD /* cell */ = {
+			isa = PBXGroup;
+			children = (
+				E8483E7825D91FCA001903FD /* adminTableViewCell.swift */,
+				E8483E7925D91FCA001903FD /* adminTableViewCell.xib */,
+			);
+			path = cell;
+			sourceTree = "<group>";
+		};
 		E8A1F0C225D8807A00E0F1A8 /* Admin */ = {
 			isa = PBXGroup;
 			children = (
 				E8A1F0C325D881E500E0F1A8 /* AdminViewController.swift */,
 				E8A1F0C425D881E500E0F1A8 /* AdminViewController.xib */,
+				E8483E7C25D91FD4001903FD /* cell */,
 			);
 			path = Admin;
 			sourceTree = "<group>";
@@ -1076,6 +1089,7 @@
 				E8374A4925D74C6600809B4E /* FullScreenViewController.xib in Resources */,
 				E8374A5125D74C6600809B4E /* CatchVideoViewController.xib in Resources */,
 				E8374A6D25D74C6600809B4E /* HomeViewController.xib in Resources */,
+				E8483E7B25D91FCA001903FD /* adminTableViewCell.xib in Resources */,
 				E83BBF6625D7592900F26E2F /* Montserrat-ExtraBold.ttf in Resources */,
 				E83BBFD625D75CED00F26E2F /* NotificationSettings.xib in Resources */,
 			);
@@ -1188,6 +1202,7 @@
 				E83BC00125D75E3B00F26E2F /* OrderCell.swift in Sources */,
 				E8374A4525D74C6600809B4E /* SignUpViewController.swift in Sources */,
 				E8374A5B25D74C6600809B4E /* CillectionImageCellCollectionViewCell.swift in Sources */,
+				E8483E7A25D91FCA001903FD /* adminTableViewCell.swift in Sources */,
 				E83BC00F25D75E3C00F26E2F /* SLSTextField.swift in Sources */,
 				E83BC00625D75E3C00F26E2F /* ChatCell.swift in Sources */,
 				E8374A4E25D74C6600809B4E /* CommentCollectionViewCell.swift in Sources */,
@@ -1195,7 +1210,6 @@
 				E8A1F0C525D881E500E0F1A8 /* AdminViewController.swift in Sources */,
 				E83BBF9A25D75B9000F26E2F /* UserDataModel.swift in Sources */,
 				E83BBFDF25D75CEE00F26E2F /* ChatVC.swift in Sources */,
-				E83BBFAB25D75C6F00F26E2F /* Feeds.swift in Sources */,
 				E83BBFD425D75CED00F26E2F /* CustomerSupport.swift in Sources */,
 				E83BBFAE25D75CC600F26E2F /* FirstView.swift in Sources */,
 				E83BBF9225D75B5400F26E2F /* UIview+Extensions.swift in Sources */,
@@ -1364,6 +1378,7 @@
 			baseConfigurationReference = 69276F81CB0AE9B439828B91 /* Pods-SlSYoussef.debug.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SlSYoussef/SlSYoussef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6VZS75SYY;
 				INFOPLIST_FILE = SlSYoussef/Info.plist;
@@ -1384,6 +1399,7 @@
 			baseConfigurationReference = 7FA25CE29FCCD01A5A478693 /* Pods-SlSYoussef.release.xcconfig */;
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				CODE_SIGN_ENTITLEMENTS = SlSYoussef/SlSYoussef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
 				DEVELOPMENT_TEAM = L6VZS75SYY;
 				INFOPLIST_FILE = SlSYoussef/Info.plist;

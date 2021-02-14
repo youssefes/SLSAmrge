@@ -25,18 +25,62 @@ enum ButtonAssestType {
 extension UIViewController {
     
     func creatNavigationBarButtons(){
-        let house   = createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "house", type: .house))
-        let back    = createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "arrow.left", type: .back))
-        let search  = createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "magnifyingglass", type: .search))
-        let message = createSystemBarButton(sideBtn: createSideUIButton(imageSystemName: "message", type: .message))
+        let Massage = UIButton.init(type: .custom)
+           Massage.setImage(#imageLiteral(resourceName: "Message"), for: .normal)
         
-        let profile      = createSystemBarButton(sideBtn: createUIButton(imageName: "hady", type: .profile))
-        let notification = createSystemBarButton(sideBtn: createUIButton(imageName: "notification", type: .notification))
+        let Notification = UIButton.init(type: .custom)
+                Notification.setImage(#imageLiteral(resourceName: "Notification-1"), for: .normal)
         
-        self.navigationItem.leftBarButtonItems  = [back , house , search]
-        self.navigationItem.rightBarButtonItems = [profile , notification , message]
-
+        let Profile = UIButton.init(type: .custom)
+                Profile.setImage(#imageLiteral(resourceName: "hady"), for: .normal)
+        Profile.cornerRadius = 20
+        Profile.clipsToBounds = true
+        Profile.widthAnchor.constraint(equalToConstant: 40).isActive = true
+        Profile.heightAnchor.constraint(equalToConstant: 40).isActive = true
+        Profile.translatesAutoresizingMaskIntoConstraints = false
+        Profile.addTarget(self, action: #selector(ShowProfile), for: .touchUpInside)
+        
+        
+        let home = UIButton.init(type: .custom)
+        home.setImage(#imageLiteral(resourceName: "Home_icon"), for: .normal)
+        Profile.addTarget(self, action: #selector(ShowHome), for: .touchUpInside)
+        let back = UIButton.init(type: .custom)
+        back.setImage(#imageLiteral(resourceName: "Layer 7"), for: .normal)
+        
+        let search = UIButton.init(type: .custom)
+        search.setImage(#imageLiteral(resourceName: "shearch"), for: .normal)
+        
+        
+        let Rightstackview = UIStackView.init(arrangedSubviews: [Massage , Notification , Profile])
+        Rightstackview.distribution = .equalSpacing
+        Rightstackview.axis = .horizontal
+        Rightstackview.spacing = 20
+        Rightstackview.translatesAutoresizingMaskIntoConstraints = false
+        
+        
+        let Leftstackview = UIStackView.init(arrangedSubviews: [back,home , search])
+        Leftstackview.distribution = .equalSpacing
+        Leftstackview.axis = .horizontal
+        Leftstackview.spacing = 20
+        Leftstackview.translatesAutoresizingMaskIntoConstraints = false
+        
+        let rightBarButton = UIBarButtonItem(customView: Rightstackview)
+        let LeftBarButton = UIBarButtonItem(customView: Leftstackview)
+        
+        self.navigationItem.leftBarButtonItem = LeftBarButton
+        self.navigationItem.rightBarButtonItem = rightBarButton
     }
+    
+    
+    @objc func ShowProfile(){
+        let profile = ProfileSetting()
+        navigationController?.pushViewController(profile, animated: true)
+    }
+    
+    @objc func ShowHome(){
+        print("show home")
+    }
+    
     
     func createSystemBarButton(sideBtn : UIButton) -> UIBarButtonItem{
         let menuBarItem = UIBarButtonItem(customView: sideBtn)
@@ -46,12 +90,12 @@ extension UIViewController {
         
         return menuBarItem
     }
-    func createSideUIButton(imageSystemName : String , type: ButtonSystemType?) -> UIButton {
+    func createSideUIButton(image : UIImage , type: ButtonSystemType?) -> UIButton {
         let sideBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35)) //create UIButton by it's custom dimensions
         
         // get the button the custom image
         if #available(iOS 13.0, *) {
-            sideBtn.setBackgroundImage(UIImage(systemName: imageSystemName) , for: .normal)
+            sideBtn.setBackgroundImage(image , for: .normal)
         } else {
             // Fallback on earlier versions
         }
@@ -74,11 +118,11 @@ extension UIViewController {
         return sideBtn
     }
     
-    func createUIButton(imageName : String , type : ButtonAssestType ) -> UIButton {
+    func createUIButton(image : UIImage , type : ButtonAssestType ) -> UIButton {
         let sideBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 25, height: 25)) //create UIButton by it's custom dimensions
         
         // get the button the custom image
-        sideBtn.setBackgroundImage(UIImage(named: imageName) , for: .normal)
+        sideBtn.setBackgroundImage(image , for: .normal)
         sideBtn.layer.cornerRadius = 15
         sideBtn.clipsToBounds = true
         

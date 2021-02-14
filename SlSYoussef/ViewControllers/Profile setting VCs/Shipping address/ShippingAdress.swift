@@ -7,10 +7,9 @@
 //
 
 import UIKit
-
+import UITextView_Placeholder
 class ShippingAdress: UIViewController {
 
-    let textViewPlaceHolder = "Your adress for shipping"
     @IBOutlet weak var textView: UITextView!
     @IBOutlet weak var saveBtn: UIButton!
     
@@ -18,33 +17,19 @@ class ShippingAdress: UIViewController {
         super.viewDidLoad()
         self.createCustomTitleViewInEditProfile(with: "Shipping adress")
         self.tapGestureOnScreen()
-        Utility.designSingsButtons(saveBtn)
-        Utility.configureUserTextView(textView, placeholder: textViewPlaceHolder)
-        textView.delegate = self
-
-    }
-
-}
-
-extension ShippingAdress : UITextViewDelegate {
-    
-    func textViewDidBeginEditing(_ textView: UITextView){
-        //This is TextView Placeholder
-        if (textView.text == textViewPlaceHolder && textView.textColor == .lightGray){
-            textView.text = ""
-            if #available(iOS 13.0, *) {
-                textView.textColor = .label
-            } else {
-                // Fallback on earlier versions
-            }
-        }
     }
     
-    func textViewDidEndEditing(_ textView: UITextView){
-        if (textView.text == ""){
-            textView.text = textViewPlaceHolder
-            textView.textColor = .lightGray
-        }
-        textView.resignFirstResponder()
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
     }
+    
+    @IBAction func dismissBtn(_ sender: Any) {
+        navigationController?.popViewController(animated: true)
+        
+    }
+    
+    @IBAction func closeBtn(_ sender: Any) {
+    }
+    
 }
