@@ -65,7 +65,7 @@ class LogIn: UIViewController {
     
     func SuccessValidation() {
         errorLabel.text = ""
-        errorImage.isHidden = false
+        errorImage.isHidden = true
         containerViewOfEmailTf.borderColor  = .green
         containerViewOfPasswordTf.borderColor = .green
     }
@@ -94,29 +94,34 @@ class LogIn: UIViewController {
             didFailedValidation(text: "Password is empty , please enter your password!")
             return
         }
-
+        
         SuccessValidation()
-//        self.showLoadingView(is: true)
+        
 
         Auth.auth().signIn(withEmail: Email, password: Password) { (user, error) in
             if error != nil {
+               
                 self.didFailedValidation(text: error!.localizedDescription)
+                 self.errorImage.isHidden = true
                 print(error!.localizedDescription)
             } else {
                 let dp = Firestore.firestore()
                 let uid = user?.user.uid
                 
                 if let uid = uid {
+                     self.showLoadingView(is: true)
                     print(uid)
-                    dp.collection("users").document(uid).getDocument { (snapshot, error) in
+                    dp.collection("Users").document(uid).getDocument { (snapshot, error) in
                         if  error == nil {
                             if let document = snapshot , document.exists {
                                 if let finalCod = document.data(){
-                                    let username : String = finalCod["name"] as! String
+                                    let username : String = finalCod["userName"] as! String
                                     print(username)
-                                    self.hideLoadingView()
-                                    self.showAlert(title: "Success", message: "You signed in successfully")
-                                    
+                                    let home = HomeViewController()
+                                    let navigation = UINavigationController(rootViewController: home)
+                                    navigation.modalPresentationStyle = .overFullScreen
+                                    self.present(navigation, animated: true, completion: nil)
+                                    UtilityFunctions.isLoggedIn = true
                                 }
                                 
                             }
@@ -135,6 +140,6 @@ class LogIn: UIViewController {
     }
     
     
-
+    
     
 }

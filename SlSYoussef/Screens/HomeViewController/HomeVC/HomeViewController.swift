@@ -52,6 +52,14 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
 extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegateFlowLayout, UICollectionViewDataSource,headerCollectionViewCellProtocal{
     
     
+    func saySameThingActionBtn() {
+        let sb = UIStoryboard(name: "Main", bundle: nil)
+        let vc = sb.instantiateViewController(withIdentifier: "PostVC")
+        navigationController?.pushViewController(vc, animated: true)
+    }
+    
+    
+    
     
     func showOptionS() {
         let optinVC = OptionVCViewController()

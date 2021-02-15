@@ -42,7 +42,7 @@ class UserRepositoryManger {
     
 static func uploadImage(userUid : String, Image : Data, copmlatiomHandler  :@escaping(_ error : String?,_ Seccess :Bool) -> Void){
         let imageName    = UUID().uuidString
-        let imgReference = Storage.storage().reference().child("UsersRefs").child(imageName)
+        let imgReference = Storage.storage().reference().child("UsersRefs").child("\(imageName).jpg")
         
         imgReference.putData(Image, metadata: nil) { (metaData, error) in
             if let err = error {

@@ -12,6 +12,7 @@ protocol headerCollectionViewCellProtocal {
     func Feeds()
     func stream()
     func openLiveStreamOfThisIndex()
+    func saySameThingActionBtn()
 }
 
 class headerCollectionViewCell: UICollectionReusableView {
@@ -19,7 +20,7 @@ class headerCollectionViewCell: UICollectionReusableView {
     var deleget : headerCollectionViewCellProtocal?
     @IBOutlet weak var headerCollectionView: UICollectionView!
     @IBOutlet weak var feedBtn: UIButton!
-    @IBOutlet weak var saySamethingtf: TextField!
+    @IBOutlet weak var saySamethingtf: UIView!
     
     @IBOutlet weak var streamBtn: UIButton!
     
@@ -39,6 +40,10 @@ class headerCollectionViewCell: UICollectionReusableView {
         setButtonConfegration(sender: feedBtn)
     }
     
+    @IBAction func seySameThi(_ sender: Any) {
+        deleget?.saySameThingActionBtn()
+        
+    }
     
     @IBAction func streamButton(_ sender: UIButton) {
         self.saySamethingtf.alpha = 0.0

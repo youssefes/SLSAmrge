@@ -22,6 +22,7 @@
         <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="ProfileSetting" customModule="SlSYoussef" customModuleProvider="target">
             <connections>
                 <outlet property="becomeSeller" destination="qAw-pU-P1O" id="3ox-t3-UNs"/>
+                <outlet property="dashbordBt" destination="Opt-go-lS9" id="m7I-Ci-mMy"/>
                 <outlet property="tableView" destination="r5d-wL-U9S" id="3fl-Jl-xME"/>
                 <outlet property="userImage" destination="zpk-rl-8WG" id="0xI-vl-asy"/>
                 <outlet property="userName" destination="Iis-aA-rZV" id="bWo-l2-hoa"/>
@@ -117,6 +118,25 @@
                         <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="989-ZS-Agb"/>
                     </connections>
                 </button>
+                <button hidden="YES" opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="Opt-go-lS9">
+                    <rect key="frame" x="20" y="585" width="335" height="50"/>
+                    <color key="backgroundColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstAttribute="height" constant="50" id="Gwd-mD-QjY"/>
+                    </constraints>
+                    <fontDescription key="fontDescription" name="Montserrat-Bold" family="Montserrat" pointSize="18"/>
+                    <state key="normal" title="DASHBOARD">
+                        <color key="titleColor" white="1" alpha="1" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
+                    </state>
+                    <userDefinedRuntimeAttributes>
+                        <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                            <real key="value" value="10"/>
+                        </userDefinedRuntimeAttribute>
+                    </userDefinedRuntimeAttributes>
+                    <connections>
+                        <action selector="dashBoardBtn:" destination="-1" eventType="touchUpInside" id="eL9-bz-PQ2"/>
+                    </connections>
+                </button>
             </subviews>
             <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
             <constraints>
@@ -125,6 +145,7 @@
                 <constraint firstItem="qAw-pU-P1O" firstAttribute="top" secondItem="UCc-JK-5fm" secondAttribute="bottom" constant="30" id="3db-fs-04U"/>
                 <constraint firstAttribute="trailing" secondItem="9vg-2X-acb" secondAttribute="trailing" constant="20" id="4mA-qQ-pBu"/>
                 <constraint firstItem="fnl-2z-Ty3" firstAttribute="trailing" secondItem="eWG-TK-GXn" secondAttribute="trailing" constant="20" id="Afk-7T-L56"/>
+                <constraint firstItem="mg5-rb-PIg" firstAttribute="top" secondItem="Opt-go-lS9" secondAttribute="bottom" constant="20" id="Dnn-QF-FpT"/>
                 <constraint firstItem="9vg-2X-acb" firstAttribute="top" secondItem="Iis-aA-rZV" secondAttribute="bottom" constant="20" id="Doj-39-4R6"/>
                 <constraint firstItem="r5d-wL-U9S" firstAttribute="top" secondItem="9vg-2X-acb" secondAttribute="bottom" constant="30" id="FmJ-a0-BFD"/>
                 <constraint firstItem="zpk-rl-8WG" firstAttribute="top" secondItem="fnl-2z-Ty3" secondAttribute="top" constant="20" id="Irw-x1-Ws2"/>
@@ -137,8 +158,10 @@
                 <constraint firstItem="9vg-2X-acb" firstAttribute="leading" secondItem="i5M-Pr-FkT" secondAttribute="leading" constant="20" id="dz9-4J-0sG"/>
                 <constraint firstItem="UCc-JK-5fm" firstAttribute="top" secondItem="r5d-wL-U9S" secondAttribute="bottom" constant="20" id="glu-gd-oEa"/>
                 <constraint firstItem="qAw-pU-P1O" firstAttribute="trailing" secondItem="mg5-rb-PIg" secondAttribute="trailing" id="iP5-91-WBR"/>
+                <constraint firstItem="Opt-go-lS9" firstAttribute="leading" secondItem="UCc-JK-5fm" secondAttribute="leading" id="mEu-nJ-hK8"/>
                 <constraint firstItem="r5d-wL-U9S" firstAttribute="height" secondItem="i5M-Pr-FkT" secondAttribute="height" multiplier="1: 3" id="oOE-8M-2wC"/>
                 <constraint firstItem="zpk-rl-8WG" firstAttribute="centerX" secondItem="i5M-Pr-FkT" secondAttribute="centerX" id="p7U-k4-An8"/>
+                <constraint firstItem="Opt-go-lS9" firstAttribute="trailing" secondItem="UCc-JK-5fm" secondAttribute="trailing" id="spe-es-Hby"/>
                 <constraint firstAttribute="trailing" secondItem="UCc-JK-5fm" secondAttribute="trailing" constant="20" id="tB3-av-FaQ"/>
                 <constraint firstItem="r5d-wL-U9S" firstAttribute="leading" secondItem="9vg-2X-acb" secondAttribute="leading" id="wjQ-fZ-UZy"/>
             </constraints>

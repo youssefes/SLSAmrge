@@ -114,7 +114,7 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
             }else{
                 guard let imageUrl = user.profile.imageURL(withDimension: .min),let data = try? Data(contentsOf: imageUrl) else{return}
                 guard let uid = user.userID else {return}
-                self.dp.collection("User").document(uid).setData(["userName" : user.profile.name ?? " " , "email" : user.profile.email ?? "", "DOB": Date().timeIntervalSince1970]){ (er) in
+                self.dp.collection("Users").document(uid).setData(["userName" : user.profile.name ?? " " , "email" : user.profile.email ?? "", "DOB": Date().timeIntervalSince1970]){ (er) in
                     print(er?.localizedDescription)
                     if er == nil{
                         UserRepositoryManger.uploadImage(userUid: user.userID, Image: data) { (error, secsess) in

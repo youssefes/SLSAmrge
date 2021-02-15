@@ -74,10 +74,8 @@ extension UIViewController {
     }
     
     func hideLoadingView(){
-        DispatchQueue.main.async {
             containerView.removeFromSuperview()
             containerView = nil
-        }
     }
     
     //MARK: - Gestures

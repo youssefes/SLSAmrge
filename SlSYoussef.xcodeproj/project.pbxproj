@@ -140,6 +140,11 @@
 		E83BC01325D75ED500F26E2F /* mageCellOfPostCollectionViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83BC01125D75ED300F26E2F /* mageCellOfPostCollectionViewCell.swift */; };
 		E83BC01425D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83BC01225D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib */; };
 		E83BC01625D75FFB00F26E2F /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = E83BC01525D75FFB00F26E2F /* Main.storyboard */; };
+		E83FFCE325DACE8500F6F7FA /* PostViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FFCE225DACE8500F6F7FA /* PostViewModel.swift */; };
+		E83FFCEB25DB011A00F6F7FA /* summeryCheckoutViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FFCE925DB011A00F6F7FA /* summeryCheckoutViewController.swift */; };
+		E83FFCEC25DB011A00F6F7FA /* summeryCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */; };
+		E83FFCEF25DB113C00F6F7FA /* OrderDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */; };
+		E83FFCF025DB113C00F6F7FA /* OrderDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */; };
 		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
 		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
 		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
@@ -287,6 +292,11 @@
 		E83BC01125D75ED300F26E2F /* mageCellOfPostCollectionViewCell.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = mageCellOfPostCollectionViewCell.swift; sourceTree = "<group>"; };
 		E83BC01225D75ED500F26E2F /* mageCellOfPostCollectionViewCell.xib */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.xib; path = mageCellOfPostCollectionViewCell.xib; sourceTree = "<group>"; };
 		E83BC01525D75FFB00F26E2F /* Main.storyboard */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = file.storyboard; path = Main.storyboard; sourceTree = "<group>"; };
+		E83FFCE225DACE8500F6F7FA /* PostViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostViewModel.swift; sourceTree = "<group>"; };
+		E83FFCE925DB011A00F6F7FA /* summeryCheckoutViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = summeryCheckoutViewController.swift; sourceTree = "<group>"; };
+		E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = summeryCheckoutViewController.xib; sourceTree = "<group>"; };
+		E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDoneViewController.swift; sourceTree = "<group>"; };
+		E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDoneViewController.xib; sourceTree = "<group>"; };
 		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
 		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -743,8 +753,8 @@
 			isa = PBXGroup;
 			children = (
 				E83BBFB125D75CED00F26E2F /* Profile setting VCs */,
+				E87F08F825DABD9B00ED2CBA /* PostVc */,
 				E83BBFB025D75CED00F26E2F /* MessagesVC.swift */,
-				E83BBFC925D75CED00F26E2F /* PostVC.swift */,
 				E83BBFCA25D75CED00F26E2F /* ChatVC.swift */,
 				E83BBFCB25D75CED00F26E2F /* NotificationVC.swift */,
 			);
@@ -754,6 +764,7 @@
 		E83BBFB125D75CED00F26E2F /* Profile setting VCs */ = {
 			isa = PBXGroup;
 			children = (
+				E83FFCE425DAFE8B00F6F7FA /* CheckoutVcs */,
 				E83BBFE325D75DDB00F26E2F /* Profile */,
 				E83BBFB225D75CED00F26E2F /* Payment methods */,
 				E83BBFB725D75CED00F26E2F /* Profile */,
@@ -851,7 +862,6 @@
 			isa = PBXGroup;
 			children = (
 				E83BBFE925D75E3B00F26E2F /* MessagesCell */,
-				E83BBFEF25D75E3B00F26E2F /* Images Cell */,
 				E83BBFF025D75E3B00F26E2F /* Chat Cell */,
 			);
 			path = "Custom Cells";
@@ -938,6 +948,33 @@
 			path = "Custom Views";
 			sourceTree = "<group>";
 		};
+		E83FFCE425DAFE8B00F6F7FA /* CheckoutVcs */ = {
+			isa = PBXGroup;
+			children = (
+				E83FFCF225DB115000F6F7FA /* summary */,
+				E83FFCF125DB114200F6F7FA /* orderDone */,
+			);
+			path = CheckoutVcs;
+			sourceTree = "<group>";
+		};
+		E83FFCF125DB114200F6F7FA /* orderDone */ = {
+			isa = PBXGroup;
+			children = (
+				E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */,
+				E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */,
+			);
+			path = orderDone;
+			sourceTree = "<group>";
+		};
+		E83FFCF225DB115000F6F7FA /* summary */ = {
+			isa = PBXGroup;
+			children = (
+				E83FFCE925DB011A00F6F7FA /* summeryCheckoutViewController.swift */,
+				E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */,
+			);
+			path = summary;
+			sourceTree = "<group>";
+		};
 		E841FA8C25D8261000EED598 /* Repositoty */ = {
 			isa = PBXGroup;
 			children = (
@@ -961,6 +998,16 @@
 				E8483E7925D91FCA001903FD /* adminTableViewCell.xib */,
 			);
 			path = cell;
+			sourceTree = "<group>";
+		};
+		E87F08F825DABD9B00ED2CBA /* PostVc */ = {
+			isa = PBXGroup;
+			children = (
+				E83BBFEF25D75E3B00F26E2F /* Images Cell */,
+				E83BBFC925D75CED00F26E2F /* PostVC.swift */,
+				E83FFCE225DACE8500F6F7FA /* PostViewModel.swift */,
+			);
+			path = PostVc;
 			sourceTree = "<group>";
 		};
 		E8A1F0C225D8807A00E0F1A8 /* Admin */ = {
@@ -1067,6 +1114,7 @@
 				E83BBF6525D7592900F26E2F /* Montserrat-ExtraLightItalic.ttf in Resources */,
 				E8374A5E25D74C6600809B4E /* headerCollectionViewCell.xib in Resources */,
 				E8374A5525D74C6600809B4E /* WatingAcceptOrderViewController.xib in Resources */,
+				E83FFCF025DB113C00F6F7FA /* OrderDoneViewController.xib in Resources */,
 				E8374A7C25D74CEE00809B4E /* ImagesViewCell.xib in Resources */,
 				E8374A4825D74C6600809B4E /* FullImageCollectionViewCell.xib in Resources */,
 				E8374A4625D74C6600809B4E /* SignUpViewController.xib in Resources */,
@@ -1078,6 +1126,7 @@
 				E83BBF6A25D7592900F26E2F /* Montserrat-Italic.ttf in Resources */,
 				E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */,
 				E8374A6C25D74C6600809B4E /* OptionVCViewController.xib in Resources */,
+				E83FFCEC25DB011A00F6F7FA /* summeryCheckoutViewController.xib in Resources */,
 				E83BBF6725D7592900F26E2F /* OFL.txt in Resources */,
 				E83BBFDB25D75CEE00F26E2F /* ShippingAdress.xib in Resources */,
 				E83BC00725D75E3C00F26E2F /* ChatCell.xib in Resources */,
@@ -1169,6 +1218,7 @@
 				E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */,
 				E8374A6B25D74C6600809B4E /* OptionVCViewController.swift in Sources */,
 				E8374A6125D74C6600809B4E /* StoresCollectionViewCell.swift in Sources */,
+				E83FFCEB25DB011A00F6F7FA /* summeryCheckoutViewController.swift in Sources */,
 				E8374A7D25D74CEE00809B4E /* ImagesViewCell.swift in Sources */,
 				E83BBF9025D75B2300F26E2F /* NibLoadingView.swift in Sources */,
 				E83BBF9F25D75C1100F26E2F /* extension.swift in Sources */,
@@ -1189,6 +1239,7 @@
 				E83BC00C25D75E3C00F26E2F /* SecondaryLabel.swift in Sources */,
 				E83BBFCD25D75CED00F26E2F /* PaymentMethodsVM.swift in Sources */,
 				E83BBF9D25D75BD300F26E2F /* Customs.swift in Sources */,
+				E83FFCE325DACE8500F6F7FA /* PostViewModel.swift in Sources */,
 				E83BBFD325D75CED00F26E2F /* ProfileSetting.swift in Sources */,
 				E83BBF9B25D75B9000F26E2F /* Utility.swift in Sources */,
 				E83749EF25D74B7600809B4E /* AppDelegate.swift in Sources */,
@@ -1236,6 +1287,7 @@
 				E83BC00D25D75E3C00F26E2F /* TitleLabel.swift in Sources */,
 				E83BBFCE25D75CED00F26E2F /* PaymentMethods.swift in Sources */,
 				E8374A5F25D74C6600809B4E /* headerCollectionViewCell.swift in Sources */,
+				E83FFCEF25DB113C00F6F7FA /* OrderDoneViewController.swift in Sources */,
 				E83BBF9825D75B9000F26E2F /* UtilityFunctions.swift in Sources */,
 				E83BC00A25D75E3C00F26E2F /* EmptyStateVC.swift in Sources */,
 				E83BBF3825D7590C00F26E2F /* LoadingView.swift in Sources */,
@@ -1387,7 +1439,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.sls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.slss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1408,7 +1460,7 @@
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.sls;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.slss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";

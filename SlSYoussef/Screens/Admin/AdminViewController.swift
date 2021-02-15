@@ -24,6 +24,12 @@ class AdminViewController: UIViewController {
         
         adminTableView.register(UINib(nibName: "adminTableViewCell", bundle: nil), forCellReuseIdentifier: cellIdentifiers)
     }
+    
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        navigationController?.setNavigationBarHidden(true, animated: true)
+    }
+    
     @IBAction func dissmisbtn(_ sender: Any) {
         dismiss(animated: true, completion: nil)
     }
@@ -43,6 +49,10 @@ extension AdminViewController : UITableViewDelegate, UITableViewDataSource{
         let cell = tableView.dequeueReusableCell(withIdentifier: cellIdentifiers, for: indexPath) as! adminTableViewCell
         
         return cell
+    }
+    
+    func tableView(_ tableView: UITableView, heightForRowAt indexPath: IndexPath) -> CGFloat {
+        return 120
     }
     
     

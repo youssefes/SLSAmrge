@@ -16,6 +16,7 @@ class ProfileSetting: UIViewController {
     @IBOutlet var tableView: UITableView!
     @IBOutlet var becomeSeller: UIButton!
     
+    @IBOutlet weak var dashbordBt: UIButton!
     var profileSettingVM  = ProfileSettingVM()
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -37,6 +38,8 @@ class ProfileSetting: UIViewController {
 
     }
     
+    @IBAction func dashBoardBtn(_ sender: Any) {
+    }
     
     @IBAction func dismiswbtn(_ sender: Any) {
         navigationController?.popViewController(animated: true)

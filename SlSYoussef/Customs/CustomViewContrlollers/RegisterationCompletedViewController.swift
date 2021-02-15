@@ -162,7 +162,7 @@ class RegisterationCompletedViewController: UIViewController {
     
     private func configureMessageLabel(){
         messageLable.text = "Your request has been request to an adminstrator, once accepted we will send you a confirmation by E-mail."
-        messageLable.font = UIFont(name: "kefa", size: 25)
+        messageLable.font = UIFont(name: Font.Bold.name, size: 25)
         messageLable.textAlignment = .center
         NSLayoutConstraint.activate([
             messageLable.topAnchor.constraint(equalTo: exclamationMark.bottomAnchor, constant: 20),

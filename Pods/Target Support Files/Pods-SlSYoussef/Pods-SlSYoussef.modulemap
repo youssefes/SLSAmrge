@@ -1,0 +1,6 @@
+framework module Pods_SlSYoussef {
+  umbrella header "Pods-SlSYoussef-umbrella.h"
+
+  export *
+  module * { export * }
+}

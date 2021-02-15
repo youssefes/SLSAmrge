@@ -25,92 +25,104 @@
                 <rect key="frame" x="0.0" y="0.0" width="360" height="88"/>
                 <autoresizingMask key="autoresizingMask"/>
                 <subviews>
-                    <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="original" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-sf-fFG">
-                        <rect key="frame" x="10" y="10" width="30" height="30"/>
+                    <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="Njn-Ae-x7f">
+                        <rect key="frame" x="0.0" y="10" width="360" height="68"/>
+                        <subviews>
+                            <imageView clipsSubviews="YES" userInteractionEnabled="NO" contentMode="scaleAspectFill" horizontalHuggingPriority="251" verticalHuggingPriority="251" image="original" translatesAutoresizingMaskIntoConstraints="NO" id="Qo4-sf-fFG">
+                                <rect key="frame" x="10" y="10" width="40" height="40"/>
+                                <constraints>
+                                    <constraint firstAttribute="width" constant="40" id="22O-6D-Kou"/>
+                                    <constraint firstAttribute="height" constant="40" id="na9-dg-aqu"/>
+                                </constraints>
+                                <userDefinedRuntimeAttributes>
+                                    <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                                </userDefinedRuntimeAttributes>
+                            </imageView>
+                            <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yVr-rh-3fI">
+                                <rect key="frame" x="60" y="10" width="104.5" height="40"/>
+                                <subviews>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="German Go Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp4-AG-0Qe">
+                                        <rect key="frame" x="0.0" y="0.0" width="104.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                        <color key="textColor" red="0.81176470590000005" green="0.92156862750000001" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                    <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/09/20 - 21h30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-Mo-pgO">
+                                        <rect key="frame" x="0.0" y="25" width="104.5" height="15"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
+                                        <color key="textColor" red="0.51372549020000002" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
+                                        <nil key="highlightedColor"/>
+                                    </label>
+                                </subviews>
+                            </stackView>
+                            <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-2I-cB7">
+                                <rect key="frame" x="174.5" y="17.5" width="165.5" height="25"/>
+                                <subviews>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFH-4Y-hSR">
+                                        <rect key="frame" x="0.0" y="0.0" width="78" height="25"/>
+                                        <color key="backgroundColor" red="0.078431372549019607" green="0.76470588235294112" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="10"/>
+                                        <state key="normal" title="Accept">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="acceptedBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wxo-ut-EYi"/>
+                                        </connections>
+                                    </button>
+                                    <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-Xj-oKR">
+                                        <rect key="frame" x="88" y="0.0" width="77.5" height="25"/>
+                                        <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
+                                        <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="10"/>
+                                        <state key="normal" title="Reject">
+                                            <color key="titleColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                                        </state>
+                                        <userDefinedRuntimeAttributes>
+                                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                                <real key="value" value="8"/>
+                                            </userDefinedRuntimeAttribute>
+                                        </userDefinedRuntimeAttributes>
+                                        <connections>
+                                            <action selector="regictedBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="F3i-GL-hvg"/>
+                                        </connections>
+                                    </button>
+                                </subviews>
+                            </stackView>
+                        </subviews>
+                        <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                         <constraints>
-                            <constraint firstAttribute="width" constant="30" id="22O-6D-Kou"/>
-                            <constraint firstAttribute="height" constant="30" id="na9-dg-aqu"/>
+                            <constraint firstItem="yVr-rh-3fI" firstAttribute="leading" secondItem="Qo4-sf-fFG" secondAttribute="trailing" constant="10" id="BrI-Tu-GuW"/>
+                            <constraint firstItem="yVr-rh-3fI" firstAttribute="top" secondItem="Qo4-sf-fFG" secondAttribute="top" id="EXn-I1-DLq"/>
+                            <constraint firstItem="4Gh-2I-cB7" firstAttribute="leading" secondItem="yVr-rh-3fI" secondAttribute="trailing" constant="10" id="JXg-6U-2mt"/>
+                            <constraint firstItem="Qo4-sf-fFG" firstAttribute="leading" secondItem="Njn-Ae-x7f" secondAttribute="leading" constant="10" id="KyA-Jw-NRv"/>
+                            <constraint firstItem="4Gh-2I-cB7" firstAttribute="centerY" secondItem="yVr-rh-3fI" secondAttribute="centerY" id="NDu-Fz-5rk"/>
+                            <constraint firstItem="Qo4-sf-fFG" firstAttribute="top" secondItem="Njn-Ae-x7f" secondAttribute="top" constant="10" id="lLV-Xm-d6m"/>
+                            <constraint firstAttribute="trailing" secondItem="4Gh-2I-cB7" secondAttribute="trailing" constant="20" id="sG6-r0-iSL"/>
                         </constraints>
                         <userDefinedRuntimeAttributes>
-                            <userDefinedRuntimeAttribute type="boolean" keyPath="isCircle" value="YES"/>
+                            <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
+                                <real key="value" value="8"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
+                                <real key="value" value="0.5"/>
+                            </userDefinedRuntimeAttribute>
+                            <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
+                                <color key="value" red="0.81176470590000005" green="0.92156862750000001" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
+                            </userDefinedRuntimeAttribute>
                         </userDefinedRuntimeAttributes>
-                    </imageView>
-                    <stackView opaque="NO" contentMode="scaleToFill" axis="vertical" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="yVr-rh-3fI">
-                        <rect key="frame" x="50" y="10" width="104.5" height="40"/>
-                        <subviews>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="German Go Shop" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="Yp4-AG-0Qe">
-                                <rect key="frame" x="0.0" y="0.0" width="104.5" height="15"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
-                                <color key="textColor" red="0.81176470590000005" green="0.92156862750000001" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                            <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="02/09/20 - 21h30" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="2fO-Mo-pgO">
-                                <rect key="frame" x="0.0" y="25" width="104.5" height="15"/>
-                                <fontDescription key="fontDescription" name="Montserrat-Medium" family="Montserrat" pointSize="12"/>
-                                <color key="textColor" red="0.51372549020000002" green="0.50980392159999999" blue="0.50980392159999999" alpha="1" colorSpace="calibratedRGB"/>
-                                <nil key="highlightedColor"/>
-                            </label>
-                        </subviews>
-                    </stackView>
-                    <stackView opaque="NO" contentMode="scaleToFill" distribution="fillEqually" spacing="10" translatesAutoresizingMaskIntoConstraints="NO" id="4Gh-2I-cB7">
-                        <rect key="frame" x="164.5" y="17.5" width="185.5" height="25"/>
-                        <subviews>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="sFH-4Y-hSR">
-                                <rect key="frame" x="0.0" y="0.0" width="88" height="25"/>
-                                <color key="backgroundColor" red="0.078431372549019607" green="0.76470588235294112" blue="0.62745098039215685" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="10"/>
-                                <state key="normal" title="Accept">
-                                    <color key="titleColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="acceptedBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="Wxo-ut-EYi"/>
-                                </connections>
-                            </button>
-                            <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="fcx-Xj-oKR">
-                                <rect key="frame" x="98" y="0.0" width="87.5" height="25"/>
-                                <color key="backgroundColor" red="1" green="0.37254901960784315" blue="0.37254901960784315" alpha="1" colorSpace="calibratedRGB"/>
-                                <fontDescription key="fontDescription" name="Montserrat-SemiBold" family="Montserrat" pointSize="10"/>
-                                <state key="normal" title="Reject">
-                                    <color key="titleColor" red="0.023529411760000001" green="0.24313725489999999" blue="0.4941176471" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
-                                </state>
-                                <userDefinedRuntimeAttributes>
-                                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                                        <real key="value" value="8"/>
-                                    </userDefinedRuntimeAttribute>
-                                </userDefinedRuntimeAttributes>
-                                <connections>
-                                    <action selector="regictedBtn:" destination="KGk-i7-Jjw" eventType="touchUpInside" id="F3i-GL-hvg"/>
-                                </connections>
-                            </button>
-                        </subviews>
-                    </stackView>
+                    </view>
                 </subviews>
                 <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
                 <constraints>
-                    <constraint firstItem="Qo4-sf-fFG" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="346-kH-NYY"/>
-                    <constraint firstItem="4Gh-2I-cB7" firstAttribute="centerY" secondItem="yVr-rh-3fI" secondAttribute="centerY" id="99J-kD-LgZ"/>
-                    <constraint firstItem="4Gh-2I-cB7" firstAttribute="leading" secondItem="yVr-rh-3fI" secondAttribute="trailing" constant="10" id="Aae-T1-w9o"/>
-                    <constraint firstItem="Qo4-sf-fFG" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" constant="10" id="YhS-pd-bgh"/>
-                    <constraint firstAttribute="trailing" secondItem="4Gh-2I-cB7" secondAttribute="trailing" constant="10" id="eel-0R-vK6"/>
-                    <constraint firstItem="yVr-rh-3fI" firstAttribute="top" secondItem="Qo4-sf-fFG" secondAttribute="top" id="u58-V9-NqC"/>
-                    <constraint firstItem="yVr-rh-3fI" firstAttribute="leading" secondItem="Qo4-sf-fFG" secondAttribute="trailing" constant="10" id="zgh-10-66D"/>
+                    <constraint firstItem="Njn-Ae-x7f" firstAttribute="top" secondItem="H2p-sc-9uM" secondAttribute="top" constant="10" id="LDU-sb-1b9"/>
+                    <constraint firstAttribute="bottom" secondItem="Njn-Ae-x7f" secondAttribute="bottom" constant="10" id="LiG-0s-034"/>
+                    <constraint firstItem="Njn-Ae-x7f" firstAttribute="leading" secondItem="H2p-sc-9uM" secondAttribute="leading" id="XBz-3i-HfX"/>
+                    <constraint firstAttribute="trailing" secondItem="Njn-Ae-x7f" secondAttribute="trailing" id="ezf-1u-xAT"/>
                 </constraints>
-                <userDefinedRuntimeAttributes>
-                    <userDefinedRuntimeAttribute type="number" keyPath="borderWidth">
-                        <real key="value" value="0.5"/>
-                    </userDefinedRuntimeAttribute>
-                    <userDefinedRuntimeAttribute type="number" keyPath="cornerRadius">
-                        <real key="value" value="8"/>
-                    </userDefinedRuntimeAttribute>
-                    <userDefinedRuntimeAttribute type="color" keyPath="borderColor">
-                        <color key="value" red="0.81176470590000005" green="0.92156862750000001" blue="0.99215686270000003" alpha="1" colorSpace="calibratedRGB"/>
-                    </userDefinedRuntimeAttribute>
-                </userDefinedRuntimeAttributes>
             </tableViewCellContentView>
             <color key="backgroundColor" white="0.0" alpha="0.0" colorSpace="custom" customColorSpace="genericGamma22GrayColorSpace"/>
             <viewLayoutGuide key="safeArea" id="njF-e1-oar"/>

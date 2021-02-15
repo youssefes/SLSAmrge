@@ -114,13 +114,15 @@ class SignUp: UIViewController {
     
     func SuccessValidation() {
         errorLabel.text = ""
-        errorImg.isHidden = false
+        errorImg.isHidden = true
         containerViewOfEmailTf.borderColor  = .green
         containerViewOfPasswirdTf.borderColor = .green
         containerViewOfUserTf.borderColor = .green
     }
     
     @IBAction func registerBtn(_ sender: Any) {
+        
+        SuccessValidation()
         guard let image = IdImage.image , let data = image.jpegData(compressionQuality: 1.0 ) else{
             self.showAlert(title: "Error", message: "Something went wrong uploading image")
             return
@@ -133,7 +135,7 @@ class SignUp: UIViewController {
                 if error == nil {
                     if let result = result {
                         self.waitUntilFinishRegisteration()
-                        self.dp.collection("user").document("\(result.user.uid)").setData(["uid" : result.user.uid,"userName" : validName , "email" : validEmail]){ (er) in
+                        self.dp.collection("Users").document("\(result.user.uid)").setData(["uid" : result.user.uid,"userName" : validName , "email" : validEmail]){ (er) in
                             guard error == nil else {
                                 self.terminateRegisteration()
                                 self.showAlert(title: "Error", message: er!.localizedDescription)
@@ -141,9 +143,11 @@ class SignUp: UIViewController {
                             }
                             UserRepositoryManger.uploadImage(userUid: result.user.uid, Image: data) { (error, secsess) in
                                 if secsess{
-                                    let vc = HomeViewController()
-                                    vc.modalPresentationStyle = .overFullScreen
-                                    self.present(vc, animated: true, completion: nil)
+                                    let home = HomeViewController()
+                                    let navigation = UINavigationController(rootViewController: home)
+                                    navigation.modalPresentationStyle = .overFullScreen
+                                    self.present(navigation, animated: true, completion: nil)
+                                    UtilityFunctions.isLoggedIn = true
                                 }else{
                                     self.showAlert(title: "Sign Up Error", message: "\(error)")
                                 }

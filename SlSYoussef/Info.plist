@@ -2,8 +2,6 @@
 <!DOCTYPE plist PUBLIC "-//Apple//DTD PLIST 1.0//EN" "http://www.apple.com/DTDs/PropertyList-1.0.dtd">
 <plist version="1.0">
 <dict>
-	<key>NSAppTransportSecurity</key>
-	<dict/>
 	<key>CFBundleDevelopmentRegion</key>
 	<string>$(DEVELOPMENT_LANGUAGE)</string>
 	<key>CFBundleExecutable</key>
@@ -67,6 +65,8 @@
 	<true/>
 	<key>LSRequiresIPhoneOS - 2</key>
 	<true/>
+	<key>NSAppTransportSecurity</key>
+	<dict/>
 	<key>NSPhotoLibraryUsageDescription</key>
 	<string>Why you want to access photo library</string>
 	<key>UIApplicationSceneManifest</key>
