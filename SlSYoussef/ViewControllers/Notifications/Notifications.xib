@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+    <device id="retina6_1" orientation="portrait" appearance="light"/>
+    <dependencies>
+        <deployment identifier="iOS"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
+        <capability name="Safe area layout guides" minToolsVersion="9.0"/>
+        <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
+    </dependencies>
+    <objects>
+        <placeholder placeholderIdentifier="IBFilesOwner" id="-1" userLabel="File's Owner" customClass="Notifications" customModule="SlSYoussef" customModuleProvider="target">
+            <connections>
+                <outlet property="numberOfNotifications" destination="vmL-TJ-ZRa" id="ViV-jF-ecB"/>
+                <outlet property="tableView" destination="pjL-z7-Rie" id="ZAP-OM-JYg"/>
+                <outlet property="topView" destination="KjW-BJ-4q3" id="222-fD-wC6"/>
+                <outlet property="view" destination="i5M-Pr-FkT" id="sfx-zR-JGt"/>
+            </connections>
+        </placeholder>
+        <placeholder placeholderIdentifier="IBFirstResponder" id="-2" customClass="UIResponder"/>
+        <view clearsContextBeforeDrawing="NO" contentMode="scaleToFill" id="i5M-Pr-FkT">
+            <rect key="frame" x="0.0" y="0.0" width="414" height="896"/>
+            <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
+            <subviews>
+                <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-BJ-4q3" userLabel="Top View">
+                    <rect key="frame" x="0.0" y="0.0" width="414" height="100"/>
+                    <subviews>
+                        <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTt-81-9xs">
+                            <rect key="frame" x="103.5" y="35" width="207" height="30.5"/>
+                            <constraints>
+                                <constraint firstAttribute="height" constant="30.5" id="lcA-Hl-Zyv"/>
+                                <constraint firstAttribute="width" constant="207" id="utI-Bv-gqD"/>
+                            </constraints>
+                            <fontDescription key="fontDescription" name="Copperplate" family="Copperplate" pointSize="30"/>
+                            <color key="textColor" systemColor="systemBlueColor" red="0.0" green="0.47843137250000001" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                            <nil key="highlightedColor"/>
+                        </label>
+                        <stackView opaque="NO" contentMode="scaleToFill" spacing="35" translatesAutoresizingMaskIntoConstraints="NO" id="Wtv-lB-er9" userLabel="Interface Stack">
+                            <rect key="frame" x="34" y="66" width="363.5" height="30"/>
+                            <subviews>
+                                <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="You have 90000 new Notifiacations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmL-TJ-ZRa">
+                                    <rect key="frame" x="0.0" y="0.0" width="271.5" height="30"/>
+                                    <fontDescription key="fontDescription" type="system" pointSize="17"/>
+                                    <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
+                                    <nil key="highlightedColor"/>
+                                </label>
+                                <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjU-DH-MFk">
+                                    <rect key="frame" x="306.5" y="0.0" width="57" height="30"/>
+                                    <state key="normal" title="Clear All"/>
+                                </button>
+                            </subviews>
+                        </stackView>
+                    </subviews>
+                    <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+                    <constraints>
+                        <constraint firstItem="JTt-81-9xs" firstAttribute="centerY" secondItem="KjW-BJ-4q3" secondAttribute="centerY" id="07i-SB-MFI"/>
+                        <constraint firstItem="Wtv-lB-er9" firstAttribute="leading" secondItem="kVc-6W-0iS" secondAttribute="leading" constant="34" id="GJJ-Aw-Dno"/>
+                        <constraint firstAttribute="height" constant="100" id="LsH-nn-8Tu"/>
+                        <constraint firstItem="kVc-6W-0iS" firstAttribute="bottom" secondItem="Wtv-lB-er9" secondAttribute="bottom" constant="4" id="TXq-jR-2bH"/>
+                        <constraint firstItem="kVc-6W-0iS" firstAttribute="trailing" secondItem="Wtv-lB-er9" secondAttribute="trailing" constant="16.5" id="hrU-sj-sKc"/>
+                        <constraint firstItem="JTt-81-9xs" firstAttribute="centerX" secondItem="KjW-BJ-4q3" secondAttribute="centerX" id="zld-xn-De0"/>
+                    </constraints>
+                    <viewLayoutGuide key="safeArea" id="kVc-6W-0iS"/>
+                </view>
+                <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-z7-Rie">
+                    <rect key="frame" x="0.0" y="100" width="414" height="796"/>
+                    <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
+                </tableView>
+            </subviews>
+            <color key="backgroundColor" red="1" green="1" blue="1" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
+            <constraints>
+                <constraint firstItem="KjW-BJ-4q3" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="030-pz-Tge"/>
+                <constraint firstAttribute="bottom" secondItem="pjL-z7-Rie" secondAttribute="bottom" id="6Kj-mD-NmJ"/>
+                <constraint firstItem="KjW-BJ-4q3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nk3-I4-l9Y"/>
+                <constraint firstItem="pjL-z7-Rie" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WXy-Dm-pEg"/>
+                <constraint firstItem="KjW-BJ-4q3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="brP-L8-4pb"/>
+                <constraint firstItem="pjL-z7-Rie" firstAttribute="top" secondItem="KjW-BJ-4q3" secondAttribute="bottom" id="gjZ-6T-bTX"/>
+                <constraint firstItem="pjL-z7-Rie" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zXE-BS-UXW"/>
+            </constraints>
+            <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
+            <point key="canvasLocation" x="137.68115942028987" y="84.375"/>
+        </view>
+    </objects>
+</document>
