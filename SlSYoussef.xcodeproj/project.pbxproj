@@ -147,6 +147,7 @@
 		E83FFCEC25DB011A00F6F7FA /* summeryCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */; };
 		E83FFCEF25DB113C00F6F7FA /* OrderDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */; };
 		E83FFCF025DB113C00F6F7FA /* OrderDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */; };
+		E840A66B25DBF7C8003C2270 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */; };
 		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
 		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
 		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
@@ -301,6 +302,7 @@
 		E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = summeryCheckoutViewController.xib; sourceTree = "<group>"; };
 		E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDoneViewController.swift; sourceTree = "<group>"; };
 		E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDoneViewController.xib; sourceTree = "<group>"; };
+		E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
 		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
@@ -664,6 +666,7 @@
 			children = (
 				E8374A4325D74C6600809B4E /* HomeViewController.xib */,
 				E8374A4425D74C6600809B4E /* HomeViewController.swift */,
+				E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -1318,6 +1321,7 @@
 				E8374A5825D74C6600809B4E /* ShowMoreStack.swift in Sources */,
 				E83BBFD725D75CEE00F26E2F /* NotificationSettings.swift in Sources */,
 				E83BC01325D75ED500F26E2F /* mageCellOfPostCollectionViewCell.swift in Sources */,
+				E840A66B25DBF7C8003C2270 /* HomeViewModel.swift in Sources */,
 				E8374A5425D74C6600809B4E /* WatingAcceptOrderViewController.swift in Sources */,
 				E8374A4A25D74C6600809B4E /* FullScreenViewController.swift in Sources */,
 				E8374A4C25D74C6600809B4E /* LiveEndViewController.swift in Sources */,

@@ -46,6 +46,9 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
         homeCollectionView.register(CellFoodsWithCollectionOfImage.self, forCellWithReuseIdentifier: "CellFoodsWithCollectionOfImage")
         homeCollectionView.register(StreamCell.self, forCellWithReuseIdentifier: "StreamCell")
     }
+    
+    
+    
 
 }
 
@@ -57,9 +60,6 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
         let vc = sb.instantiateViewController(withIdentifier: "PostVC")
         navigationController?.pushViewController(vc, animated: true)
     }
-    
-    
-    
     
     func showOptionS() {
         let optinVC = OptionVCViewController()
