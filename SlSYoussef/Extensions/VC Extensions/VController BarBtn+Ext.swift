@@ -169,8 +169,8 @@ extension UIViewController {
         print("Profile button clicked")
     }
     @objc func notificationButtonClicked(){
-        let notiVC = NotificationVC()
-        navigationController?.popToViewController(notiVC, animated: true)
+////        let notiVC = NotificationVC()
+//        navigationController?.popToViewController(notiVC, animated: true)
     }
     
     

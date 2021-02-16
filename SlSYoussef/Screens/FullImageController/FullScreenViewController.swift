@@ -16,7 +16,7 @@ class FullScreenViewController: UIViewController {
     private var currentSlide = 0
     
     
-    var ArrayOfImage : [UIImage] = []
+    var ArrayOfImage : [String] = []
     @IBOutlet weak var imagesCollectioView: UICollectionView!
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -64,8 +64,11 @@ extension FullScreenViewController : UICollectionViewDataSource, UICollectionVie
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "FullImageCollectionViewCell", for: indexPath) as! FullImageCollectionViewCell
-        cell.fullPhote.image = ArrayOfImage[indexPath.row]
-        
+        if ArrayOfImage.count > 0 {
+            if let url = URL(string: ArrayOfImage[indexPath.row]){
+               cell.fullPhote.kf.setImage(with: url)
+            }
+        }
         return cell
     }
     

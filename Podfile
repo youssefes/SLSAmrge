@@ -21,5 +21,5 @@ pod 'MessageKit'
  pod 'NVActivityIndicatorView'
  pod 'PaddingLabel'
 pod 'Firebase/Auth'
-
+  pod 'Kingfisher', '~> 5.0'
 end

@@ -53,7 +53,7 @@
                                             </constraints>
                                             <state key="normal" image="Group 16012"/>
                                             <connections>
-                                                <action selector="dismissBtn:" destination="-1" eventType="touchUpInside" id="hgJ-lp-0Mq"/>
+                                                <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="ZWC-He-29G"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-Zw-VLL">

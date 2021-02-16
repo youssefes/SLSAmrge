@@ -9,10 +9,15 @@
 import UIKit
 
 class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtocal,HomeCellProtocal  {
+   
     
+    
+    var arrayOfPosts : [PostModel] = []
+    @IBOutlet weak var loading: LoadingView!
     
     @IBOutlet weak var homeCollectionView: UICollectionView!
     
+    let viewModel = HomeViewModel()
     let tableCellIdentifier =  "HomeCellWithotImage"
     
     var isFeed : Bool = true
@@ -22,15 +27,35 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
         super.viewDidLoad()
         setUpTableView()
         creatNavigationBarButtons()
-        
+        viewModel.viewDidLoad()
+        loading.loadingView.stopAnimating()
     }
     
     func reloadCollection() {
         homeCollectionView.reloadData()
     }
     
+    override func viewWillAppear(_ animated: Bool) {
+        super.viewWillAppear(animated)
+        self.loading.loadingView.startAnimating()
+        viewModel.getPosts { [weak self] (arrayOfPost, error) in
+            guard let self = self else {return}
+            if error == nil {
+                guard let posts = arrayOfPost else{return}
+                self.arrayOfPosts = posts
+                self.loading.loadingView.stopAnimating()
+                self.loading.isHidden = true
+                self.homeCollectionView.isHidden = false
+                self.homeCollectionView.reloadData()
+            }else{
+                self.loading.loadingView.stopAnimating()
+                self.showAlert(title: "error in loading post", message: error!.localizedDescription)
+                
+            }
+        }
+    }
     
-    func presentFullScreen(ArrayOfImage: [UIImage]) {
+    func presentFullScreen(ArrayOfImage: [String]) {
         let fullScrrenImage =  FullScreenViewController()
         fullScrrenImage.modalPresentationStyle = .overFullScreen
         fullScrrenImage.ArrayOfImage = ArrayOfImage
@@ -121,24 +146,41 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, layout collectionViewLayout: UICollectionViewLayout, sizeForItemAt indexPath: IndexPath) -> CGSize {
         
-        
-        if isFeed{
-            let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
-            let dymCell = CellFoodsWithCollectionOfImage(frame: frame)
-            dymCell.layoutIfNeeded()
-            let targetSize = CGSize(width: view.frame.width, height: 50)
-            let estmaitedSize = dymCell.systemLayoutSizeFitting(targetSize)
-            let height = max(50+50 + 16, estmaitedSize.height)
-            return CGSize(width: collectionView.frame.width, height: height)
+        if let arrayimagecount = arrayOfPosts[indexPath.item].postContext.image {
+            if arrayimagecount.count > 0{
+                if isFeed{
+                    let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+                    let dymCell = CellFoodsWithCollectionOfImage(frame: frame)
+                    dymCell.layoutIfNeeded()
+                    let targetSize = CGSize(width: view.frame.width, height: 50)
+                    let estmaitedSize = dymCell.systemLayoutSizeFitting(targetSize)
+                    let height = max(50+50 + 16, estmaitedSize.height)
+                    return CGSize(width: collectionView.frame.width, height: height)
+                }else{
+                    let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+                    let dymCell = StreamCell(frame: frame)
+                    dymCell.layoutIfNeeded()
+                    let targetSize = CGSize(width: view.frame.width, height: 50)
+                    let estmaitedSize = dymCell.systemLayoutSizeFitting(targetSize)
+                    let height = max(50+50 + 16, estmaitedSize.height)
+                    return CGSize(width: collectionView.frame.width, height: height)
+                }
+            }else{
+                let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
+                let dymCell = HomeCellWithotImage(frame: frame)
+                dymCell.layoutIfNeeded()
+                let targetSize = CGSize(width: view.frame.width, height: 50)
+                let estmaitedSize = dymCell.systemLayoutSizeFitting(targetSize)
+                let height = max(50+50 + 16, estmaitedSize.height)
+                return CGSize(width: collectionView.frame.width, height: height)
+            }
+            
         }else{
-            let frame = CGRect(x: 0, y: 0, width: view.frame.width, height: 50)
-            let dymCell = StreamCell(frame: frame)
-            dymCell.layoutIfNeeded()
-            let targetSize = CGSize(width: view.frame.width, height: 50)
-            let estmaitedSize = dymCell.systemLayoutSizeFitting(targetSize)
-            let height = max(50+50 + 16, estmaitedSize.height)
-            return CGSize(width: collectionView.frame.width, height: height)
+            
         }
+        
+        
+      
         
         
     }
@@ -146,14 +188,18 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
     
     func collectionView(_ collectionView: UICollectionView, numberOfItemsInSection section: Int) -> Int {
         
-        return 4
+        return arrayOfPosts.count
     }
     
     func collectionView(_ collectionView: UICollectionView, cellForItemAt indexPath: IndexPath) -> UICollectionViewCell {
         if isFeed{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "CellFoodsWithCollectionOfImage", for: indexPath) as! CellFoodsWithCollectionOfImage
-            cell.Deleget = self
-            cell.CollectionViewContainer.Deleget = self
+            if arrayOfPosts.count > 0{
+                cell.post = arrayOfPosts[indexPath.row]
+                cell.Deleget = self
+                cell.CollectionViewContainer.Deleget = self
+            }
+           
             return cell
         }else{
             let cell = collectionView.dequeueReusableCell(withReuseIdentifier: "StreamCell", for: indexPath) as! StreamCell
