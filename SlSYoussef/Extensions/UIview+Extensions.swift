@@ -105,6 +105,7 @@ import UIKit
     }
     
 }
+
 extension Data {
     var html2AttributedString: NSAttributedString? {
         do {

@@ -73,8 +73,11 @@ extension UIViewController {
     
     
     @objc func ShowProfile(){
-        let profile = ProfileSetting()
-        navigationController?.pushViewController(profile, animated: true)
+//        let profile = ProfileSetting()
+//        navigationController?.pushViewController(profile, animated: true)
+        
+                let profile = ChatVC()
+                navigationController?.pushViewController(profile, animated: true)
     }
     
     @objc func ShowHome(){
@@ -169,7 +172,7 @@ extension UIViewController {
         print("Profile button clicked")
     }
     @objc func notificationButtonClicked(){
-        let notiVC = NotificationVC()
+        let notiVC = Notifications()
         navigationController?.popToViewController(notiVC, animated: true)
     }
     

@@ -16,6 +16,7 @@ class TopMessageView : UIView {
     let userImage          = UIImageView()
     let onlineStateImage   = UIImageView()
     
+    let seperatorView      = UIView()
     let stackView = UIStackView()
     let padding : CGFloat = 8
     
@@ -29,30 +30,37 @@ class TopMessageView : UIView {
     }
     
     private func configure(){
-        let subViews = [friendOnlineState , friendUsername , userImage , onlineStateImage , stackView]
+        let subViews = [friendOnlineState , friendUsername , userImage , onlineStateImage , stackView , seperatorView]
         for view in subViews {
             view.translatesAutoresizingMaskIntoConstraints = false
             addSubview(view)
         }
- 
+        
         configureStackView()
         configureFriendImage()
-        
+
         NSLayoutConstraint.activate([
             userImage.leadingAnchor.constraint(equalTo: self.leadingAnchor ,constant: 80),
             userImage.trailingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: -padding),
-            userImage.heightAnchor.constraint(equalToConstant: 60),
-            userImage.widthAnchor.constraint(equalToConstant: 60),
+            userImage.heightAnchor.constraint(equalToConstant: 47),
+            userImage.widthAnchor.constraint(equalToConstant: 47),
             userImage.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
-            onlineStateImage.trailingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: -4),
-            onlineStateImage.topAnchor.constraint(equalTo: self.topAnchor, constant: 20),
-            onlineStateImage.leadingAnchor.constraint(equalTo: self.leadingAnchor, constant: 60-15+84),
             onlineStateImage.heightAnchor.constraint(equalToConstant: 15),
+            onlineStateImage.widthAnchor.constraint(equalToConstant: 15),
+            onlineStateImage.trailingAnchor.constraint(equalTo: stackView.leadingAnchor, constant: -4),
+            onlineStateImage.topAnchor.constraint(equalTo: self.topAnchor, constant: (100 - 47) / 2),
             
             stackView.centerYAnchor.constraint(equalTo: self.centerYAnchor),
             
+            seperatorView.bottomAnchor.constraint(equalTo: self.bottomAnchor, constant: 2),
+            seperatorView.leadingAnchor.constraint(equalTo: self.leadingAnchor),
+            seperatorView.trailingAnchor.constraint(equalTo: self.trailingAnchor),
+            seperatorView.heightAnchor.constraint(equalToConstant: 0.5)
+            
         ])
+        self.backgroundColor = .white
+        seperatorView.backgroundColor = .lightGray
     }
     
     private func configureStackView(){
@@ -79,13 +87,14 @@ class TopMessageView : UIView {
             // Fallback on earlier versions
         }
         friendOnlineState.text      = "Online"
-        friendOnlineState.textColor = .systemGreen
+        friendOnlineState.textColor =  UIColor.rgb(red: 20, green: 195, blue: 160)
+   
     }
     
     private func configureFriendImage(){
-        userImage.image       = UIImage(named: "hady")
+        userImage.image       = UIImage(named: "ppp")
         userImage.contentMode = .scaleAspectFill
-        userImage.layer.cornerRadius  = 20
+        userImage.layer.cornerRadius  = 18
         userImage.layer.masksToBounds = true
         userImage.clipsToBounds       = true
         

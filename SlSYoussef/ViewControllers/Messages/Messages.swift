@@ -90,19 +90,6 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
         return numOfMessages
     }
     
-    //     func scrollViewDidScroll(_ scrollView: UIScrollView) {
-    //        let safeAreaTop = UIApplication.shared.windows.filter{$0.isKeyWindow}.first?.safeAreaInsets.top ?? 0
-    //
-    //        let magicalSafeAreaTop : CGFloat = safeAreaTop + (navigationController?.navigationBar.frame.height ?? 0)
-    //        print(scrollView.contentOffset.y)
-    //
-    //        let offset = scrollView.contentOffset.y + magicalSafeAreaTop
-    //      //  let alpha : CGFloat = 1 - ((scrollView.contentOffset.y + magicalSafeAreaTop) / magicalSafeAreaTop)
-    //
-    //     //   [backButton , homeButton].forEach{$0.tintColor?.withAlphaComponent(alpha)}
-    //        navigationController?.navigationBar.transform = .init(translationX: 0, y: min(0 , -offset))
-    //    }
-    
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         let cell = tableView.dequeueReusableCell(withIdentifier: ChatCell.cellIdentifier, for: indexPath) as! ChatCell
         cell.messageTime.text  = "44:2"
@@ -115,9 +102,9 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ChatVC()
-        //vc.title = "Notification"
-        navigationController?.pushViewController(vc, animated: true)
-        // performSegue(withIdentifier: "notificationSegue", sender: self)
+        vc.userToChatId = "the id of the user you will message"
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
 }
 

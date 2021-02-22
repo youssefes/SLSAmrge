@@ -31,6 +31,10 @@ class FirstView: UIViewController {
     }
     
     @IBAction func logInButton(_ sender: Any) {
+        let vc = Notifications()
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
+        
     }
     
     @IBAction func registerButton(_ sender: Any) {

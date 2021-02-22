@@ -24,11 +24,12 @@ class PaymentMethods: UIViewController {
 
        
        @IBAction func classBtn(_ sender: Any) {
+        navigationController?.popToRootViewController(animated: true)
        }
        
        @IBAction func dismissBtn(_ sender: Any) {
            navigationController?.popViewController(animated: true)
        }
     
-
+    
 }

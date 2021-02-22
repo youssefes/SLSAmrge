@@ -26,8 +26,8 @@ class Notifications: UIViewController , UITableViewDelegate , UITableViewDataSou
     }
     
     private func configureTableView(){
-        tableView.delegate = self
-        tableView.dataSource = self
+        tableView.delegate       = self
+        tableView.dataSource     = self
         tableView.separatorStyle = .none
         tableView.register(UINib(nibName: "ChatCell", bundle: nil), forCellReuseIdentifier: ChatCell.cellIdentifier)
         tableView.rowHeight  = 100
@@ -37,10 +37,9 @@ class Notifications: UIViewController , UITableViewDelegate , UITableViewDataSou
         if !isClicked{
             numOfRow = 0
             tableView.reloadData()
-            createEmptyStateView()
+           // createEmptyStateView()
             print("createEmptyStateView")
             isClicked.toggle()
-            dismiss(animated: true, completion: nil)
         }
         else {
             emptyStateView.removeFromSuperview()
@@ -72,7 +71,8 @@ class Notifications: UIViewController , UITableViewDelegate , UITableViewDataSou
     }
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let vc = ChatVC()
-        navigationController?.pushViewController(vc , animated: true)
+        vc.modalPresentationStyle = .overFullScreen
+        present(vc, animated: true, completion: nil)
     }
     
     func tableView(_ tableView: UITableView, cellForRowAt indexPath: IndexPath) -> UITableViewCell {
