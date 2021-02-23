@@ -26,13 +26,15 @@ extension UIViewController {
     
     func creatNavigationBarButtons(){
         let Massage = UIButton.init(type: .custom)
-           Massage.setImage(#imageLiteral(resourceName: "Message"), for: .normal)
+        Massage.setImage(#imageLiteral(resourceName: "Message"), for: .normal)
+        Massage.addTarget(self, action: #selector(messageButtonClicked), for: .touchUpInside)
         
         let Notification = UIButton.init(type: .custom)
-                Notification.setImage(#imageLiteral(resourceName: "Notification-1"), for: .normal)
+        Notification.setImage(#imageLiteral(resourceName: "Notification-1"), for: .normal)
+        Notification.addTarget(self, action: #selector(notificationButtonClicked), for: .touchUpInside)
         
         let Profile = UIButton.init(type: .custom)
-                Profile.setImage(#imageLiteral(resourceName: "hady"), for: .normal)
+        Profile.setImage(#imageLiteral(resourceName: "hady"), for: .normal)
         Profile.cornerRadius = 20
         Profile.clipsToBounds = true
         Profile.widthAnchor.constraint(equalToConstant: 40).isActive = true
@@ -43,10 +45,12 @@ extension UIViewController {
         
         let home = UIButton.init(type: .custom)
         home.setImage(#imageLiteral(resourceName: "Home_icon"), for: .normal)
-        Profile.addTarget(self, action: #selector(ShowHome), for: .touchUpInside)
+        home.addTarget(self, action: #selector(ShowHome), for: .touchUpInside)
+        
         let back = UIButton.init(type: .custom)
         back.setImage(#imageLiteral(resourceName: "Layer 7"), for: .normal)
-        
+        back.addTarget(self, action: #selector(backButtonPressed), for: .touchUpInside)
+
         let search = UIButton.init(type: .custom)
         search.setImage(#imageLiteral(resourceName: "shearch"), for: .normal)
         
@@ -73,11 +77,10 @@ extension UIViewController {
     
     
     @objc func ShowProfile(){
-//        let profile = ProfileSetting()
-//        navigationController?.pushViewController(profile, animated: true)
-        
-                let profile = ChatVC()
-                navigationController?.pushViewController(profile, animated: true)
+        let profile = ProfileSetting()
+        navigationController?.pushViewController(profile, animated: true)
+
+
     }
     
     @objc func ShowHome(){
@@ -143,9 +146,6 @@ extension UIViewController {
     }
     
     @objc func houseButton(){
-//        let messageVC = self.storyboard?.instantiateViewController(withIdentifier: "PostVC")
-//        let MynavController = UINavigationController(rootViewController: messageVC!) as UIViewController
-//        self.present(MynavController, animated: true, completion: nil)
         navigationController?.popToRootViewController(animated: true)
     }
     
@@ -159,13 +159,8 @@ extension UIViewController {
     }
     
     @objc func messageButtonClicked(){
-        let msgVC  = Messages()
-//        if isModal() {
-//        navigationController?.popToViewController(msgVC, animated: true)
-//        }
-//        else {
-            navigationController?.pushViewController(msgVC, animated: true)
-        //}
+        let profile = ChatVC()
+        navigationController?.pushViewController(profile, animated: true)
     }
 
     @objc func profileButtonClicked(){
@@ -173,7 +168,7 @@ extension UIViewController {
     }
     @objc func notificationButtonClicked(){
         let notiVC = Notifications()
-        navigationController?.popToViewController(notiVC, animated: true)
+        navigationController?.pushViewController(notiVC, animated: true)
     }
     
     

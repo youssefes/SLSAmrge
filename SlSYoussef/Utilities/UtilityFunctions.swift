@@ -16,6 +16,7 @@ import FBSDKLoginKit
 struct UtilityFunctions {
     
     public static var isLoggedIn = false
+    
     //MARK: - to Retreve UIImage from PHAsset
     static  func handlePHImageManager(asset : PHAsset) -> UIImage?{
         var returnedImage : UIImage?

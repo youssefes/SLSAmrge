@@ -14,7 +14,7 @@ import FBSDKLoginKit
 
 struct FetchUserData {
     
-    
+    let dp = Firestore.firestore()
     static func fetchFBUserData(complation : @escaping ((_ user : UserDataModel?)-> Void)){
         Auth.auth().addStateDidChangeListener { (auth, user) in
             if let user = user {
@@ -32,5 +32,7 @@ struct FetchUserData {
         }
        
     }
+    
+
     
 }

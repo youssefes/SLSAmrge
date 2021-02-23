@@ -89,9 +89,6 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
         GIDSignIn.sharedInstance()?.signOut()
         loadingView.loadingView.startAnimating()
         GIDSignIn.sharedInstance()?.signIn()
-        let vc = ChatVC()
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true, completion: nil)
     }
     
     func sign(_ signIn: GIDSignIn!, didSignInFor user: GIDGoogleUser!, withError error: Error!) {

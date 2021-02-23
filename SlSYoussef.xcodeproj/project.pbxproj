@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073D132C25E5087300C437DA /* MessageFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D132B25E5087300C437DA /* MessageFB.swift */; };
 		075B2D7225DBDEF10083B3E0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7025DBDEF10083B3E0 /* Messages.swift */; };
 		075B2D7325DBDEF10083B3E0 /* Messages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075B2D7125DBDEF10083B3E0 /* Messages.xib */; };
 		075B2D7625DBDFD90083B3E0 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7425DBDFD90083B3E0 /* Notifications.swift */; };
@@ -158,6 +159,7 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		073D132B25E5087300C437DA /* MessageFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFB.swift; sourceTree = "<group>"; };
 		075B2D7025DBDEF10083B3E0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
 		075B2D7125DBDEF10083B3E0 /* Messages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Messages.xib; sourceTree = "<group>"; };
 		075B2D7425DBDFD90083B3E0 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
@@ -334,6 +336,14 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		073D132D25E5196700C437DA /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				073D132B25E5087300C437DA /* MessageFB.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		075B2D6F25DBDED70083B3E0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
@@ -409,6 +419,7 @@
 		E83749ED25D74B7600809B4E /* SlSYoussef */ = {
 			isa = PBXGroup;
 			children = (
+				073D132D25E5196700C437DA /* View Models */,
 				E83BBF9325D75B9000F26E2F /* Utilities */,
 				075B2D7D25DBE1140083B3E0 /* Firebase Manager */,
 				E8CA34FC25D9AC8800192582 /* SlSYoussef.entitlements */,
@@ -1275,6 +1286,7 @@
 				E8374A5D25D74C6600809B4E /* HomeCellWithotImage.swift in Sources */,
 				E83BBF8E25D75B1500F26E2F /* UITextField+Extension.swift in Sources */,
 				E83BBFA925D75C6F00F26E2F /* SignUp.swift in Sources */,
+				073D132C25E5087300C437DA /* MessageFB.swift in Sources */,
 				075B2D7225DBDEF10083B3E0 /* Messages.swift in Sources */,
 				E83BC00B25D75E3C00F26E2F /* CustomButton.swift in Sources */,
 				E8374A6425D74C6600809B4E /* liveView.swift in Sources */,

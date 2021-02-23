@@ -27,17 +27,30 @@ struct Message: MessageType {
 
 class ChatVC: MessagesViewController , MessagesDataSource {
     
-    let currentUser = Sender(senderId: "Self", displayName: "Current User")
+    //MARK: - Get users data
+    var currentUser : UserDataModel? {
+        
+        var userDM : UserDataModel?
+        FetchUserData.fetchFBUserData { (user) in
+            guard user != nil else {return}
+            userDM = user
+        }
+        return userDM
+    }
     
-    let otherUser = Sender(senderId: "Other", displayName: "Other User")
-    
-    var messages = [MessageType] ()
-    
-    var userToChatId : String!
-    
-    let dp = Firestore.firestore()
-    
-    var currentlyUserUid : String?
+    var otherUser : [String : Any]? {
+        var otherUserData : [String : Any]?
+        ChatVCvm.getUserDocumentData(uid: otherUserID, dp: dp) { [weak self] (result) in
+            guard self != nil else {return}
+            switch result {
+            case .success(let data):
+                otherUserData = data
+            case .failure(_):
+                break
+            }
+        }
+        return otherUserData
+    }
     
     func currentUserIsValid() -> Bool {
         var isOnline = true
@@ -49,12 +62,45 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         return isOnline
     }
     
-    let otherUserID = "uanV18ZjMLPegT2zUwSlibejdTy1"
-    func cc(){
+    var currentUserMsg : SenderType {
         if currentUserIsValid(){
+            return  Sender(senderId: currentlyUserUid!, displayName: currentUser!.displayName!)}
+        else {
+            dismiss(animated: true) {
+                self.showAlert(title: "Error", message: "This user may be deleted")
+            }
+            return Sender(senderId: "asdf", displayName: "asdf")
+        }
+    }
+    
+    var otherUserMsg : SenderType {
+        if currentUserIsValid(){
+            return  Sender(senderId: otherUserID, displayName: otherUser![User.userName] as! String)}
+        else {
+            dismiss(animated: true) {
+                self.showAlert(title: "Error", message: "This user may be deleted")
+            }
+            return Sender(senderId: "asdf", displayName: "Asdf")
+        }
+    }
+    
+    let otherUserID = "uanV18ZjMLPegT2zUwSlibejdTy1"
+    
+    var messages = [MessageType] ()
+    var userToChatId : String!
+    let dp = Firestore.firestore()
+    var currentlyUserUid : String?
+    var channelID : String?
+    
+    func instantiateChatMessages(){
+        if currentUserIsValid(){
+            
+            //currentUserMsg = Sender(senderId: currentlyUserUid!, displayName: currentUser!.displayName!)
+            //   otherUserMsg   = Sender(senderId: otherUserID, displayName: otherUser![User.userName] as! String)
+            
             let refToCurrentUser = dp.collection(User.user).document(currentlyUserUid!).collection("engagedChatChannels").document(otherUserID)
             let channelID = dp.collection("chatChannels").document().documentID
-            
+            self.channelID = channelID
             refToCurrentUser.setData(["channelId" : "\(channelID)"]) { (error) in
                 if error != nil {
                     self.showAlert(title: "Error", message: error!.localizedDescription)
@@ -77,19 +123,36 @@ class ChatVC: MessagesViewController , MessagesDataSource {
             //create userInfo map and add ( userIcon , userName )
             var userIcon : String?
             var userName : String?
-            dp.collection(User.user).document(otherUserID).getDocument { (docSnapshot, error) in
-                if error == nil {
-                    if let document = docSnapshot , document.exists {
-                        if let documentData = document.data(){
-                            userName = documentData["username"] as? String
-                            userIcon = documentData["profileImg"] as? String
-                            if let er = ChatVCvm.saveUserImgAndName(userName: userName, userIcon: userIcon, refToCurrentUser: refToCurrentUser) {
-                                self.showAlert(title: "Error", message: er.localizedDescription)
-                            }
-                        }
+            
+            
+            ChatVCvm.getUserDocumentData(uid: otherUserID, dp: dp){ [weak self] result in
+                guard let self = self else { return }
+                switch result {
+                case .success(let data):
+                    userName = data["username"] as? String
+                    userIcon = data["profileImg"] as? String
+                    if let er = ChatVCvm.saveUserImgAndName(userName: userName, userIcon: userIcon, refToCurrentUser: refToCurrentUser) {
+                        self.showAlert(title: "Error", message: er.localizedDescription)
                     }
-                }else { print(error!.localizedDescription) }
+                    
+                case .failure(let error):
+                    self.showAlert(title: "Error", message: error.localizedDescription)
+                }
             }
+            
+            //            dp.collection(User.user).document(otherUserID).getDocument { (docSnapshot, error) in
+            //                if error == nil {
+            //                    if let document = docSnapshot , document.exists {
+            //                        if let documentData = document.data(){
+            //                            userName = documentData["username"] as? String
+            //                            userIcon = documentData["profileImg"] as? String
+            //                            if let er = ChatVCvm.saveUserImgAndName(userName: userName, userIcon: userIcon, refToCurrentUser: refToCurrentUser) {
+            //                                self.showAlert(title: "Error", message: er.localizedDescription)
+            //                            }
+            //                        }
+            //                    }
+            //                }else { print(error!.localizedDescription) }
+            //            }
         }else {
             print("=============NOt valid===============")
             
@@ -99,43 +162,47 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     override func viewDidLoad() {
         super.viewDidLoad()
         
-        
+        instantiateChatMessages()
         creatNavigationBarButtons()
         ChatVCvm.setTheTopMessageView(view: view, MC: messagesCollectionView)
         configureCollectionView()
         configureMessageInputBar()
-        cc()
         tapGestureKeyboard()
-        messages.append(Message(sender: currentUser,
+        
+        let currentUserMsg = Sender(senderId: "curren", displayName: "Current User")
+        let otherUserMsg = Sender(senderId: "Other", displayName: "Other User")
+        
+        messages.append(Message(sender: currentUserMsg,
                                 messageId: "2",
                                 sentDate: Date().addingTimeInterval(-80000),
                                 kind: .text("whassup")))
-        messages.append(Message(sender: otherUser,
+        messages.append(Message(sender: otherUserMsg,
                                 messageId: "3",
                                 sentDate: Date().addingTimeInterval(-70000),
                                 kind: .text("here si along reply here si along replyhere si along replyhere si along reply here si along reply here si along reply here si along reply here si along reply")))
-        messages.append(Message(sender: currentUser,
+        messages.append(Message(sender: currentUserMsg,
                                 messageId: "4",
                                 sentDate: Date().addingTimeInterval(-50000),
                                 kind: .text("it works")))
-        messages.append(Message(sender: otherUser,
+        messages.append(Message(sender: otherUserMsg,
                                 messageId: "5",
                                 sentDate: Date().addingTimeInterval(-23160),
                                 kind: .text("i love apps")))
         
-        messages.append(Message(sender: currentUser,
+        messages.append(Message(sender: currentUserMsg,
                                 messageId: "8794",
                                 sentDate: Date().addingTimeInterval(-10165),
                                 kind: .text("Hbye basjkl;aslkjg; alkdfgjw")))
-        messages.append(Message(sender: currentUser,
+        messages.append(Message(sender: currentUserMsg,
                                 messageId: "9/8451",
                                 sentDate: Date().addingTimeInterval(-10165),
                                 kind: .text("Hbye basjkl;aslkjg; alkdfgjw")))
         
     }
     
+    //MARK: - Message Cell Delegate functions
     func currentSender() -> SenderType {
-        return currentUser
+        return currentUserMsg
     }
     
     func messageForItem(at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> MessageType {
@@ -147,18 +214,16 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         return messages.count
     }
     
-    
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         if indexPath.section >= 1 , messages[indexPath.section - 1].sender.senderId == messages[indexPath.section].sender.senderId {
             avatarView.isHidden = true
             
-            
-        }else if messages[indexPath.section].sender.senderId == currentUser.senderId {
+        }else if messages[indexPath.section].sender.senderId == currentUserMsg.senderId {
             avatarView.isHidden = false
             avatarView.image = UIImage(named: "hady")
             
         }
-        else if messages[indexPath.section].sender.senderId == otherUser.senderId {
+        else if messages[indexPath.section].sender.senderId == otherUserMsg.senderId {
             avatarView.image = UIImage(named: "ppp")
             avatarView.isHidden = false
         }
@@ -187,7 +252,7 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     }
     
     func backgroundColor(for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) -> UIColor {
-        if messages[indexPath.section].sender.senderId == currentUser.senderId {
+        if messages[indexPath.section].sender.senderId == currentUserMsg.senderId {
             return UIColor(red: 254/255, green: 235/255, blue: 253/255, alpha: 1)
         }
         else {
@@ -239,19 +304,34 @@ extension ChatVC : InputBarAccessoryViewDelegate {
         processInputBar(messageInputBar)
     }
     
-    private func insertMessages(_ data: [Any]) {
-        for component in data {
-            if let str = component as? String {
-                self.messages.append(Message(sender: currentUser, messageId: UUID().uuidString, sentDate: Date(), kind: .text(str)))
-            }
-        }
+    func uploadMessage() {
+        
+        let msgData : [String : Any] =
+            ["recipientID" : otherUserID ,
+             "reciverImage" : "f",
+             "senderID" : currentlyUserUid!,
+             "senderImage" : "" ,
+             "senderName" : "",
+             "text" : "" ,
+             "time"  : Date(),
+             "type" : ""]
     }
+    
+    //    private func insertMessages(_ data: [Any]) {
+    //        for component in data {
+    //            if let str = component as? String {
+    //                self.messages.append(Message(sender: currentUser, messageId: UUID().uuidString, sentDate: Date(), kind: .text(str)))
+    //
+    //            }
+    //        }
+    //    }
     
     func insertMessage(_ component : [Any]) {
         for component in component {
-            if let str = component as? String {
-                self.messages.append(Message(sender: currentUser, messageId: UUID().uuidString, sentDate: Date(), kind: .text(str)))
-                
+            if let str = component as? String , channelID != nil{
+                let msgID = dp.collection("chatChannels").document("\(channelID!)").collection("messages").document().documentID
+                self.messages.append(Message(sender: currentUserMsg, messageId: msgID, sentDate: Date(), kind: .text(str)))
+                //    uploadMessage()
                 // Reload last section to update header/footer labels and insert a new one
                 messagesCollectionView.performBatchUpdates({
                     messagesCollectionView.insertSections([messages.count - 1])
@@ -263,7 +343,7 @@ extension ChatVC : InputBarAccessoryViewDelegate {
                         self?.messagesCollectionView.scrollToLastItem(animated: true)
                     }
                 })
-            }
+            }else {print("ChannelID may be nil")}
         }
     }
     

@@ -23,7 +23,7 @@ class ChatVCvm {
             subView.heightAnchor.constraint(equalToConstant: 100)
         ])
         subView.backgroundColor = .white
-        MC.contentInset.top = 70
+        MC.contentInset.top = 70 + 64
     }
     
     static let formatter: DateFormatter = {
@@ -47,18 +47,17 @@ class ChatVCvm {
         }
         return isValidFunc
     }
+      
+    static func getUserDocumentData(uid : String , dp : Firestore ,completed : @escaping (Result<[String : Any] , Error>) -> Void){
+        dp.collection(User.user).document(uid).getDocument { (documentSnapShot, error) in
+            if error == nil {
+                if let document = documentSnapShot , document.exists {
+                    if let documentData = document.data(){
+                        completed(.success(documentData))
+                    }
+                }
+            }else {completed(.failure(error!))}
+        }
+    }
     
-//    static func createBotSeperatorView(view : UIView , MC : MessagesCollectionView){
-//        let seperator = UIView()
-//        seperator.translatesAutoresizingMaskIntoConstraints = false
-//        view.addSubview(seperator)
-//        NSLayoutConstraint.activate([
-//            seperator.leadingAnchor.constraint(equalTo: MC.safeAreaLayoutGuide.leadingAnchor),
-//            seperator.trailingAnchor.constraint(equalTo: MC.safeAreaLayoutGuide.trailingAnchor),
-//            seperator.heightAnchor.constraint(equalToConstant: 0.5),
-//            seperator.bottomAnchor.constraint(equalTo: MC.safeAreaLayoutGuide.bottomAnchor , constant: 500)
-//        ])
-//        view.backgroundColor = .lightGray
-//        MC.contentInset.bottom = 110
-//    }
 }

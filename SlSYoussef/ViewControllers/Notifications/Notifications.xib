@@ -22,10 +22,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="KjW-BJ-4q3" userLabel="Top View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Notifications" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="JTt-81-9xs">
-                            <rect key="frame" x="103.5" y="45" width="207" height="30.5"/>
+                            <rect key="frame" x="103.5" y="35" width="207" height="30.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30.5" id="lcA-Hl-Zyv"/>
                             </constraints>
@@ -34,13 +34,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="You have 5 new Notifiacations" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="vmL-TJ-ZRa">
-                            <rect key="frame" x="82.5" y="91.5" width="229.5" height="20.5"/>
+                            <rect key="frame" x="82.5" y="71.5" width="229.5" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="tjU-DH-MFk">
-                            <rect key="frame" x="349" y="86" width="57" height="30"/>
+                            <rect key="frame" x="349" y="66" width="57" height="30"/>
                             <state key="normal" title="Clear All"/>
                             <connections>
                                 <action selector="clearAllButton:" destination="-1" eventType="touchUpInside" id="Op1-wg-iir"/>
@@ -50,7 +50,7 @@
                     <color key="backgroundColor" systemColor="secondarySystemBackgroundColor" red="0.94901960780000005" green="0.94901960780000005" blue="0.96862745100000003" alpha="1" colorSpace="custom" customColorSpace="sRGB"/>
                     <constraints>
                         <constraint firstItem="JTt-81-9xs" firstAttribute="centerY" secondItem="KjW-BJ-4q3" secondAttribute="centerY" id="07i-SB-MFI"/>
-                        <constraint firstAttribute="height" constant="120" id="LsH-nn-8Tu"/>
+                        <constraint firstAttribute="height" constant="100" id="LsH-nn-8Tu"/>
                         <constraint firstItem="kVc-6W-0iS" firstAttribute="trailing" secondItem="tjU-DH-MFk" secondAttribute="trailing" constant="8" id="NUC-Zl-dkA"/>
                         <constraint firstItem="vmL-TJ-ZRa" firstAttribute="centerX" secondItem="KjW-BJ-4q3" secondAttribute="centerX" constant="-10" id="XRy-va-2C5"/>
                         <constraint firstItem="kVc-6W-0iS" firstAttribute="bottom" secondItem="tjU-DH-MFk" secondAttribute="bottom" constant="4" id="tbT-ps-iqK"/>
@@ -60,7 +60,7 @@
                     <viewLayoutGuide key="safeArea" id="kVc-6W-0iS"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="pjL-z7-Rie">
-                    <rect key="frame" x="0.0" y="120" width="414" height="776"/>
+                    <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -70,8 +70,8 @@
                 <constraint firstAttribute="bottom" secondItem="pjL-z7-Rie" secondAttribute="bottom" id="6Kj-mD-NmJ"/>
                 <constraint firstItem="KjW-BJ-4q3" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="Nk3-I4-l9Y"/>
                 <constraint firstItem="pjL-z7-Rie" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="WXy-Dm-pEg"/>
-                <constraint firstItem="KjW-BJ-4q3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="brP-L8-4pb"/>
                 <constraint firstItem="pjL-z7-Rie" firstAttribute="top" secondItem="KjW-BJ-4q3" secondAttribute="bottom" id="gjZ-6T-bTX"/>
+                <constraint firstItem="KjW-BJ-4q3" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="vTo-Vc-ehh"/>
                 <constraint firstItem="pjL-z7-Rie" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="zXE-BS-UXW"/>
             </constraints>
             <viewLayoutGuide key="safeArea" id="fnl-2z-Ty3"/>
