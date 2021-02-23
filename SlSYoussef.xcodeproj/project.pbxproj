@@ -149,7 +149,10 @@
 		E83FFCEC25DB011A00F6F7FA /* summeryCheckoutViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */; };
 		E83FFCEF25DB113C00F6F7FA /* OrderDoneViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */; };
 		E83FFCF025DB113C00F6F7FA /* OrderDoneViewController.xib in Resources */ = {isa = PBXBuildFile; fileRef = E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */; };
+		E840A66B25DBF7C8003C2270 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */; };
 		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
+		E843CF7225DC27F0001E4E53 /* PostModuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843CF7125DC27F0001E4E53 /* PostModuel.swift */; };
+		E843CF7425DC3CFD001E4E53 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843CF7325DC3CFD001E4E53 /* user.swift */; };
 		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
 		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
 		E8483E7A25D91FCA001903FD /* adminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8483E7825D91FCA001903FD /* adminTableViewCell.swift */; };
@@ -305,7 +308,10 @@
 		E83FFCEA25DB011A00F6F7FA /* summeryCheckoutViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = summeryCheckoutViewController.xib; sourceTree = "<group>"; };
 		E83FFCED25DB113C00F6F7FA /* OrderDoneViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = OrderDoneViewController.swift; sourceTree = "<group>"; };
 		E83FFCEE25DB113C00F6F7FA /* OrderDoneViewController.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = OrderDoneViewController.xib; sourceTree = "<group>"; };
+		E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
+		E843CF7125DC27F0001E4E53 /* PostModuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModuel.swift; sourceTree = "<group>"; };
+		E843CF7325DC3CFD001E4E53 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = user.swift; path = ../../../weNotes/weNotes/Models/user.swift; sourceTree = "<group>"; };
 		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8483E7825D91FCA001903FD /* adminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminTableViewCell.swift; sourceTree = "<group>"; };
@@ -366,6 +372,7 @@
 			isa = PBXGroup;
 			children = (
 				075B2D7925DBE10E0083B3E0 /* Orders.swift */,
+				E843CF7325DC3CFD001E4E53 /* user.swift */,
 				075B2D7A25DBE10E0083B3E0 /* User.swift */,
 			);
 			path = "Firebase Manager";
@@ -678,6 +685,7 @@
 			children = (
 				E8374A4325D74C6600809B4E /* HomeViewController.xib */,
 				E8374A4425D74C6600809B4E /* HomeViewController.swift */,
+				E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */,
 			);
 			path = HomeVC;
 			sourceTree = "<group>";
@@ -1058,6 +1066,7 @@
 				E83BBFEF25D75E3B00F26E2F /* Images Cell */,
 				E83BBFC925D75CED00F26E2F /* PostVC.swift */,
 				E83FFCE225DACE8500F6F7FA /* PostViewModel.swift */,
+				E843CF7125DC27F0001E4E53 /* PostModuel.swift */,
 			);
 			path = PostVc;
 			sourceTree = "<group>";
@@ -1269,6 +1278,7 @@
 				075B2D7625DBDFD90083B3E0 /* Notifications.swift in Sources */,
 				E83BBF5625D7592900F26E2F /* Color.swift in Sources */,
 				E8374A6A25D74C6600809B4E /* CommentsOfPostViewController.swift in Sources */,
+				E843CF7425DC3CFD001E4E53 /* user.swift in Sources */,
 				E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */,
 				E8374A6B25D74C6600809B4E /* OptionVCViewController.swift in Sources */,
 				E8374A6125D74C6600809B4E /* StoresCollectionViewCell.swift in Sources */,
@@ -1285,6 +1295,7 @@
 				E83BBF9925D75B9000F26E2F /* FetchUserData.swift in Sources */,
 				E8374A5D25D74C6600809B4E /* HomeCellWithotImage.swift in Sources */,
 				E83BBF8E25D75B1500F26E2F /* UITextField+Extension.swift in Sources */,
+				E843CF7225DC27F0001E4E53 /* PostModuel.swift in Sources */,
 				E83BBFA925D75C6F00F26E2F /* SignUp.swift in Sources */,
 				073D132C25E5087300C437DA /* MessageFB.swift in Sources */,
 				075B2D7225DBDEF10083B3E0 /* Messages.swift in Sources */,
@@ -1333,6 +1344,7 @@
 				E8374A5825D74C6600809B4E /* ShowMoreStack.swift in Sources */,
 				E83BBFD725D75CEE00F26E2F /* NotificationSettings.swift in Sources */,
 				E83BC01325D75ED500F26E2F /* mageCellOfPostCollectionViewCell.swift in Sources */,
+				E840A66B25DBF7C8003C2270 /* HomeViewModel.swift in Sources */,
 				E8374A5425D74C6600809B4E /* WatingAcceptOrderViewController.swift in Sources */,
 				E8374A4A25D74C6600809B4E /* FullScreenViewController.swift in Sources */,
 				E8374A4C25D74C6600809B4E /* LiveEndViewController.swift in Sources */,

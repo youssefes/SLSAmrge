@@ -24,6 +24,8 @@ class PostVC: UIViewController , UICollectionViewDelegateFlowLayout , UICollecti
     var userUid             = ""
     var arrayOfUrl : [String] = []
     var seccesUploadImage = false
+    
+    let rootRef = Firestore.firestore().collection("posts").document()
     var viewModel : PostViewModel = PostViewModel()
     @IBOutlet weak var userTextView: UITextView!
     @IBOutlet weak var writeSomethingLabel: UILabel!
@@ -63,9 +65,7 @@ class PostVC: UIViewController , UICollectionViewDelegateFlowLayout , UICollecti
                         print("error in uploading")
                     }
                 })
-                
             }
-           
              
         }else {
             self.createPost()
@@ -92,9 +92,9 @@ class PostVC: UIViewController , UICollectionViewDelegateFlowLayout , UICollecti
     
     
     func createPost(){
-        
+        let postId  = rootRef.documentID
         if let posttext = userTextView.text, !imagesArray.isEmpty, !posttext.isEmpty {
-            Firestore.firestore().collection("posts").document().setData(["user" : userUid ,"context" : ["text" : posttext ,"img" : arrayOfUrl], "price" : priceTextField.text ?? "", "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self](error) in
+            rootRef.setData(["id" : postId , "user" : userUid ,"context" : ["text" : posttext ,"img" : arrayOfUrl], "price" : priceTextField.text ?? "", "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self](error) in
                 guard let self = self else{return}
                 if error == nil{
                     self.loading.loadingView.stopAnimating()
@@ -111,7 +111,7 @@ class PostVC: UIViewController , UICollectionViewDelegateFlowLayout , UICollecti
             }
             
         }else if !imagesArray.isEmpty {
-            Firestore.firestore().collection("posts").document().setData(["user" : userUid ,"context" : ["text" : "" ,"img" : arrayOfUrl],"price" : priceTextField.text ?? "", "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self] (error) in
+            rootRef.setData(["id" : postId ,"user" : userUid ,"context" : ["text" : "" ,"img" : arrayOfUrl],"price" : priceTextField.text ?? "", "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self] (error) in
                  guard let self = self else{return}
                 if error == nil{
                     self.loading.loadingView.stopAnimating()
@@ -126,7 +126,7 @@ class PostVC: UIViewController , UICollectionViewDelegateFlowLayout , UICollecti
                 }
             }
         }else if let posttext = userTextView.text ,!posttext.isEmpty {
-            Firestore.firestore().collection("posts").document().setData(["user" : userUid ,"context" : ["text" : posttext ,"img" : []], "price" : priceTextField.text ?? "" , "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self] (error) in
+            rootRef.setData(["id" : postId ,"user" : userUid ,"context" : ["text" : posttext ,"img" : []], "price" : priceTextField.text ?? "" , "date" : Date.timeIntervalBetween1970AndReferenceDate]) { [weak self] (error) in
                  guard let self = self else{return}
                 if error == nil{
                     self.loading.loadingView.stopAnimating()

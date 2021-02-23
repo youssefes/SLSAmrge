@@ -7,6 +7,8 @@
 //
 
 import UIKit
+import Firebase
+import Kingfisher
 protocol CellFoodsWithCollectionOfImageProtocal : class {
     func reloadCollection()
     func handelFollowAndUnFollow(isFollow : Bool)
@@ -19,29 +21,46 @@ class CellFoodsWithCollectionOfImage : UICollectionViewCell, ShowMoreProtocal{
     var islike  = false
     weak var Deleget : CellFoodsWithCollectionOfImageProtocal?
     var arrayOfimage : [UIImage] = [#imageLiteral(resourceName: "Group 528")]
-    //    var delegate : HomePostCellDeleget?
     
-    //    var post : Posts?{
-    //        didSet{
-    //
-    //            guard let caption = post?.caption else {
-    //                return
-    //            }
-    //            guard let user = post?.user else {
-    //                return
-    //            }
-    //
-    //            guard let post = post else {
-    //                return
-    //            }
-    //            likeButton.setImage(post.hasLike == true ? #imageLiteral(resourceName: "heart") : #imageLiteral(resourceName: "activity-selected"), for: .normal)
-    //            PhotoImageView.loadImage(imageUrl: user.prrofilURlImage)
-    //            let timpeToDisplay = post.creationDate.getPastTime(for: post.creationDate)
-    //            timaCreationLbl.text = timpeToDisplay
-    //            captionLbl.text = caption
-    //            userNameLbl.text = user.userName
-    //        }
-    //    }
+        var post : PostModel?{
+            didSet{
+    
+                guard let text = post?.postContext.text else {
+                    return
+                }
+                guard let user = post?.userId else {
+                    return
+                }
+    
+                guard let post = post else {
+                    return
+                }
+                print(post)
+                
+                Database.fetchUserWithUid(Uid: user) { [weak self] (DataOfUser) in
+                    guard let self = self else {return}
+                    guard let url  = URL(string: DataOfUser.prrofilURlImage) else {return}
+                    let resouece = ImageResource(downloadURL: url)
+                    self.profileImage.kf.setImage(with: resouece)
+                    
+                    self.userNameLbl.text = DataOfUser.userName
+                }
+                
+                if  let images = post.postContext.image  {
+                     CollectionViewContainer.arrayOfimage = images
+                }
+                timaCreationLbl.text = post.date.getPastTime(for: post.date)
+                
+                PostTextView.text = text
+                
+//                likeButton.setImage(post.hasLike == true ? #imageLiteral(resourceName: "heart") : #imageLiteral(resourceName: "activity-selected"), for: .normal)
+//                profileImage.loadImage(imageUrl: user.prrofilURlImage)
+//                let timpeToDisplay = post.creationDate.getPastTime(for: post.creationDate)
+//                timaCreationLbl.text = timpeToDisplay
+//                captionLbl.text = caption
+//                userNameLbl.text = user.userName
+            }
+        }
     
     
     let profileImage : UIImageView = {

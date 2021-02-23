@@ -372,6 +372,9 @@ PODS:
     - InputBarAccessoryView/Core (= 5.2.3)
   - InputBarAccessoryView/Core (5.2.3)
   - IQKeyboardManagerSwift (6.5.6)
+  - Kingfisher (5.15.8):
+    - Kingfisher/Core (= 5.15.8)
+  - Kingfisher/Core (5.15.8)
   - leveldb-library (1.22)
   - MessageKit (3.5.0):
     - InputBarAccessoryView (~> 5.2.1)
@@ -399,6 +402,7 @@ DEPENDENCIES:
   - Firebase/Storage
   - GoogleSignIn
   - IQKeyboardManagerSwift
+  - Kingfisher (~> 5.0)
   - MessageKit
   - NVActivityIndicatorView
   - PaddingLabel
@@ -434,6 +438,7 @@ SPEC REPOS:
     - GTMSessionFetcher
     - InputBarAccessoryView
     - IQKeyboardManagerSwift
+    - Kingfisher
     - leveldb-library
     - MessageKit
     - nanopb
@@ -471,6 +476,7 @@ SPEC CHECKSUMS:
   GTMSessionFetcher: b3503b20a988c4e20cc189aa798fd18220133f52
   InputBarAccessoryView: f814a0317d47687fafc6bac9e4df6015eaf5b764
   IQKeyboardManagerSwift: c7df9d2deb356c04522f5c4b7b6e4ce4d8ed94fe
+  Kingfisher: a3c03d702433fa6cfedabb2bddbe076fb8f2e902
   leveldb-library: 55d93ee664b4007aac644a782d11da33fba316f7
   MessageKit: fb539583599cd914e8e2d41fe7bdceb4bf686565
   nanopb: 59221d7f958fb711001e6a449489542d92ae113e
@@ -480,6 +486,6 @@ SPEC CHECKSUMS:
   ReadMoreTextView: 19147adf93abce6d7271e14031a00303fe28720d
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: ab0b86eb7d7d218b6ec8b2aba971f7e8581bb1a6
+PODFILE CHECKSUM: 43db453661e09716135354fe748337bd8fed3623
 
 COCOAPODS: 1.10.1
