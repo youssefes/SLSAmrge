@@ -14,29 +14,30 @@ struct MessageFB : Codable {
     var senderID : String
     var senderImage : String
     var senderName : String
-    var text : String
+    var text : String?
     var time : Date
     var type : String
+    var imgUrl : String?
     
-    init?(data : [String : Any]) {
-        guard let recipientID = data["recipientID"] as? String,
-            let reciverImage = data["reciverImage"] as? String,
-            let senderId = data["senderID"] as? String ,
-            let senderImage = data["senderImage"] as? String,
-            let senderName = data["senderName"] as? String,
-            let text = data["text"] as? String,
-            let time = data["time"] as? Date,
-            let type = data["type"] as? String else {
-                return nil
-        }
-        
-        self.recipientID = recipientID
+    init(text : String ,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date) {
+        self.text         = text
+        self.recipientID  = recipientID
+        self.senderID     = senderID
         self.reciverImage = reciverImage
-        self.senderID = senderId
-        self.senderImage = senderImage
-        self.senderName = senderName
-        self.text = text
-        self.time = time
-        self.type = type
+        self.senderImage  = senderImage
+        self.senderName   = senderName
+        self.time         = time
+        self.type         = "text"
+    }
+    
+    init(imgURL : String,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date) {
+        self.imgUrl       = imgURL
+        self.recipientID  = recipientID
+        self.reciverImage = reciverImage
+        self.senderImage  = senderImage
+        self.senderID     = senderID
+        self.senderName   = senderName
+        self.time         = time
+        self.type         = "Picutre"
     }
 }

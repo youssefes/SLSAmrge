@@ -19,11 +19,12 @@ class ChatVCvm {
         NSLayoutConstraint.activate([
             subView.leadingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.leadingAnchor),
             subView.trailingAnchor.constraint(equalTo: view.safeAreaLayoutGuide.trailingAnchor),
-            subView.topAnchor.constraint(equalTo: view.topAnchor , constant: 5 ),
+            subView.topAnchor.constraint(equalTo: view.layoutMarginsGuide.topAnchor),
             subView.heightAnchor.constraint(equalToConstant: 100)
         ])
         subView.backgroundColor = .white
         MC.contentInset.top = 70 + 64
+        
     }
     
     static let formatter: DateFormatter = {
@@ -59,5 +60,34 @@ class ChatVCvm {
             }else {completed(.failure(error!))}
         }
     }
+    
+    static func uploadImgMessage(image : Data , channelID : String ) -> String? {
+        var imgURl : String?
+        let imageName    = UUID().uuidString
+        
+        let imgReference = Storage.storage().reference().child("Messages").child(channelID).child(imageName)
+        imgReference.putData(image, metadata: nil) { (metaData, error) in
+            if let err = error {
+                print(err)
+            }else{
+                imgReference.downloadURL { (url, error) in
+                    if let error = error {
+                       print("Errorrrrrrrrrrrr \(error)")
+                    }else {
+                        print("The picture uploaded and now we downloaded the URL")
+                    }
+                    
+                    guard let url = url else {
+                        return
+                    }
+                    
+                    imgURl = url.absoluteString
+                }
+            }
+        }
+        print("Image uer is:hh" )
+        return imgURl
+    }
+    
     
 }

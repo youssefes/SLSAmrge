@@ -7,21 +7,26 @@
 //
 
 import UIKit
-
+import Firebase
 class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {        
     @IBOutlet weak var tableView: UITableView!
     @IBOutlet weak var topView: UIView!
     
     
-    var numOfMessages = 10
-    var isClicked     = false
+    var numOfMessages  = 10
+    var isClicked      = false
     let emptyStateView = EmptyStateVC()
+    let dp             = Firestore.firestore()
     override func viewDidLoad() {
         super.viewDidLoad()
         creatNavigationBarButtons()
         configureTableView()
         configureSearchController()
         //    navigationController?.hidesBarsOnSwipe = true
+        
+    }
+    
+    func loadUserMessages(){
         
     }
     
@@ -101,10 +106,28 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
     }
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
-        let vc = ChatVC()
-        vc.userToChatId = "the id of the user you will message"
-        vc.modalPresentationStyle = .overFullScreen
-        present(vc, animated: true, completion: nil)
+        let otherId : String?
+        otherId = "vLJ1L7zvK8dQnC9pSZG9hWmUgRW2"
+        self.showLoadingView()
+        if let otherID = otherId {
+            ChatVCvm.getUserDocumentData(uid: otherID, dp: dp) { [weak self] (result) in
+                guard self != nil else {return}
+                switch result {
+                case .success(let data):
+                    self?.hideLoadingView()
+                    let vc = ChatVC()
+                    vc.otherUserID = otherId
+                    vc.otherUser   = data
+                    self?.navigationController?.pushViewController(vc, animated: true)
+                    
+                case .failure(let error):
+                    self?.hideLoadingView()
+                    self?.showAlert(title: "Error", message: error.localizedDescription)
+                    break
+                }
+            }
+
+        }
     }
 }
 

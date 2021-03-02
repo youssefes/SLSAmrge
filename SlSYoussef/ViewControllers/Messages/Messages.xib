@@ -21,10 +21,10 @@
             <autoresizingMask key="autoresizingMask" widthSizable="YES" heightSizable="YES"/>
             <subviews>
                 <view contentMode="scaleToFill" translatesAutoresizingMaskIntoConstraints="NO" id="2vQ-V4-e5n" userLabel="Top View">
-                    <rect key="frame" x="0.0" y="0.0" width="414" height="120"/>
+                    <rect key="frame" x="0.0" y="44" width="414" height="100"/>
                     <subviews>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" text="Messages" textAlignment="natural" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="wlH-cr-64j">
-                            <rect key="frame" x="135.5" y="45" width="143.5" height="30.5"/>
+                            <rect key="frame" x="135.5" y="35" width="143.5" height="30.5"/>
                             <constraints>
                                 <constraint firstAttribute="height" constant="30.5" id="sVV-0x-mQu"/>
                             </constraints>
@@ -33,13 +33,13 @@
                             <nil key="highlightedColor"/>
                         </label>
                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="251" verticalHuggingPriority="251" horizontalCompressionResistancePriority="749" text="You have 5 new Messages" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="7JP-TB-tPU">
-                            <rect key="frame" x="96" y="91.5" width="202" height="20.5"/>
+                            <rect key="frame" x="96" y="71.5" width="202" height="20.5"/>
                             <fontDescription key="fontDescription" type="system" pointSize="17"/>
                             <color key="textColor" systemColor="secondaryLabelColor" red="0.23529411759999999" green="0.23529411759999999" blue="0.26274509800000001" alpha="0.59999999999999998" colorSpace="custom" customColorSpace="sRGB"/>
                             <nil key="highlightedColor"/>
                         </label>
                         <button opaque="NO" contentMode="scaleToFill" contentHorizontalAlignment="center" contentVerticalAlignment="center" buttonType="roundedRect" lineBreakMode="middleTruncation" translatesAutoresizingMaskIntoConstraints="NO" id="8BE-9b-vwt">
-                            <rect key="frame" x="349" y="86" width="57" height="30"/>
+                            <rect key="frame" x="349" y="66" width="57" height="30"/>
                             <state key="normal" title="Clear All"/>
                             <connections>
                                 <action selector="clearAllButton:" destination="-1" eventType="touchUpInside" id="yZY-W9-zYc"/>
@@ -54,12 +54,12 @@
                         <constraint firstItem="wlH-cr-64j" firstAttribute="centerY" secondItem="2vQ-V4-e5n" secondAttribute="centerY" id="cdy-TD-9zU"/>
                         <constraint firstItem="wOm-fb-TOd" firstAttribute="bottom" secondItem="8BE-9b-vwt" secondAttribute="bottom" constant="4" id="f2x-U7-bXC"/>
                         <constraint firstItem="wOm-fb-TOd" firstAttribute="bottom" secondItem="7JP-TB-tPU" secondAttribute="bottom" constant="8" id="ktY-qf-urN"/>
-                        <constraint firstAttribute="height" constant="120" id="zuV-bq-tAj"/>
+                        <constraint firstAttribute="height" constant="100" id="zuV-bq-tAj"/>
                     </constraints>
                     <viewLayoutGuide key="safeArea" id="wOm-fb-TOd"/>
                 </view>
                 <tableView clipsSubviews="YES" contentMode="scaleToFill" alwaysBounceVertical="YES" style="plain" separatorStyle="default" rowHeight="-1" estimatedRowHeight="-1" sectionHeaderHeight="28" sectionFooterHeight="28" translatesAutoresizingMaskIntoConstraints="NO" id="zLb-Qe-Xfa">
-                    <rect key="frame" x="0.0" y="120" width="414" height="776"/>
+                    <rect key="frame" x="0.0" y="144" width="414" height="752"/>
                     <color key="backgroundColor" systemColor="systemBackgroundColor" cocoaTouchSystemColor="whiteColor"/>
                 </tableView>
             </subviews>
@@ -67,9 +67,9 @@
             <constraints>
                 <constraint firstItem="zLb-Qe-Xfa" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="3D2-xK-Axo"/>
                 <constraint firstItem="zLb-Qe-Xfa" firstAttribute="top" secondItem="2vQ-V4-e5n" secondAttribute="bottom" id="BsM-Au-7jP"/>
+                <constraint firstItem="2vQ-V4-e5n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="topMargin" id="EvA-6c-2JG"/>
                 <constraint firstItem="2vQ-V4-e5n" firstAttribute="leading" secondItem="fnl-2z-Ty3" secondAttribute="leading" id="IkQ-Zc-PHc"/>
                 <constraint firstItem="2vQ-V4-e5n" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="Jzf-Nz-k7s"/>
-                <constraint firstItem="2vQ-V4-e5n" firstAttribute="top" secondItem="i5M-Pr-FkT" secondAttribute="top" id="SQT-bs-5pR"/>
                 <constraint firstAttribute="bottom" secondItem="zLb-Qe-Xfa" secondAttribute="bottom" id="wOA-Nt-hpG"/>
                 <constraint firstItem="zLb-Qe-Xfa" firstAttribute="trailing" secondItem="fnl-2z-Ty3" secondAttribute="trailing" id="wUg-PB-xif"/>
             </constraints>

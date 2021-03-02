@@ -224,6 +224,7 @@ PODS:
     - BoringSSL-GRPC/Interface (= 0.0.7)
   - BoringSSL-GRPC/Interface (0.0.7)
   - BSImagePicker (3.3.1)
+  - CodableFirebase (0.2.1)
   - FacebookCore (0.9.0):
     - FBSDKCoreKit (~> 5.0)
   - FacebookLogin (0.9.0):
@@ -393,6 +394,7 @@ PODS:
 
 DEPENDENCIES:
   - BSImagePicker
+  - CodableFirebase
   - FacebookCore
   - FacebookLogin
   - Firebase/Analytics
@@ -415,6 +417,7 @@ SPEC REPOS:
     - AppAuth
     - BoringSSL-GRPC
     - BSImagePicker
+    - CodableFirebase
     - FacebookCore
     - FacebookLogin
     - FBSDKCoreKit
@@ -453,6 +456,7 @@ SPEC CHECKSUMS:
   AppAuth: 31bcec809a638d7bd2f86ea8a52bd45f6e81e7c7
   BoringSSL-GRPC: 8edf627ee524575e2f8d19d56f068b448eea3879
   BSImagePicker: 0fe04b574d4d6b81093785d2af6c26227efc8428
+  CodableFirebase: 0bf201991eeec35eb9fcd987d271ea463cf34a80
   FacebookCore: ba86524b66cfa86d0f8e65d08faa8504a9f732dd
   FacebookLogin: 6cee9fd6e1fe976fe8f7eec199e27b28b14f5d63
   FBSDKCoreKit: 1d5acf7c9d7a2f92bb1a242dc60cae5b7adb91df
@@ -486,6 +490,6 @@ SPEC CHECKSUMS:
   ReadMoreTextView: 19147adf93abce6d7271e14031a00303fe28720d
   "UITextView+Placeholder": d7b0c400921f66523f3a85d74f774512e14f6502
 
-PODFILE CHECKSUM: 43db453661e09716135354fe748337bd8fed3623
+PODFILE CHECKSUM: 854b4c8b54b119d97f1f09166efc5d785bec97d0
 
 COCOAPODS: 1.10.1

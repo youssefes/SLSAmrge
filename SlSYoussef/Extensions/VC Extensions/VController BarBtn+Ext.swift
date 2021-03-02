@@ -21,18 +21,19 @@ enum ButtonAssestType {
     case profile
     case back
 }
- 
+
 extension UIViewController {
     
     func creatNavigationBarButtons(){
-        let Massage = UIButton.init(type: .custom)
-           Massage.setImage(#imageLiteral(resourceName: "Message"), for: .normal)
+        let messages = UIButton.init(type: .custom)
+        messages.setImage(#imageLiteral(resourceName: "Message"), for: .normal)
+        messages.addTarget(self, action: #selector(messageButtonClicked), for: .touchUpInside)
         
         let Notification = UIButton.init(type: .custom)
-                Notification.setImage(#imageLiteral(resourceName: "Notification-1"), for: .normal)
+        Notification.setImage(#imageLiteral(resourceName: "Notification-1"), for: .normal)
         
         let Profile = UIButton.init(type: .custom)
-                Profile.setImage(#imageLiteral(resourceName: "hady"), for: .normal)
+        Profile.setImage(#imageLiteral(resourceName: "hady"), for: .normal)
         Profile.cornerRadius = 20
         Profile.clipsToBounds = true
         Profile.widthAnchor.constraint(equalToConstant: 40).isActive = true
@@ -51,7 +52,7 @@ extension UIViewController {
         search.setImage(#imageLiteral(resourceName: "shearch"), for: .normal)
         
         
-        let Rightstackview = UIStackView.init(arrangedSubviews: [Massage , Notification , Profile])
+        let Rightstackview = UIStackView.init(arrangedSubviews: [messages , Notification , Profile])
         Rightstackview.distribution = .equalSpacing
         Rightstackview.axis = .horizontal
         Rightstackview.spacing = 20
@@ -90,6 +91,7 @@ extension UIViewController {
         
         return menuBarItem
     }
+    
     func createSideUIButton(image : UIImage , type: ButtonSystemType?) -> UIButton {
         let sideBtn = UIButton(frame: CGRect(x: 0, y: 0, width: 35, height: 35)) //create UIButton by it's custom dimensions
         
@@ -157,20 +159,17 @@ extension UIViewController {
     
     @objc func messageButtonClicked(){
         let msgVC  = Messages()
-//        if isModal() {
-//        navigationController?.popToViewController(msgVC, animated: true)
-//        }
-//        else {
+        
             navigationController?.pushViewController(msgVC, animated: true)
-        //}
+        
     }
 
     @objc func profileButtonClicked(){
         print("Profile button clicked")
     }
     @objc func notificationButtonClicked(){
-////        let notiVC = NotificationVC()
-//        navigationController?.popToViewController(notiVC, animated: true)
+        let notiVC = Notifications()
+        navigationController?.pushViewController(notiVC, animated: true)
     }
     
     

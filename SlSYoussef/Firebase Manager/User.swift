@@ -10,7 +10,7 @@ import Foundation
 struct User {
     static let user = "Users"
     static let fullName    = "fullName"
-    static let userName    = "userName"
+    static let userName    = "username"
     static let email       = "email"
     static let pass        = "password"
     static let profilePic  = "profileImg"

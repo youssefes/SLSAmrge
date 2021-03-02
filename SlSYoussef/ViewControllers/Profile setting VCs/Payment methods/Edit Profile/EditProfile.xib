@@ -53,11 +53,7 @@
                                             </constraints>
                                             <state key="normal" image="Group 16012"/>
                                             <connections>
-<<<<<<< HEAD:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Edit Profile/EditProfile.xib
                                                 <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="opr-69-sn9"/>
-=======
-                                                <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="ZWC-He-29G"/>
->>>>>>> 93dbab93cf7145396a543a3683824b3b2b2f536a:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Profile/EditProfile.xib
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-Zw-VLL">

@@ -42,23 +42,14 @@ class EditProfile: UIViewController  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-       // self.createCustomTitleViewInEditProfile(with: "Edit profile")
         editProfileVM.configureImageView(userImage: userImage)
         editProfileVM.tapGestureOnScreen(view: self.view)
         Utility.designSingsButtons(saveBtn)
-//        Utility.configureProfileTextFields(txtField: fullnameTF)
-//        Utility.configureProfileTextFields(txtField: emailTF)
-//        Utility.configureProfileTextFields(txtField: phoneNumberTF)
         tapGestureInImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-<<<<<<< HEAD:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Edit Profile/EditProfile.swift
         navigationController?.navigationBar.isHidden = true
-=======
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
->>>>>>> 93dbab93cf7145396a543a3683824b3b2b2f536a:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Profile/EditProfile.swift
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -67,18 +58,12 @@ class EditProfile: UIViewController  {
     }
     
     @IBAction func dismiswbtn(_ sender: Any) {
-<<<<<<< HEAD:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Edit Profile/EditProfile.swift
         navigationController?.popViewController(animated: true)
     }
     
     @IBAction func closeBtn(_ sender: UIButton) {
         navigationController?.popToRootViewController(animated: true)
     }
-=======
-           navigationController?.popViewController(animated: true)
-       }
-    
->>>>>>> 93dbab93cf7145396a543a3683824b3b2b2f536a:SlSYoussef/ViewControllers/Profile setting VCs/Payment methods/Profile/EditProfile.swift
     @IBAction func uploadImageButton(_ sender: Any) {
         handleUploadImage()
     }
