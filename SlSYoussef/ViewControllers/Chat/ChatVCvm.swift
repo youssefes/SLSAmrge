@@ -9,6 +9,7 @@
 import UIKit
 import MessageKit
 import Firebase
+import CodableFirebase
 class ChatVCvm {
     
     static func setTheTopMessageView(view : UIView , MC : MessagesCollectionView) {
@@ -33,7 +34,6 @@ class ChatVCvm {
         return formatter
     }()
     
-    
     static func saveUserImgAndName(userName : String? , userIcon : String? , refToCurrentUser : DocumentReference) -> Error?{
         var isValidFunc : Error?
         let otherUserInfo = [ "userName" : userName! , "userIcon" : userIcon!]
@@ -48,31 +48,63 @@ class ChatVCvm {
         }
         return isValidFunc
     }
-      
-    static func getUserDocumentData(uid : String , dp : Firestore ,completed : @escaping (Result<[String : Any] , Error>) -> Void){
+    
+    static func getUserDocumentData(uid : String , dp : Firestore ,completed : @escaping (Result<[String : Any] , Er>) -> Void){
         dp.collection(User.user).document(uid).getDocument { (documentSnapShot, error) in
+            var err : Er = Er(error: error, userNotExist: false)
             if error == nil {
                 if let document = documentSnapShot , document.exists {
                     if let documentData = document.data(){
                         completed(.success(documentData))
                     }
-                }
-            }else {completed(.failure(error!))}
+                } else {
+                    err.userNotExist = true
+                    completed(.failure(err))}
+            }else {completed(.failure(err))}
         }
     }
     
-    static func uploadImgMessage(image : Data , channelID : String ) -> String? {
-        var imgURl : String?
-        let imageName    = UUID().uuidString
+    struct Er : Error {
+        var error : Error?
+        var userNotExist : Bool
+    }
+    
+    
+    static func refToCurrent(currentlyUserUid : String?, otherUserID : String , dp : Firestore) -> (Any , String ,Error?){
+        var er : Error?
+        let refToCurrentUser = dp.collection(User.user).document(currentlyUserUid!).collection("engagedChatChannels").document(otherUserID)
+        let channelID = dp.collection("chatChannels").document().documentID
         
+        refToCurrentUser.setData(["channelId" : "\(channelID)"] ,merge: true) { (error) in
+            er = error
+        }
+        
+        return (refToCurrentUser ,channelID , er)
+    }
+    
+    static func refToOther(currentlyUserUid : String , otherUserID : String , channelID : String , dp : Firestore) -> Error?{
+        var er : Error?
+        let refToOtherUser = dp.collection(User.user).document(otherUserID).collection("engagedChatChannels").document(currentlyUserUid)
+        refToOtherUser.setData(["channelId" : channelID] , merge: true) { (error) in
+            if error != nil {
+                er = error
+            }
+        }
+        return er
+    }
+    
+    static func uploadImgMessage(image : Data , channelID : String , compltion : @escaping (_ imgURl : String? , _ error : Error?) -> Void){
+        var er : Error?
+        let imageName = UUID().uuidString
         let imgReference = Storage.storage().reference().child("Messages").child(channelID).child(imageName)
+        // group.enter()
         imgReference.putData(image, metadata: nil) { (metaData, error) in
             if let err = error {
-                print(err)
+                er = err
             }else{
                 imgReference.downloadURL { (url, error) in
                     if let error = error {
-                       print("Errorrrrrrrrrrrr \(error)")
+                        er = error
                     }else {
                         print("The picture uploaded and now we downloaded the URL")
                     }
@@ -81,13 +113,13 @@ class ChatVCvm {
                         return
                     }
                     
-                    imgURl = url.absoluteString
+                    compltion(url.absoluteString , er)
                 }
+                
             }
+            
         }
-        print("Image uer is:hh" )
-        return imgURl
+
     }
-    
     
 }

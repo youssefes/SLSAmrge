@@ -38,6 +38,6 @@ struct MessageFB : Codable {
         self.senderID     = senderID
         self.senderName   = senderName
         self.time         = time
-        self.type         = "Picutre"
+        self.type         = "image"
     }
 }

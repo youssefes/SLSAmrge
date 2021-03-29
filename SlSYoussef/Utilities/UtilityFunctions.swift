@@ -18,7 +18,7 @@ struct UtilityFunctions {
     public static var isLoggedIn = false
     public static var user : UserDataModel?
     //MARK: - to Retreve UIImage from PHAsset
-    static  func handlePHImageManager(asset : PHAsset) -> UIImage?{
+    static func handlePHImageManager(asset : PHAsset) -> UIImage?{
         var returnedImage : UIImage?
         
         PHImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: nil) { (image, _) in

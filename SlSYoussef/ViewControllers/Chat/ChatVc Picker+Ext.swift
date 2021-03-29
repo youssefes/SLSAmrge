@@ -12,6 +12,7 @@ extension ChatVC : UIImagePickerControllerDelegate ,UINavigationControllerDelega
     func imagePickerController(_ picker: UIImagePickerController, didFinishPickingMediaWithInfo info: [UIImagePickerController.InfoKey : Any]) {
         
         if let chosenimage = info[UIImagePickerController.InfoKey.editedImage] as? UIImage {
+            print("Now we are Uploading the image...")
             insertMessage([chosenimage])
         }
         dismiss(animated: true, completion: nil)

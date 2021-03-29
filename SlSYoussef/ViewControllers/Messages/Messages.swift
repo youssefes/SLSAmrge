@@ -107,7 +107,8 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
     
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         let otherId : String?
-        otherId = "vLJ1L7zvK8dQnC9pSZG9hWmUgRW2"
+        otherId = "bnYfR5HVogOkXyBZrciMzmXeL6T2"
+        //HadyHelal :3gmxFkvwtaXXy7TQVkyvbVdWbze2 11 , Hulk: bnYfR5HVogOkXyBZrciMzmXeL6T2  8+
         self.showLoadingView()
         if let otherID = otherId {
             ChatVCvm.getUserDocumentData(uid: otherID, dp: dp) { [weak self] (result) in
@@ -122,11 +123,17 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
                     
                 case .failure(let error):
                     self?.hideLoadingView()
-                    self?.showAlert(title: "Error", message: error.localizedDescription)
-                    break
+                    guard error.userNotExist else {
+                        self?.showAlert(title: "Error", message: error.localizedDescription)
+                        return
+                    }
+                    self?.showAlert(title: "Error", message: "This user doesn't exist")
                 }
             }
 
+        }else {
+            self.hideLoadingView()
+            self.showAlert(title: "Error", message: "This user doesn't exist anymore")
         }
     }
 }

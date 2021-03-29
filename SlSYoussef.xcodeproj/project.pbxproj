@@ -18,6 +18,7 @@
 		0783CFF225DED084004623DF /* ChatVCvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783CFF125DED084004623DF /* ChatVCvm.swift */; };
 		07CF2B3325E6CC5F00389F53 /* ImageMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */; };
 		2711C44F918C5579B2907782 /* Pods_SlSYoussef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */; };
+		B663B9A1260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */; };
 		E83749EF25D74B7600809B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749EE25D74B7600809B4E /* AppDelegate.swift */; };
 		E83749F125D74B7600809B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749F025D74B7600809B4E /* SceneDelegate.swift */; };
 		E83749F825D74B7B00809B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83749F725D74B7B00809B4E /* Assets.xcassets */; };
@@ -175,6 +176,7 @@
 		07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMediaItem.swift; sourceTree = "<group>"; };
 		69276F81CB0AE9B439828B91 /* Pods-SlSYoussef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.debug.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA25CE29FCCD01A5A478693 /* Pods-SlSYoussef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.release.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.release.xcconfig"; sourceTree = "<group>"; };
+		B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC InbutBar + Ext.swift"; sourceTree = "<group>"; };
 		D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlSYoussef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EB25D74B7600809B4E /* SlSYoussef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlSYoussef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EE25D74B7600809B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -387,6 +389,7 @@
 				E83BBFCA25D75CED00F26E2F /* ChatVC.swift */,
 				073C5F3625E703320006DF72 /* ChatVc Picker+Ext.swift */,
 				0783CFF125DED084004623DF /* ChatVCvm.swift */,
+				B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -1340,6 +1343,7 @@
 				073C5F3725E703320006DF72 /* ChatVc Picker+Ext.swift in Sources */,
 				E83BBF5725D7592900F26E2F /* Typography.swift in Sources */,
 				E83BBFD825D75CEE00F26E2F /* EditProfile.swift in Sources */,
+				B663B9A1260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift in Sources */,
 				E8374A6625D74C6600809B4E /* CommentofPostCellCollectionViewCell.swift in Sources */,
 				E8374A5925D74C6600809B4E /* CellFoodsWithCollectionOfImage.swift in Sources */,
 				E83BC01025D75E3C00F26E2F /* TopMessagesView.swift in Sources */,
