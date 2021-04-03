@@ -30,16 +30,19 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     
     //MARK: - Get users data
     let db = Firestore.firestore()
-
     var messages = [MessageType] ()
     var otherUserID : String!
+    var otherUserImage : UIImage?
+    var otherUser : [String : Any]!
+    
     var currentlyUserUid : String?
     var currentUser : UserDataModel?
-    var otherUser : [String : Any]!
+
     var channelID : String?
     var listener : ListenerRegistration?
     var anotherTimeEnteringChat = false
     var nowTime = Date()
+
     var currentUserMsg : SenderType {
         return  Sender(senderId: currentlyUserUid!, displayName: currentUser!.displayName!)
     }
@@ -71,28 +74,20 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                     }
                     self.messagesCollectionView.reloadData()
                     self.listenForNewMessages(stopListen: false)
-                    self.anotherTimeEnteringChat = true
                 }
             }
-
+            
             else {
                 self.instantiateChatMessages()
             }
         }
         
     }
-     
-    func trans(data : [String : Any]) -> Date? {
-        guard let stamp = data["time"] as? Timestamp else {
-            return nil
-        }
-        return stamp.dateValue()
-    }
     
     func retrieveCurrentUserMessage( data : [String : Any] , document : QueryDocumentSnapshot) {
         if data["type"] as! String == "text" {
             let messageText = data["text"] as! String
-            guard let date  = trans(data: data) else {
+            guard let date  = ImagesOperations.trans(data: data) else {
                 self.showAlert(title: "Error", message: "Error in message time propaply time zone is wrong")
                 return
             }
@@ -105,12 +100,19 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                 return
             }
             
-            DispatchQueue.main.async {
-                self.DownloadImage(url: url) { (img) in
-                    let image = ImageMediaItem(image: img)
-                    self.messages.append(Message(sender: self.currentUserMsg , messageId: document.documentID , sentDate: data["time"] as! Date, kind: .photo(image) ))
+            self.DownloadImage(url: url) { (img) in
+                let image = ImageMediaItem(image: img)
+                guard let date  = ImagesOperations.trans(data: data) else { return}
+                var idx = 0
+                for msg in self.messages {
+                    if msg.sentDate > date {
+                        self.messages.insert(Message(sender: self.currentUserMsg , messageId: document.documentID , sentDate: date, kind: .photo(image) ), at: idx)
+                        break
+                    }
+                    idx += 1
                 }
             }
+            
         }
         messagesCollectionView.reloadData()
     }
@@ -118,7 +120,7 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     func retrieveOtherMessage(data : [String : Any], document : QueryDocumentSnapshot){
         if data["type"] as! String == "text" {
             let messageText = data["text"] as! String
-            guard let date  = trans(data: data) else {
+            guard let date  = ImagesOperations.trans(data: data) else {
                 self.showAlert(title: "Error", message: "Error in message time propaply time zone is wrong")
                 return
             }
@@ -126,20 +128,24 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                                     kind: .text( messageText ) )) }
         else {
             guard let url = data["imgUrl"] as? String else {
-                self.showAlert(title: "Error", message: "There is an error in the database")
+                self.showAlert(title: "Error", message: "There is an error in the database image")
                 return
             }
             
-            DispatchQueue.main.async {
-                self.DownloadImage(url: url) { (img) in
-                    let image = ImageMediaItem(image: img)
-                    guard let date  = self.trans(data: data) else { return}
-                    self.messages.append(Message(sender: self.otherUserMsg , messageId: document.documentID , sentDate: date,
-                                                 kind: .photo(image) ))
-                    self.messagesCollectionView.reloadData()
+            self.DownloadImage(url: url) { (img) in
+                let image = ImageMediaItem(image: img)
+                guard let date  = ImagesOperations.trans(data: data) else { return}
+                var idx = 0
+                for msg in self.messages {
+                    if msg.sentDate > date {
+                        self.messages.insert(Message(sender: self.otherUserMsg , messageId: document.documentID , sentDate: date,
+                                                     kind: .photo(image) ), at: idx)
+                        break
+                    }
+                    idx += 1
                 }
+                self.messagesCollectionView.reloadData()
             }
-        
         }
         messagesCollectionView.reloadData()
         
@@ -203,20 +209,21 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                         print("Error fetching documents: \(error!)")
                         return
                     }
-                    let newMsg = documents.last!.data()
-                    guard let transTime = self.trans(data: newMsg)  , transTime > self.nowTime else {
-                        return
-                    }
-                    print("Current new msg is : \(newMsg)")
-                    if newMsg["senderID"] as? String == self.currentUser!.uid {
-                        self.retrieveCurrentUserMessage(data: newMsg, document: documents.last!)
-                    }else{
+                    for document in documents {
+                        let newMsg = document.data()
+                        guard let transTime = ImagesOperations.trans(data: newMsg)  , transTime > self.nowTime else {
+                            return
+                        }
+                        print("Current new msg is : \(newMsg)")
+                        if newMsg["senderID"] as? String == self.currentUser!.uid {
+                            self.retrieveCurrentUserMessage(data: newMsg, document: documents.last!)
+                        }else{
                             self.retrieveOtherMessage(data: newMsg, document: documents.last!)
                         }
-                    
-                    
+                    }
                 }
             }
+            
         } else {
             if let listener = listener { listener.remove()}
         }
@@ -238,7 +245,6 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         super.viewDidLoad()
         
         guard let user = UtilityFunctions.user else {
-            print("55555555556")
             return
         }
         
@@ -246,7 +252,7 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         self.currentUser = user
 
         creatNavigationBarButtons()
-        ChatVCvm.setTheTopMessageView(view: view, MC: messagesCollectionView)
+        ChatVCvm.setTheTopMessageView(view: view, MC: messagesCollectionView, img: otherUserImage ?? UIImage(named: "pp")! ) 
         configureCollectionView()
         configureMessageInputBar()
         tapGestureKeyboard()

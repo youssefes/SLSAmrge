@@ -12,8 +12,8 @@ import Firebase
 import CodableFirebase
 class ChatVCvm {
     
-    static func setTheTopMessageView(view : UIView , MC : MessagesCollectionView) {
-        let subView = TopMessageView()
+    static func setTheTopMessageView(view : UIView , MC : MessagesCollectionView , img : UIImage) {
+        let subView = TopMessageView(img: img)
         subView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subView)
         

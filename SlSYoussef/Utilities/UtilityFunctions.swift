@@ -100,6 +100,7 @@ struct UtilityFunctions {
             FetchUserData.fetchFBUserData { (user) in
                 if user != nil {
                     UtilityFunctions.user = user
+                    
                     print("Helloooo this is the current user data")
                     print(user!)
                 }

@@ -15,6 +15,7 @@ class TopMessageView : UIView {
     
     let userImage          = UIImageView()
     let onlineStateImage   = UIImageView()
+    var recievedImg  : UIImage?
     
     let seperatorView      = UIView()
     let stackView = UIStackView()
@@ -22,6 +23,12 @@ class TopMessageView : UIView {
     
     override init(frame: CGRect) {
         super.init(frame: .zero)
+        configure()
+    }
+    
+    init(img : UIImage) {
+        super.init(frame: .zero)
+        self.recievedImg = img
         configure()
     }
     
@@ -92,7 +99,7 @@ class TopMessageView : UIView {
     }
     
     private func configureFriendImage(){
-        userImage.image       = UIImage(named: "ppp")
+        userImage.image       = recievedImg
         userImage.contentMode = .scaleAspectFill
         userImage.layer.cornerRadius  = 18
         userImage.layer.masksToBounds = true

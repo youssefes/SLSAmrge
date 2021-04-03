@@ -162,7 +162,6 @@ extension ChatVC : InputBarAccessoryViewDelegate {
             sleep(1)
             DispatchQueue.main.async { [weak self] in
                     self?.insertMessage(components)
-                //        self?.messagesCollectionView.reloadData()
                 inputBar.sendButton.stopAnimating()
                 inputBar.inputTextView.placeholderLabel.text = "   Write a message"
                 //self?.insertMessages(components)

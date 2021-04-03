@@ -18,7 +18,11 @@
 		0783CFF225DED084004623DF /* ChatVCvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783CFF125DED084004623DF /* ChatVCvm.swift */; };
 		07CF2B3325E6CC5F00389F53 /* ImageMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */; };
 		2711C44F918C5579B2907782 /* Pods_SlSYoussef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */; };
+		B65F619E26135D2900D33A95 /* ImagesOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F619D26135D2900D33A95 /* ImagesOperations.swift */; };
 		B663B9A1260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */; };
+		B6670535261485A3004B16B7 /* MessagesVM.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6670534261485A3004B16B7 /* MessagesVM.swift */; };
+		B66A4A7626134C1A005F3118 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A4A7526134C1A005F3118 /* MessageData.swift */; };
+		B66A4A7A261350EE005F3118 /* ChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A4A79261350EE005F3118 /* ChannelData.swift */; };
 		E83749EF25D74B7600809B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749EE25D74B7600809B4E /* AppDelegate.swift */; };
 		E83749F125D74B7600809B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749F025D74B7600809B4E /* SceneDelegate.swift */; };
 		E83749F825D74B7B00809B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83749F725D74B7B00809B4E /* Assets.xcassets */; };
@@ -176,7 +180,11 @@
 		07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMediaItem.swift; sourceTree = "<group>"; };
 		69276F81CB0AE9B439828B91 /* Pods-SlSYoussef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.debug.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA25CE29FCCD01A5A478693 /* Pods-SlSYoussef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.release.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.release.xcconfig"; sourceTree = "<group>"; };
+		B65F619D26135D2900D33A95 /* ImagesOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesOperations.swift; sourceTree = "<group>"; };
 		B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC InbutBar + Ext.swift"; sourceTree = "<group>"; };
+		B6670534261485A3004B16B7 /* MessagesVM.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessagesVM.swift; sourceTree = "<group>"; };
+		B66A4A7526134C1A005F3118 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		B66A4A79261350EE005F3118 /* ChannelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelData.swift; sourceTree = "<group>"; };
 		D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlSYoussef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EB25D74B7600809B4E /* SlSYoussef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlSYoussef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EE25D74B7600809B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -360,7 +368,10 @@
 			isa = PBXGroup;
 			children = (
 				075B2D7025DBDEF10083B3E0 /* Messages.swift */,
+				B6670534261485A3004B16B7 /* MessagesVM.swift */,
 				075B2D7125DBDEF10083B3E0 /* Messages.xib */,
+				B66A4A7C26135121005F3118 /* Models */,
+				B65F619D26135D2900D33A95 /* ImagesOperations.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -410,6 +421,15 @@
 				D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B66A4A7C26135121005F3118 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B66A4A7526134C1A005F3118 /* MessageData.swift */,
+				B66A4A79261350EE005F3118 /* ChannelData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E83749E225D74B7600809B4E = {
@@ -1286,6 +1306,8 @@
 				E8374A6A25D74C6600809B4E /* CommentsOfPostViewController.swift in Sources */,
 				E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */,
 				E8374A6B25D74C6600809B4E /* OptionVCViewController.swift in Sources */,
+				B6670535261485A3004B16B7 /* MessagesVM.swift in Sources */,
+				B66A4A7626134C1A005F3118 /* MessageData.swift in Sources */,
 				E8374A6125D74C6600809B4E /* StoresCollectionViewCell.swift in Sources */,
 				075B2D7C25DBE10E0083B3E0 /* User.swift in Sources */,
 				E83FFCEB25DB011A00F6F7FA /* summeryCheckoutViewController.swift in Sources */,
@@ -1320,6 +1342,7 @@
 				E83BC00425D75E3C00F26E2F /* ProfileSettingCell.swift in Sources */,
 				E8374A5C25D74C6600809B4E /* ContainerImageView.swift in Sources */,
 				E8374A5025D74C6600809B4E /* CameraController.swift in Sources */,
+				B66A4A7A261350EE005F3118 /* ChannelData.swift in Sources */,
 				E83BBF5525D7592900F26E2F /* DesignSystem.swift in Sources */,
 				E83BBF5825D7592900F26E2F /* CustomFontDiscriptor.swift in Sources */,
 				E8374A6E25D74C6600809B4E /* HomeViewController.swift in Sources */,
@@ -1366,6 +1389,7 @@
 				E83BBF9825D75B9000F26E2F /* UtilityFunctions.swift in Sources */,
 				0783CFF225DED084004623DF /* ChatVCvm.swift in Sources */,
 				E83BC00A25D75E3C00F26E2F /* EmptyStateVC.swift in Sources */,
+				B65F619E26135D2900D33A95 /* ImagesOperations.swift in Sources */,
 				E83BBF3825D7590C00F26E2F /* LoadingView.swift in Sources */,
 				E83BBFDC25D75CEE00F26E2F /* ShippingAdress.swift in Sources */,
 				E83BBFDE25D75CEE00F26E2F /* PostVC.swift in Sources */,
