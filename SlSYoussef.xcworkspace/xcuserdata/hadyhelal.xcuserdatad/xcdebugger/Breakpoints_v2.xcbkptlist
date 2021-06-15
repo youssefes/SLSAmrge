@@ -7,182 +7,6 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "29CD4D98-7C22-4219-B235-98FEE4057CB1"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "120"
-            endingLineNumber = "120"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2358DE37-D9A1-4394-A00D-24BE6E719166"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "127"
-            endingLineNumber = "127"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "FA54CEAF-816F-4317-AF90-184C81DEC2C2"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "FA54CEAF-816F-4317-AF90-184C81DEC2C2 - d76810b336a5b025"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.ChatVC.retrieveMessages() -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "57"
-                  endingLineNumber = "57"
-                  offsetFromSymbolStart = "1430">
-               </Location>
-               <Location
-                  uuid = "FA54CEAF-816F-4317-AF90-184C81DEC2C2 - 423bf41d5ec5af26"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.ChatVC.retrieveMessages() -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "58"
-                  endingLineNumber = "58"
-                  offsetFromSymbolStart = "161">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "3E810192-A06E-4A15-AEC8-6CD19E6EFE07"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "68"
-            endingLineNumber = "68"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4E5E5F4B-1027-4AAD-B30E-01D4D8135098"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "902142DB-8A73-4BCF-95BF-30D537F5C681"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "61"
-            endingLineNumber = "61"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "DF4837AD-6044-43DB-BBEC-EDA24E5F2968"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "9AF87DB7-B2DE-4386-8974-870DD5407C8E"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "237"
-            endingLineNumber = "237"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "D0A65209-323E-4AE5-805E-B72C7D503801"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "243"
-            endingLineNumber = "243"
-            landmarkName = "tableView(_:didSelectRowAt:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
             uuid = "F97636D4-E806-422D-A314-3B17D680DDE3"
             shouldBeEnabled = "No"
             ignoreCount = "0"
@@ -190,280 +14,40 @@
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "234"
-            endingLineNumber = "234"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "4D76AFD1-1005-4649-9BC3-CEF47D8AA157"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "254"
-            endingLineNumber = "254"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "2B00F832-64D6-4B05-B1FF-A19A143A0113"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "206"
-            endingLineNumber = "206"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "2B00F832-64D6-4B05-B1FF-A19A143A0113 - c732013370ca1a1f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlSYoussef.ChatVC.listenForNewMessages(stopListen: Swift.Bool) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "206"
-                  endingLineNumber = "206"
-                  offsetFromSymbolStart = "130">
-               </Location>
-               <Location
-                  uuid = "2B00F832-64D6-4B05-B1FF-A19A143A0113 - ec953d0c748ccd1"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.ChatVC.listenForNewMessages(stopListen: Swift.Bool) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "207"
-                  endingLineNumber = "207"
-                  offsetFromSymbolStart = "294">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7D4BAD61-0C3F-4FB2-8FAD-6C113AA62CD3"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "208"
-            endingLineNumber = "208"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BC7EA70B-0884-4E40-8B61-A3C2CCF03A26"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "230"
-            endingLineNumber = "230"
-            landmarkName = "tableView(_:didSelectRowAt:)"
+            startingLineNumber = "57"
+            endingLineNumber = "57"
+            landmarkName = "viewWillAppear(_:)"
             landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "BC7EA70B-0884-4E40-8B61-A3C2CCF03A26 - 1cc9ac41a8741ffb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlSYoussef.Messages.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "321">
-               </Location>
-               <Location
-                  uuid = "BC7EA70B-0884-4E40-8B61-A3C2CCF03A26 - 3cc96e53a76bae1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Result&lt;Swift.Dictionary&lt;Swift.String, Any&gt;, SlSYoussef.ChatVCvm.Er&gt;) -&gt; () in SlSYoussef.Messages.tableView(_: __C.UITableView, didSelectRowAt: Foundation.IndexPath) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "114"
-                  endingLineNumber = "114"
-                  offsetFromSymbolStart = "255">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7CE13BF2-E49A-4FF0-807B-D240D6479419"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "76"
-            endingLineNumber = "76"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "468C09DB-47FE-48BA-B258-CF9E65A0E606"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "135"
-            endingLineNumber = "135"
-            landmarkName = "unknown"
-            landmarkType = "0">
-            <Locations>
-               <Location
-                  uuid = "468C09DB-47FE-48BA-B258-CF9E65A0E606 - 7a67c0692bc37a1b"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlSYoussef.ChatVC.retrieveOtherMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "135"
-                  endingLineNumber = "135"
-                  offsetFromSymbolStart = "2460">
-               </Location>
-               <Location
-                  uuid = "468C09DB-47FE-48BA-B258-CF9E65A0E606 - 88efe09d0e7641c2"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIImage) -&gt; () in SlSYoussef.ChatVC.retrieveOtherMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "136"
-                  endingLineNumber = "136"
-                  offsetFromSymbolStart = "342">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "F1A21CB1-CD98-4C6C-8722-F0CB70EB2F49"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "261"
-            endingLineNumber = "261"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "851D3680-F287-45AD-A180-852371AF8050"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "266"
-            endingLineNumber = "266"
-            landmarkName = "unknown"
-            landmarkType = "0">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "063BD6A8-3CFF-4AB2-AE87-A338E751A61C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "271"
-            endingLineNumber = "271"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "90A66721-0C62-4EC5-8D8C-96CC8194EE86"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "58"
-            endingLineNumber = "58"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            startingLineNumber = "105"
+            endingLineNumber = "105"
+            landmarkName = "instantiateChatMessages()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "6967AB6C-A47D-4704-B7EC-B5BAE5C96861"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "64"
-            endingLineNumber = "64"
+            startingLineNumber = "81"
+            endingLineNumber = "81"
             landmarkName = "insertMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -472,14 +56,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "69C81436-EE7D-44C0-8322-78C9E8C51B2F"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "75"
-            endingLineNumber = "75"
+            startingLineNumber = "93"
+            endingLineNumber = "93"
             landmarkName = "insertMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -488,14 +72,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "4EDF5EFB-D3B9-4265-AB85-EE59E44FC99C"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "70"
-            endingLineNumber = "70"
+            startingLineNumber = "88"
+            endingLineNumber = "88"
             landmarkName = "insertMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -510,13 +94,13 @@
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
+            startingLineNumber = "99"
+            endingLineNumber = "99"
             landmarkName = "insertMessage(_:)"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "61852A7C-ACFB-4AA0-9744-B2432B1196D1 - 35553047bb31cdc3"
+                  uuid = "61852A7C-ACFB-4AA0-9744-B2432B1196D1 - 35553047bb31c07c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -526,12 +110,12 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20InbutBar%20+%20Ext.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "5421">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "5428">
                </Location>
                <Location
-                  uuid = "61852A7C-ACFB-4AA0-9744-B2432B1196D1 - 35553047bb31cdc3"
+                  uuid = "61852A7C-ACFB-4AA0-9744-B2432B1196D1 - 35553047bb31c07c"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -541,9 +125,9 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20InbutBar%20+%20Ext.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "80"
-                  endingLineNumber = "80"
-                  offsetFromSymbolStart = "5532">
+                  startingLineNumber = "99"
+                  endingLineNumber = "99"
+                  offsetFromSymbolStart = "5539">
                </Location>
             </Locations>
          </BreakpointContent>
@@ -552,14 +136,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "965EFD44-5F14-4B6B-AAC0-6F0C04E14885"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "94"
-            endingLineNumber = "94"
+            startingLineNumber = "111"
+            endingLineNumber = "111"
             landmarkName = "insertMessage(_:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -568,19 +152,19 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "A41E2650-DA9D-4794-958F-7CA6795B2CE9"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "119"
-            endingLineNumber = "119"
+            startingLineNumber = "133"
+            endingLineNumber = "133"
             landmarkName = "updateCollectionView()"
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A41E2650-DA9D-4794-958F-7CA6795B2CE9 - 4822d4322546b4fd"
+                  uuid = "A41E2650-DA9D-4794-958F-7CA6795B2CE9 - 4822d4322546b4bb"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -590,12 +174,12 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20InbutBar%20+%20Ext.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "119"
-                  endingLineNumber = "119"
+                  startingLineNumber = "117"
+                  endingLineNumber = "117"
                   offsetFromSymbolStart = "44">
                </Location>
                <Location
-                  uuid = "A41E2650-DA9D-4794-958F-7CA6795B2CE9 - 1de628bd1f6e28e2"
+                  uuid = "A41E2650-DA9D-4794-958F-7CA6795B2CE9 - 1de628bd1f6e2920"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -605,8 +189,8 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20InbutBar%20+%20Ext.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "120"
-                  endingLineNumber = "120"
+                  startingLineNumber = "118"
+                  endingLineNumber = "118"
                   offsetFromSymbolStart = "77">
                </Location>
             </Locations>
@@ -616,14 +200,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "49452121-AA20-40BF-8A04-B66401CF8C23"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "125"
-            endingLineNumber = "125"
+            startingLineNumber = "139"
+            endingLineNumber = "139"
             landmarkName = "updateCollectionView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -632,14 +216,14 @@
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
             uuid = "1A23093D-AC38-42A1-8C79-CCA00BA35E91"
-            shouldBeEnabled = "Yes"
+            shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "122"
-            endingLineNumber = "122"
+            startingLineNumber = "136"
+            endingLineNumber = "136"
             landmarkName = "updateCollectionView()"
             landmarkType = "7">
          </BreakpointContent>
@@ -647,7 +231,23 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "35C1CF6D-8AED-4E3C-AB2E-B932B8B0DEA7"
+            uuid = "61A34CF0-E2DD-4242-A976-5A3CFD22E144"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "162"
+            endingLineNumber = "162"
+            landmarkName = "listenForNewMessages(stopListen:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "120A2E1D-16A1-466D-A040-5171E69A853B"
             shouldBeEnabled = "No"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -656,14 +256,1050 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "87"
             endingLineNumber = "87"
-            landmarkName = "unknown"
-            landmarkType = "0">
+            landmarkName = "viewDidLoad()"
+            landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0B09E244-25DC-4D7F-81B3-B899AE5295C5"
+            uuid = "D510441D-2359-4ECA-A5FD-89A9600497F2"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "101"
+            endingLineNumber = "101"
+            landmarkName = "instantiateChatMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3960B49E-6FAD-4A33-A10F-6F40E8DCE37C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "instantiateChatMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83AC5A5A-3156-4530-824F-6FFA6DF43BBA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC Picker+Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "handle(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "57D07A46-810E-48DA-A313-9842DF2DE31D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC Picker+Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "43"
+            endingLineNumber = "43"
+            landmarkName = "handle(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "6FC4E86A-119D-4DEA-8E18-78A4C208996D"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC Picker+Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "50"
+            endingLineNumber = "50"
+            landmarkName = "DownloadImage(url:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E74E5663-E5F7-4C61-A525-BEFB99189C93"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "87"
+            endingLineNumber = "87"
+            landmarkName = "retrieveOtherMessage(data:document:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E4E72964-14CC-454D-9D77-58A7F1D211E0"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/Extensions/VC Extensions/VController BarBtn+Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "92"
+            endingLineNumber = "92"
+            landmarkName = "ShowProfile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "CB203BA3-C60F-4163-AA09-289E2B1C2757"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/Extensions/VC Extensions/VController BarBtn+Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "96"
+            endingLineNumber = "96"
+            landmarkName = "ShowProfile()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/Customs/Custom Cells/Chat Cell/ChatCell.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "ChatCell"
+            landmarkType = "3">
+            <Locations>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - 9d775a1aab92882c"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.array.getter : Swift.Array&lt;Swift.Int&gt;"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "122">
+               </Location>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - 17e01a342f6c3020"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.array.setter : Swift.Array&lt;Swift.Int&gt;"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "148">
+               </Location>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - b1dfe60ad3c0cec4"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.array.modify : Swift.Array&lt;Swift.Int&gt;"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "0"
+                  endingLineNumber = "0"
+                  offsetFromSymbolStart = "18">
+               </Location>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - bce7617816ee6020"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.array.modify : Swift.Array&lt;Swift.Int&gt; with unmangled suffix &quot;.resume.0&quot;"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "4">
+               </Location>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - adda4c4cff478133"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.init(style: __C.UITableViewCellStyle, reuseIdentifier: Swift.Optional&lt;Swift.String&gt;) -&gt; SlSYoussef.ChatCell"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "958">
+               </Location>
+               <Location
+                  uuid = "AB146422-3449-41CD-8CA9-4CCE1A4A5858 - 6a27f3c3f2e44081"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatCell.init(coder: __C.NSCoder) -&gt; Swift.Optional&lt;SlSYoussef.ChatCell&gt;"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/Customs/Custom%20Cells/Chat%20Cell/ChatCell.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "23"
+                  endingLineNumber = "23"
+                  offsetFromSymbolStart = "899">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D667576F-57DB-4720-B585-F76AFE2C4FAC"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "54"
+            endingLineNumber = "54"
+            landmarkName = "retrieveCurrentUserMessage(data:document:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "D667576F-57DB-4720-B585-F76AFE2C4FAC - 8ca077b59d941078"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatVC.retrieveCurrentUserMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1239">
+               </Location>
+               <Location
+                  uuid = "D667576F-57DB-4720-B585-F76AFE2C4FAC - 8ca077b59d941078"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatVC.retrieveCurrentUserMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "54"
+                  endingLineNumber = "54"
+                  offsetFromSymbolStart = "1708">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3908833D-6BEC-4BB7-B03B-841F66EEAD10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "84"
+            endingLineNumber = "84"
+            landmarkName = "insertMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "3815EB5C-92EA-446B-9BFB-13E9638397DF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC InbutBar + Ext.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "insertMessage(_:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A05454BA-AA8E-4F96-A638-3D2C0249F1BB"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Models/MessageData.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "18"
+            endingLineNumber = "18"
+            landmarkName = "MessageData"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "ED16914D-A644-423A-B793-22DCA9A9EF50"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/View Models/MessageFB.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "MessageFB"
+            landmarkType = "14">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "78E924C8-53BE-4926-B37E-FCDC07EB0437"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/View Models/MessageFB.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "23"
+            endingLineNumber = "23"
+            landmarkName = "init(text:recipientID:senderID:senderImage:reciverImage:senderName:time:seen:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1A3CAEAC-7EA4-493B-A1CE-B58330A91B10"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/View Models/MessageFB.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "35"
+            endingLineNumber = "35"
+            landmarkName = "init(imgURL:recipientID:senderID:senderImage:reciverImage:senderName:time:seen:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "334C9451-45B0-4075-8C75-468D0F9D4BD5"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVCvm.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "52"
+            endingLineNumber = "52"
+            landmarkName = "getUserDocumentData(uid:dp:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "90028231-8530-4381-9BEF-C8FD584CDA93"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVCvm.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "37"
+            endingLineNumber = "37"
+            landmarkName = "saveUserImgAndName(userName:userIcon:refToCurrentUser:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "D3C67D6C-FF0C-4073-A695-E24188AEDE56"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "45"
+            endingLineNumber = "45"
+            landmarkName = "retrieveCurrentUserMessage(data:document:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2C3F987B-3882-4643-B5C0-20B6861BE4F9"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "15"
+            endingLineNumber = "15"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "B0111E67-1F3C-4842-9EA0-9F417E11B228"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "21"
+            endingLineNumber = "21"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "B0111E67-1F3C-4842-9EA0-9F417E11B228 - 2a4a3ea214581bc9"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.ChatVC.retrieveMessages() -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "21"
+                  endingLineNumber = "21"
+                  offsetFromSymbolStart = "1239">
+               </Location>
+               <Location
+                  uuid = "B0111E67-1F3C-4842-9EA0-9F417E11B228 - bf19da0c7c38040a"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRQuerySnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.ChatVC.retrieveMessages() -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "22"
+                  endingLineNumber = "22"
+                  offsetFromSymbolStart = "154">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4A0C96D1-B403-4A56-BAA7-B01E72BBFD33"
+            shouldBeEnabled = "No"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "22"
+            endingLineNumber = "22"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "8156147F-6A11-4A9C-AC7E-D406FE77EA5F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "25"
+            endingLineNumber = "25"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "18646ABD-27B2-478F-90FE-C37E79CD4739"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "27"
+            endingLineNumber = "27"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "28D96429-9EA2-4691-8B2C-B10EA0F55353"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "26"
+            endingLineNumber = "26"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "C8B17A85-7809-4BA2-ACFB-242F47976BDF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "28"
+            endingLineNumber = "28"
+            landmarkName = "retrieveMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A377716D-7952-4C33-A788-3359BA651782"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "125"
+            endingLineNumber = "125"
+            landmarkName = "retrieveOtherMessage(data:document:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "92AE3E19-448D-4530-878C-772FC944055B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "retrieveOtherMessage(data:document:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "92AE3E19-448D-4530-878C-772FC944055B - 8745ee78093ee414"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "SlSYoussef.ChatVC.retrieveOtherMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "106"
+                  endingLineNumber = "106"
+                  offsetFromSymbolStart = "2486">
+               </Location>
+               <Location
+                  uuid = "92AE3E19-448D-4530-878C-772FC944055B - 6c311db26d93dfc7"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.UIImage&gt;) -&gt; () in SlSYoussef.ChatVC.retrieveOtherMessage(data: Swift.Dictionary&lt;Swift.String, Any&gt;, document: __C.FIRQueryDocumentSnapshot) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Chat/ChatVC%20+%20RetrieveMessages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "107"
+                  endingLineNumber = "107"
+                  offsetFromSymbolStart = "426">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "83BB9EB7-C1C3-4071-8B4E-2F7E0EDF08E0"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "107"
+            endingLineNumber = "107"
+            landmarkName = "retrieveOtherMessage(data:document:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "04EA4925-1346-4738-9C63-86A99D61EAB1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC + RetrieveMessages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "117"
+            endingLineNumber = "117"
+            landmarkName = "retrieveOtherMessage(data:document:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "9045E4FB-A97D-4DE3-8DBF-F754FCF1B004"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "373"
+            endingLineNumber = "373"
+            landmarkName = "handleDeleteChat(alertAction:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "E3D81E5F-2A31-4A47-B7BC-1582AF6B5B00"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
+            landmarkName = "handleDeleteChat(alertAction:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "4E146223-A840-4ABD-9AB2-CDB970AFBC9E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "393"
+            endingLineNumber = "393"
+            landmarkName = "handleDeleteChat(alertAction:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A5A241DB-D46F-4808-9EE2-4A20DC3034D6"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "103"
+            endingLineNumber = "103"
+            landmarkName = "loadUserMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "899BB868-6E5F-43C3-819F-98D97326DEEF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "106"
+            endingLineNumber = "106"
+            landmarkName = "loadUserMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "48C1B667-7617-42FF-94DE-CF135D2365AA"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "110"
+            endingLineNumber = "110"
+            landmarkName = "loadUserMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1CB187DC-EE12-489B-961F-C5FB81ABE1B4"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "114"
+            endingLineNumber = "114"
+            landmarkName = "loadUserMessages()"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "865C2AA0-4F68-4A59-AB38-44950E9DC730"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "184"
+            endingLineNumber = "184"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23D98E44-03F7-44D2-86E6-6E80A0CBEAAF"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "190"
+            endingLineNumber = "190"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "DC7E28A3-8430-4D4F-A29F-3C2A117248E8"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "194"
+            endingLineNumber = "194"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "68EDB16C-39FC-4BB1-81B4-55C3F1CF8A6F"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "198"
+            endingLineNumber = "198"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "5B9F4AD6-8B1E-4111-A57D-D20871D2F89D"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "187"
+            endingLineNumber = "187"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "204"
+            endingLineNumber = "204"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - e1991db19f4348bc"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "199"
+                  endingLineNumber = "199"
+                  offsetFromSymbolStart = "2285">
+               </Location>
+               <Location
+                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - 68e9aad9dc8f9d21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "366">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "205"
+            endingLineNumber = "205"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+            <Locations>
+               <Location
+                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 68e9aad9dc8f9d21"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "200"
+                  endingLineNumber = "200"
+                  offsetFromSymbolStart = "366">
+               </Location>
+               <Location
+                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 88e57fa207169f39"
+                  shouldBeEnabled = "Yes"
+                  ignoreCount = "0"
+                  continueAfterRunningActions = "No"
+                  symbolName = "closure #1 (Swift.Optional&lt;SlSYoussef.RetrievedData&gt;) -&gt; () in closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
+                  moduleName = "SlSYoussef"
+                  usesParentBreakpointCondition = "Yes"
+                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
+                  startingColumnNumber = "9223372036854775807"
+                  endingColumnNumber = "9223372036854775807"
+                  startingLineNumber = "202"
+                  endingLineNumber = "202"
+                  offsetFromSymbolStart = "567">
+               </Location>
+            </Locations>
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "177D2964-FD78-4F3B-9683-C1BB76D4205E"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "211"
+            endingLineNumber = "211"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "BF5FA66C-6C17-4CC3-9FDC-0C49D198081B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "234"
+            endingLineNumber = "234"
+            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "731E5243-E9B0-4CE1-A0B0-45B7EDC8D4A7"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "236"
+            endingLineNumber = "236"
+            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "F3645460-6C4A-4996-A169-F245CBA4E515"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "240"
+            endingLineNumber = "240"
+            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "49FFC866-74EC-460A-A30E-F20863768AD1"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "244"
+            endingLineNumber = "244"
+            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "81DD4F3A-320B-45CE-98D8-5B8996D3CA48"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
@@ -672,6 +1308,22 @@
             endingColumnNumber = "9223372036854775807"
             startingLineNumber = "218"
             endingLineNumber = "218"
+            landmarkName = "getImageAndName(otherUserID:channelID:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "2A374AFA-AE49-42D0-B187-6D890B8C674B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "342"
+            endingLineNumber = "342"
             landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -679,384 +1331,64 @@
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "20094289-EF28-4CFD-87C9-CA67EDCFDC39"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "211"
-            endingLineNumber = "211"
-            landmarkName = "tableView(_:numberOfRowsInSection:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "E5546235-BCD9-448D-9D4C-A79299164473"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "66"
-            endingLineNumber = "66"
-            landmarkName = "headingToChannelID(channelID:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "236FCF20-B376-469D-A436-8E8DA7CEB46A"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "77"
-            endingLineNumber = "77"
-            landmarkName = "headingToChannelID(channelID:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "AB9F47A9-17FB-45C8-A18E-A94DBFA517C7"
+            uuid = "801DB719-777F-4A53-91CE-8C44ACE23621"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "32"
-            endingLineNumber = "32"
-            landmarkName = "viewDidLoad()"
+            startingLineNumber = "330"
+            endingLineNumber = "330"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "0508639B-C248-4633-928A-343633411FB7"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "99"
-            endingLineNumber = "99"
-            landmarkName = "getImageAndName(otherUserID:channelID:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "0508639B-C248-4633-928A-343633411FB7 - e1991db19f433bbb"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "98"
-                  endingLineNumber = "98"
-                  offsetFromSymbolStart = "1959">
-               </Location>
-               <Location
-                  uuid = "0508639B-C248-4633-928A-343633411FB7 - 68e9aad9dc8fecb0"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "87"
-                  endingLineNumber = "87"
-                  offsetFromSymbolStart = "68">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "322BC855-F2D1-40F8-9664-BCA85767BE6C"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "91"
-            endingLineNumber = "91"
-            landmarkName = "getImageAndName(otherUserID:channelID:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "322BC855-F2D1-40F8-9664-BCA85767BE6C - 13f08ac15ca5a63e"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "90"
-                  endingLineNumber = "90"
-                  offsetFromSymbolStart = "494">
-               </Location>
-               <Location
-                  uuid = "322BC855-F2D1-40F8-9664-BCA85767BE6C - e1991db19f43392f"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "86"
-                  endingLineNumber = "86"
-                  offsetFromSymbolStart = "369">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "02E6C248-7970-4531-A2A8-BF0D50C1F59D"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "79"
-            endingLineNumber = "79"
-            landmarkName = "headingToChannelID(channelID:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "B343E702-62D8-46C3-B51B-20CCF6C4BB5F"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "80"
-            endingLineNumber = "80"
-            landmarkName = "headingToChannelID(channelID:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "15AA8741-A661-4C2D-9E2E-356433E3E695"
+            uuid = "DAD4B9E8-2B49-46F8-B383-E2FE1A81B96D"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "115"
-            endingLineNumber = "115"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            startingLineNumber = "331"
+            endingLineNumber = "331"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "45FA6533-2CC7-4851-9615-44BD0A9E1E2D"
+            uuid = "6A2CC657-2626-44D4-868C-41A639A72E5A"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "121"
-            endingLineNumber = "121"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
+            startingLineNumber = "334"
+            endingLineNumber = "334"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
       <BreakpointProxy
          BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
          <BreakpointContent
-            uuid = "6F146AA3-61DE-4D89-809A-82506AAA9457"
+            uuid = "969A07F3-C30D-4230-A849-48D1A7ACD7E7"
             shouldBeEnabled = "Yes"
             ignoreCount = "0"
             continueAfterRunningActions = "No"
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "124"
-            endingLineNumber = "124"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "C244072A-071C-4C5F-A99F-6F92698CEC29"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "129"
-            endingLineNumber = "129"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "A1912DDF-479F-4FF0-BC3F-0BA90BA1571C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Chat/ChatVC.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "95"
-            endingLineNumber = "95"
-            landmarkName = "unknown"
-            landmarkType = "0">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "7A9CABFB-F717-4831-BF99-FD49C510D8B0"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "100"
-            endingLineNumber = "100"
-            landmarkName = "getImageAndName(otherUserID:channelID:)"
-            landmarkType = "7">
-            <Locations>
-               <Location
-                  uuid = "7A9CABFB-F717-4831-BF99-FD49C510D8B0 - 68e9aad9dc8fee45"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "100"
-                  endingLineNumber = "100"
-                  offsetFromSymbolStart = "262">
-               </Location>
-               <Location
-                  uuid = "7A9CABFB-F717-4831-BF99-FD49C510D8B0 - ab31d9cde1849ee8"
-                  shouldBeEnabled = "Yes"
-                  ignoreCount = "0"
-                  continueAfterRunningActions = "No"
-                  symbolName = "closure #1 (Swift.String, Foundation.Date) -&gt; () in closure #1 (__C.UIImage) -&gt; () in closure #1 (Swift.Optional&lt;__C.FIRDocumentSnapshot&gt;, Swift.Optional&lt;Swift.Error&gt;) -&gt; () in SlSYoussef.Messages.getImageAndName(otherUserID: Swift.Optional&lt;Swift.String&gt;, channelID: Swift.String) -&gt; ()"
-                  moduleName = "SlSYoussef"
-                  usesParentBreakpointCondition = "Yes"
-                  urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
-                  startingColumnNumber = "9223372036854775807"
-                  endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "88"
-                  endingLineNumber = "88"
-                  offsetFromSymbolStart = "411">
-               </Location>
-            </Locations>
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "BB54F2C1-C34C-4FED-B9CF-ACCDE357C43B"
-            shouldBeEnabled = "No"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "130"
-            endingLineNumber = "130"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1D028086-B5E1-45ED-B3BE-3F6D641D5F7C"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "117"
-            endingLineNumber = "117"
-            landmarkName = "retrieveLastMessage(channelID:completed:)"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "1907D4B9-92A3-4262-B47D-B33BF8C03342"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "49"
-            endingLineNumber = "49"
-            landmarkName = "loadUserMessages()"
-            landmarkType = "7">
-         </BreakpointContent>
-      </BreakpointProxy>
-      <BreakpointProxy
-         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
-         <BreakpointContent
-            uuid = "81E3F1AE-3E6E-41A4-B7F5-15C772E0F07F"
-            shouldBeEnabled = "Yes"
-            ignoreCount = "0"
-            continueAfterRunningActions = "No"
-            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
-            startingColumnNumber = "9223372036854775807"
-            endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "60"
-            endingLineNumber = "60"
-            landmarkName = "loadUserMessages()"
+            startingLineNumber = "336"
+            endingLineNumber = "336"
+            landmarkName = "tableView(_:cellForRowAt:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>

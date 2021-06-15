@@ -13,7 +13,7 @@ extension UIViewController {
     //MARK: - Alerts
     func presentAlertOnMainThread(title: String , message: String , leftTitle: String , rightTitle: String){
         DispatchQueue.main.async {
-            let alertVC = AlertVC(title: title, message: message, leftTitle: leftTitle , rightTitle: rightTitle )
+            let alertVC = AlertVC(message: message, leftTitle: leftTitle , rightTitle: rightTitle )
             alertVC.modalPresentationStyle = .overFullScreen
             alertVC.modalTransitionStyle   = .crossDissolve
             

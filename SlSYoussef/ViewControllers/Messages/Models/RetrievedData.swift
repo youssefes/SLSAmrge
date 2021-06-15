@@ -7,3 +7,9 @@
 //
 
 import Foundation
+struct RetrievedData {
+    var messageBody : String
+    var msgDate : Date
+    var senderUID : String
+    var seen : Bool
+}

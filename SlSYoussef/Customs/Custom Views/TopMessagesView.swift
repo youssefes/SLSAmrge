@@ -15,7 +15,9 @@ class TopMessageView : UIView {
     
     let userImage          = UIImageView()
     let onlineStateImage   = UIImageView()
-    var recievedImg  : UIImage?
+    var recievedImg   : UIImage?
+    var otherUserName : String?
+    var isOnline : Bool?
     
     let seperatorView      = UIView()
     let stackView = UIStackView()
@@ -26,9 +28,11 @@ class TopMessageView : UIView {
         configure()
     }
     
-    init(img : UIImage) {
+    init(img : UIImage , otherUserName : String , isOnline : Bool) {
         super.init(frame: .zero)
         self.recievedImg = img
+        self.otherUserName = otherUserName
+        self.isOnline = isOnline
         configure()
     }
     
@@ -45,6 +49,7 @@ class TopMessageView : UIView {
         
         configureStackView()
         configureFriendImage()
+        checkUserAvilability()
 
         NSLayoutConstraint.activate([
             userImage.leadingAnchor.constraint(equalTo: self.leadingAnchor ,constant: 80),
@@ -85,7 +90,7 @@ class TopMessageView : UIView {
         } else {
             // Fallback on earlier versions
         }
-        friendUsername.text         = "Hady Helal"
+        friendUsername.text         = otherUserName
         
         friendOnlineState.font      = UIFont.systemFont(ofSize: 15)
         if #available(iOS 13.0, *) {
@@ -93,19 +98,34 @@ class TopMessageView : UIView {
         } else {
             // Fallback on earlier versions
         }
-        friendOnlineState.text      = "Online"
-        friendOnlineState.textColor =  UIColor.rgb(red: 20, green: 195, blue: 160)
-   
     }
     
     private func configureFriendImage(){
-        userImage.image       = recievedImg
+        if let recievedImg = recievedImg { userImage.image  = recievedImg }
+        else { userImage.image = UIImage(named: "icon8-user")}
         userImage.contentMode = .scaleAspectFill
         userImage.layer.cornerRadius  = 18
         userImage.layer.masksToBounds = true
         userImage.clipsToBounds       = true
-        
-        onlineStateImage.image = UIImage(named: "active")
+    }
+    
+    private func checkUserAvilability(){
+        guard let online = isOnline else { return }
+        if online { userOnline() }
+            else {  userOffline() }
+    }
+    
+    private func userOffline(){
+        #warning("Set the offline image if existed")
+        onlineStateImage.image      = UIImage()
+        friendOnlineState.text      = "Offline"
+        friendOnlineState.textColor = .gray
+    }
+    
+    private func userOnline(){
+        onlineStateImage.image      = UIImage(named: "active")
+        friendOnlineState.text      = "Online"
+        friendOnlineState.textColor =  UIColor.rgb(red: 20, green: 195, blue: 160)
     }
 }
 

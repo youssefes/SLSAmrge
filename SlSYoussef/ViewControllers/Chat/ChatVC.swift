@@ -12,6 +12,7 @@ import InputBarAccessoryView
 import Firebase
 import CodableFirebase
 import Kingfisher
+
 struct Sender : SenderType {
     var senderId: String
     
@@ -37,10 +38,10 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     
     var currentlyUserUid : String?
     var currentUser : UserDataModel?
+    var currentUserImg : UIImage?
 
     var channelID : String?
     var listener : ListenerRegistration?
-    var anotherTimeEnteringChat = false
     var nowTime = Date()
 
     var currentUserMsg : SenderType {
@@ -50,185 +51,7 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     var otherUserMsg : SenderType {
         return  Sender(senderId: otherUserID, displayName: otherUser[User.userName] as! String)
     }
-    
-    func retrieveMessages(){
-        db.collection(User.user).document(currentlyUserUid!).collection("engagedChatChannels").document(otherUserID).getDocument { (snapshot, error) in
-            if error == nil , let _ = snapshot?.exists , let document = snapshot?.data(){
-                
-                guard let chnlID = document["channelId"] as? String else { print("nooooooooooooooo") ;return }
-                self.channelID = chnlID
-                self.db.collection("chatChannels").document(self.channelID!).collection("messages").order(by: "time", descending: false).getDocuments  { (snapshot, error) in
-                    if error == nil , snapshot != nil {
-                        print(snapshot!.count)
-                        for document in snapshot!.documents {
-                            let docData = document.data()
-                            if docData["senderID"] as? String == self.currentUser!.uid {
-                                print("\(docData["senderID"] ?? "nillawy")")
-                                //print(docData)
-                                self.retrieveCurrentUserMessage(data: docData, document: document)
-                            }else{
-                                self.retrieveOtherMessage(data: docData, document: document)
-                            }
-                        }
-                        
-                    }
-                    self.messagesCollectionView.reloadData()
-                    self.listenForNewMessages(stopListen: false)
-                }
-            }
-            
-            else {
-                self.instantiateChatMessages()
-            }
-        }
-        
-    }
-    
-    func retrieveCurrentUserMessage( data : [String : Any] , document : QueryDocumentSnapshot) {
-        if data["type"] as! String == "text" {
-            let messageText = data["text"] as! String
-            guard let date  = ImagesOperations.trans(data: data) else {
-                self.showAlert(title: "Error", message: "Error in message time propaply time zone is wrong")
-                return
-            }
 
-            print(messageText)
-            messages.append(Message(sender: currentUserMsg , messageId: document.documentID , sentDate: date , kind: .text( messageText) )) }
-        else {
-            guard let url = data["imgUrl"] as? String else {
-                self.showAlert(title: "Error", message: "There is an error in the database")
-                return
-            }
-            
-            self.DownloadImage(url: url) { (img) in
-                let image = ImageMediaItem(image: img)
-                guard let date  = ImagesOperations.trans(data: data) else { return}
-                var idx = 0
-                for msg in self.messages {
-                    if msg.sentDate > date {
-                        self.messages.insert(Message(sender: self.currentUserMsg , messageId: document.documentID , sentDate: date, kind: .photo(image) ), at: idx)
-                        break
-                    }
-                    idx += 1
-                }
-            }
-            
-        }
-        messagesCollectionView.reloadData()
-    }
-    
-    func retrieveOtherMessage(data : [String : Any], document : QueryDocumentSnapshot){
-        if data["type"] as! String == "text" {
-            let messageText = data["text"] as! String
-            guard let date  = ImagesOperations.trans(data: data) else {
-                self.showAlert(title: "Error", message: "Error in message time propaply time zone is wrong")
-                return
-            }
-            messages.append(Message(sender: otherUserMsg , messageId: document.documentID , sentDate: date,
-                                    kind: .text( messageText ) )) }
-        else {
-            guard let url = data["imgUrl"] as? String else {
-                self.showAlert(title: "Error", message: "There is an error in the database image")
-                return
-            }
-            
-            self.DownloadImage(url: url) { (img) in
-                let image = ImageMediaItem(image: img)
-                guard let date  = ImagesOperations.trans(data: data) else { return}
-                var idx = 0
-                for msg in self.messages {
-                    if msg.sentDate > date {
-                        self.messages.insert(Message(sender: self.otherUserMsg , messageId: document.documentID , sentDate: date,
-                                                     kind: .photo(image) ), at: idx)
-                        break
-                    }
-                    idx += 1
-                }
-                self.messagesCollectionView.reloadData()
-            }
-        }
-        messagesCollectionView.reloadData()
-        
-    }
-    
-    func handle (_ result : Result<RetrieveImageResult,KingfisherError>) -> Bool{
-        var status : Bool
-        switch result {
-        case .success(let retrievedImage):
-            status = true
-            let image = retrievedImage.image
-            let casheType = retrievedImage.cacheType
-            let source = retrievedImage.source
-            let originalResource = retrievedImage.originalSource
-            let message = """
-            ImageSize:
-            \(image.size)
-            
-            cashe:
-            \(casheType)
-            
-            source:
-            \(source)
-
-            Original source:
-            \(originalResource)
-             
-            """
-            self.showAlert(title: "Success!", message: message)
-            return true
-        case .failure(let error):
-            status = false
-            self.showAlert(title: "Error", message: error.localizedDescription)
-        }
-        return status
-    }
-    
-    func DownloadImage(url : String , completed : @escaping (_ image : UIImage) ->Void){
-        let resource = ImageResource(downloadURL: URL(string: url)!)
-        let placeholder = UIImage(named: "face")
-        let processor = RoundCornerImageProcessor(cornerRadius: 20.0)
-        let img = UIImageView()
-        img.kf.indicatorType = .activity
-        img.kf.setImage(with: resource, placeholder: placeholder, options: [.processor(processor)]) { (receivedSize, totalSize) in
-            let precentage = (Float(receivedSize) / Float(totalSize)) + 100
-            print("Downloading progress \(precentage)%")
-            
-        } completionHandler: { [self] (result) in
-            if self.handle(result) {
-                completed(img.image!)
-            }
-        }
-    }
-    
-    
-    func listenForNewMessages(stopListen : Bool){
-        if !stopListen {
-            listener = db.collection("chatChannels").document(channelID!).collection("messages").order(by: "time", descending: false).addSnapshotListener { (snapShot, error) in
-                if error == nil {
-                    guard let documents = snapShot?.documents else {
-                        print("Error fetching documents: \(error!)")
-                        return
-                    }
-                    for document in documents {
-                        let newMsg = document.data()
-                        guard let transTime = ImagesOperations.trans(data: newMsg)  , transTime > self.nowTime else {
-                            return
-                        }
-                        print("Current new msg is : \(newMsg)")
-                        if newMsg["senderID"] as? String == self.currentUser!.uid {
-                            self.retrieveCurrentUserMessage(data: newMsg, document: documents.last!)
-                        }else{
-                            self.retrieveOtherMessage(data: newMsg, document: documents.last!)
-                        }
-                    }
-                }
-            }
-            
-        } else {
-            if let listener = listener { listener.remove()}
-        }
-    }
-    
     override func viewWillAppear(_ animated: Bool) {
         super.viewWillAppear(true)
         retrieveMessages()
@@ -238,6 +61,7 @@ class ChatVC: MessagesViewController , MessagesDataSource {
     override func viewWillDisappear(_ animated: Bool) {
         super.viewWillDisappear(true)
         if let listener = self.listener { listener.remove()}
+        
         messages.removeAll()
     }
     
@@ -250,17 +74,27 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         
         currentlyUserUid = user.uid!
         self.currentUser = user
-
+        
         creatNavigationBarButtons()
-        ChatVCvm.setTheTopMessageView(view: view, MC: messagesCollectionView, img: otherUserImage ?? UIImage(named: "pp")! ) 
+        ChatVCvm.setTheTopMessageView(view: view, MC: messagesCollectionView, img: otherUserImage ?? UIImage(named: "ppp")! , otherUserName: otherUser["userName"] as! String, isOnline: otherUser["isOnline"] as! Bool)
         configureCollectionView()
         configureMessageInputBar()
         tapGestureKeyboard()
+        //Downloading current user image and set it in the message cell
+        if let imgURL = currentUser?.photoURL {
+            DownloadImage(url: imgURL.absoluteString) { (image) in
+                if let image = image {
+                    self.currentUserImg = image
+                    self.messagesCollectionView.reloadData() }
+            }
+        }
+        
+        
     }
     
     func instantiateChatMessages(){
         if UtilityFunctions.isLoggedIn {
-           let (refToCurrentUser ,channelID , refError) = ChatVCvm.refToCurrent(currentlyUserUid: currentlyUserUid, otherUserID: otherUserID , dp: db)
+            let (refToCurrentUser ,channelID , refError) = ChatVCvm.refToCurrent(currentlyUserUid: currentlyUserUid, otherUserID: otherUserID , dp: db)
             self.channelID = channelID
             
             guard refError == nil else {
@@ -279,7 +113,6 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                 }
             }
             
-            //create userInfo map and add ( userIcon , userName )
             var userIcon : String?
             var userName : String?
             ChatVCvm.getUserDocumentData(uid: otherUserID, dp: db){ [weak self] result in
@@ -297,11 +130,50 @@ class ChatVC: MessagesViewController , MessagesDataSource {
                 }
             }
         }else {
-            print("=============NOt valid===============")
-            
+            dismiss(animated: true, completion: nil)
         }
     }
 
+    func listenForNewMessages(stopListen : Bool){
+        listener = db.collection("chatChannels").document(channelID!).collection("messages").order(by: "time", descending: true).addSnapshotListener { (snapShot, error) in
+            if error == nil {
+                guard let documents = snapShot?.documents else {
+                    print("Error fetching documents: \(error!)")
+                    return
+                }
+                 
+                for document in documents {
+                    let newMsg = document.data()
+
+                    if newMsg["senderID"] as? String == self.currentUser!.uid  {
+                        continue
+                    }
+                    
+                    if let transTime = ImagesOperations.trans(data: newMsg)  , transTime < self.nowTime  {
+                        continue
+                    }
+                    self.retrieveOtherMessage(data: newMsg, document: documents.last!)
+                }
+                self.nowTime = Date()
+                self.scrollToLastItemInLastSection()
+            }
+        }
+        
+
+    }
+    
+    //Before using this funciton make sure that messagecollection view have more than one seciton
+    func scrollToLastItemInLastSection(){
+        let lastSection = self.messagesCollectionView.numberOfSections - 1
+
+        let lastRow = self.messagesCollectionView.numberOfItems(inSection: lastSection)
+
+        let indexPath = IndexPath(row: lastRow - 1, section: lastSection)
+
+        self.messagesCollectionView.scrollToItem(at: indexPath, at: .bottom, animated: true)
+
+    }
+    
     //MARK: - Message Cell Delegate functions
     func currentSender() -> SenderType {
         return currentUserMsg
@@ -315,17 +187,25 @@ class ChatVC: MessagesViewController , MessagesDataSource {
         return messages.count
     }
     
+     func collectionView(_ collectionView: UICollectionView, didSelectItemAt indexPath: IndexPath) {
+        if messages[indexPath.section] is UIImage {
+            print("image at \(messages[indexPath.section].kind)")
+        }
+    }
+    
     func configureAvatarView(_ avatarView: AvatarView, for message: MessageType, at indexPath: IndexPath, in messagesCollectionView: MessagesCollectionView) {
         if indexPath.section >= 1 , messages[indexPath.section - 1].sender.senderId == messages[indexPath.section].sender.senderId {
             avatarView.isHidden = true
             
         }else if messages[indexPath.section].sender.senderId == currentUserMsg.senderId {
             avatarView.isHidden = false
-            avatarView.image = UIImage(named: "hady")
+            avatarView.image = currentUserImg ?? nil
+            #warning("Here set the current user picture")
             
         }
         else if messages[indexPath.section].sender.senderId == otherUserMsg.senderId {
-            avatarView.image = UIImage(named: "ppp")
+            avatarView.image = otherUserImage ?? UIImage()
+            #warning("set the default image")
             avatarView.isHidden = false
         }
         else {
@@ -378,3 +258,12 @@ class ChatVC: MessagesViewController , MessagesDataSource {
 }
 
 extension ChatVC : MessagesLayoutDelegate , MessagesDisplayDelegate  {}
+extension ChatVC : MessageCellDelegate {
+    func didTapImage(in cell: MessageCollectionViewCell) {
+        print("Image tapedk")
+    }
+    
+    func didTapMessage(in cell: MessageCollectionViewCell) {
+        print("message tapped")
+    }
+}

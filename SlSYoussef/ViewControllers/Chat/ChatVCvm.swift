@@ -12,8 +12,8 @@ import Firebase
 import CodableFirebase
 class ChatVCvm {
     
-    static func setTheTopMessageView(view : UIView , MC : MessagesCollectionView , img : UIImage) {
-        let subView = TopMessageView(img: img)
+    static func setTheTopMessageView(view : UIView , MC : MessagesCollectionView , img : UIImage , otherUserName : String , isOnline : Bool) {
+        let subView = TopMessageView(img: img , otherUserName: otherUserName , isOnline : isOnline)
         subView.translatesAutoresizingMaskIntoConstraints = false
         view.addSubview(subView)
         
@@ -43,8 +43,8 @@ class ChatVCvm {
                 isValidFunc =  error
             }
             
-            print("This is the fetched document")
-            print(dic)
+//            print("This is the fetched document")
+//            print(dic)
         }
         return isValidFunc
     }
@@ -97,7 +97,6 @@ class ChatVCvm {
         var er : Error?
         let imageName = UUID().uuidString
         let imgReference = Storage.storage().reference().child("Messages").child(channelID).child(imageName)
-        // group.enter()
         imgReference.putData(image, metadata: nil) { (metaData, error) in
             if let err = error {
                 er = err
@@ -112,14 +111,11 @@ class ChatVCvm {
                     guard let url = url else {
                         return
                     }
-                    
+
                     compltion(url.absoluteString , er)
                 }
-                
             }
-            
         }
-
     }
     
 }

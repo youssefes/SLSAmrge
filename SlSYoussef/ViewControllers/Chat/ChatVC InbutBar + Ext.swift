@@ -30,7 +30,8 @@ extension ChatVC : InputBarAccessoryViewDelegate {
         let attachImg = UIButton.init(type: .custom)
         messageInputBar.addSubview(attachImg)
         attachImg.addTarget(self, action: #selector(attatchImgClicked), for: .touchUpInside)
-        attachImg.setBackgroundImage(UIImage(named: "hady"), for: .normal)
+        #warning("Add this assests image")
+        attachImg.setBackgroundImage(UIImage(named: "icons8-xlarge_icons"), for: .normal)
         attachImg.translatesAutoresizingMaskIntoConstraints = false
         NSLayoutConstraint.activate([
             attachImg.topAnchor.constraint(equalTo: messageInputBar.middleContentView!.topAnchor),
@@ -39,14 +40,14 @@ extension ChatVC : InputBarAccessoryViewDelegate {
             attachImg.widthAnchor.constraint(equalToConstant: 35)
             
         ])
+        
         for constraint in messageInputBar.leftStackView.constraints {
             messageInputBar.leftStackView.removeConstraint(constraint)
 
         }
 
-        //attachImg.bringSubviewToFront(messageInputBar)
-
         messageInputBar.middleContentView?.leadingAnchor.constraint(equalTo: messageInputBar.leftStackView.trailingAnchor, constant: 40).isActive = true
+        #warning("Add this assests image")
         messageInputBar.sendButton.setImage(UIImage(named: "send-message-icon"), for: .normal)
         //messageInputBar.sendButton.setBackgroundImage(UIImage(named: "send-message-icon"), for: .normal)
         messageInputBar.sendButton.setTitle(nil, for: .normal)
@@ -59,26 +60,43 @@ extension ChatVC : InputBarAccessoryViewDelegate {
     
     @objc func inputBar(_ inputBar: InputBarAccessoryView, didPressSendButtonWith text: String) {
         processInputBar(messageInputBar)
+        
+    }
+    
+    func setChatAccessToTrue(){
+        
+    }
+    
+    func updateChatAccess(){
+        //NEW MODIFICATIONS
+        let chatAccessVar = [ "\(currentlyUserUid!)" : true, "\(otherUserID!)" : true]
+        let dic = ["ChatAccess" : chatAccessVar]
+        db.collection("chatChannels").document(channelID!).setData(dic as [String : Any] , merge: true) { (error) in
+            guard error == nil else {
+                print(error!) ; return
+            }
+        }
     }
     
     func insertMessage(_ component : [Any]) {
         for component in component {
+            // If the message is a simble text
             if let str = component as? String , channelID != nil{
-                let model = MessageFB(text: str, recipientID: otherUserID, senderID:  currentUser!.uid!, senderImage: currentUser!.photoURL!.absoluteString , reciverImage:  otherUser![User.profilePic]! as! String , senderName:  currentUser!.displayName!, time: Date())
-                              
-                              let docData = try! FirestoreEncoder().encode(model)
-                              self.messages.append(Message(sender: self.currentUserMsg, messageId: UUID().uuidString, sentDate: Date(), kind: .text(str) ))
-                              updateCollectionView()
-                              db.collection("chatChannels").document(channelID!).collection("messages").document().setData(docData , merge: true) {
+                let model = MessageFB(text: str, recipientID: otherUserID, senderID:  currentUser!.uid!, senderImage: currentUser!.photoURL!.absoluteString , reciverImage:  otherUser![User.profilePic]! as! String , senderName:  currentUser!.displayName!, time: Date(), seen: false)
+                
+                let docData = try! FirestoreEncoder().encode(model)
+                self.messages.append(Message(sender: self.currentUserMsg, messageId: UUID().uuidString, sentDate: Date(), kind: .text(str) ))
+                updateCollectionView()
+                db.collection("chatChannels").document(channelID!).collection("messages").document().setData(docData , merge: true) {
                     error in
-                    if error != nil {
-                        self.showAlert(title: "Error", message: error!.localizedDescription)
+                    guard error == nil else {
+                        self.showAlert(title: "Error", message: error!.localizedDescription) ; return
                     }
-                    
-                              }
+                    self.updateChatAccess()
+                }
+                
                 
             }else if let img = component as? UIImage , channelID != nil {
-                print("Nice we now uploading the image")
                 let imgMediaItem = ImageMediaItem(image: img)
                 self.messages.append(Message(sender: self.currentUserMsg, messageId: UUID().uuidString, sentDate: Date(), kind: .photo(imgMediaItem) ))
                 updateCollectionView()
@@ -90,26 +108,22 @@ extension ChatVC : InputBarAccessoryViewDelegate {
                 
                 ChatVCvm.uploadImgMessage(image: imgData, channelID: channelID!) { (imgURL , error) in
                     guard error == nil else {return}
-                    
                     if let imgURL = imgURL {
-                        print("This is the image URL: \(imgURL)")
-                        print("done uploading , now saving reference")
-                        let model = MessageFB(imgURL: imgURL, recipientID: self.otherUserID!, senderID: self.currentUser!.uid!, senderImage: self.currentUser!.photoURL!.absoluteString, reciverImage: self.otherUser![User.profilePic]! as! String, senderName: self.currentUser!.displayName!, time: Date())
-                        
-                        print(model)
-                        
+//                        print("This is the image URL: \(imgURL)")
+//                        print("done uploading , now saving reference")
+                        let model = MessageFB(imgURL: imgURL, recipientID: self.otherUserID!, senderID: self.currentUser!.uid!, senderImage: self.currentUser!.photoURL!.absoluteString, reciverImage: self.otherUser![User.profilePic]! as! String, senderName: self.currentUser!.displayName!, time: Date(), seen: false )
+                                                
                         let docData = try! FirestoreEncoder().encode(model)
                         self.db.collection("chatChannels").document(self.channelID!).collection("messages").document().setData(docData) { (error) in
-                            if error != nil{
-                                self.showAlert(title: "Error", message: error!.localizedDescription)
-                            }else {self.showAlert(title: "Success", message: "The image uploaded successfully")}
+                            guard error == nil else {
+                                self.showAlert(title: "Error", message: error!.localizedDescription) ; return
+                            }
+                            self.updateChatAccess()
                         }
                     } else {
-                        print("is fuckinhg nillll")
+                        self.showAlert(title: "Error", message: "Maybe the image resource is corrupted try again next time.")
                     }
                 }
-                
-                
                 
             } else {print("ChannelID may be nil")}
         }
@@ -138,11 +152,11 @@ extension ChatVC : InputBarAccessoryViewDelegate {
     }
     
     func processInputBar(_ inputBar: InputBarAccessoryView) {
-        // Here we can parse for which substrings were autocompleted
+         //Here we can parse for which substrings were autocompleted
         let attributedText = inputBar.inputTextView.attributedText!
         let range = NSRange(location: 0, length: attributedText.length)
         attributedText.enumerateAttribute(.autocompleted, in: range, options: []) { (_, range, _) in
-            
+
             let substring = attributedText.attributedSubstring(from: range)
             let context = substring.attribute(.autocompletedContext, at: 0, effectiveRange: nil)
             print("Autocompleted: `", substring, "` with context: ", context ?? [])

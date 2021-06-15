@@ -8,7 +8,7 @@
 
 import UIKit
 import MessageKit
-
+import Firebase
 enum ButtonSystemType {
     case house
     case back
@@ -44,7 +44,7 @@ extension UIViewController {
         
         let home = UIButton.init(type: .custom)
         home.setImage(#imageLiteral(resourceName: "Home_icon"), for: .normal)
-        Profile.addTarget(self, action: #selector(ShowHome), for: .touchUpInside)
+      //  Profile.addTarget(self, action: #selector(ShowProfile), for: .touchUpInside)
         let back = UIButton.init(type: .custom)
         back.setImage(#imageLiteral(resourceName: "Layer 7"), for: .normal)
         
@@ -74,8 +74,35 @@ extension UIViewController {
     
     
     @objc func ShowProfile(){
-        let profile = ProfileSetting()
-        navigationController?.pushViewController(profile, animated: true)
+         let profile = ProfileSetting()
+        self.navigationController?.pushViewController(profile, animated: true)
+
+//        let selectedOtherUID = "9or3qfTZCKal8ToaOoOPCLmZhVt1"
+//        let selectedUserImage = UIImage(named: "hady")
+//        let db = Firestore.firestore()
+//        self.showLoadingView()
+//        ChatVCvm.getUserDocumentData(uid: selectedOtherUID, dp: db) { [weak self] (result) in
+//            guard self != nil else { self?.hideLoadingView() ; return}
+//            switch result {
+//            case .success(let data):
+//                self?.hideLoadingView()
+//                let vc = ChatVC()
+//                vc.otherUserID    = selectedOtherUID
+//                vc.otherUser      = data
+//                vc.otherUserImage = selectedUserImage
+//                #warning("pass other user name to the next controller")
+//                self?.navigationController?.pushViewController(vc, animated: true)
+//
+//            case .failure(let error):
+//                self?.hideLoadingView()
+//                guard error.userNotExist else {
+//                    self?.showAlert(title: "Error", message: error.localizedDescription)
+//                    return
+//                }
+//                self?.showAlert(title: "Error", message: "This user doesn't exist")
+//            }
+//        }
+          //presentAlertOnMainThread(title: "Error", message: "Bro are you sure you wont to delete this chat", leftTitle: "Yes", rightTitle: "No")
     }
     
     @objc func ShowHome(){
@@ -153,7 +180,6 @@ extension UIViewController {
     }
     
     @objc func backButtonPressed(){
-        
         swipedRightAndUserWantsToDismiss()
     }
     

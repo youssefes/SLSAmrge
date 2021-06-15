@@ -9,9 +9,12 @@
 import UIKit
 
 struct MessageData {
-    let messageTime : String
+    let messageTime : Date
     let messageBody : String
     let senderImage : UIImage
     let senderName  : String
     let senderUID   : String
+    let channelID   : String
+    let seen        : Bool
+    let isOnline    : Bool
 }

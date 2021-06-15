@@ -18,9 +18,11 @@ struct MessageFB : Codable {
     var time : Date
     var type : String
     var imgUrl : String?
+    var seen : Bool
     
-    init(text : String ,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date) {
+    init(text : String ,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date , seen : Bool) {
         self.text         = text
+        self.seen         = seen
         self.recipientID  = recipientID
         self.senderID     = senderID
         self.reciverImage = reciverImage
@@ -30,7 +32,8 @@ struct MessageFB : Codable {
         self.type         = "text"
     }
     
-    init(imgURL : String,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date) {
+    init(imgURL : String,recipientID : String ,senderID : String, senderImage: String , reciverImage : String ,senderName : String ,time : Date , seen : Bool) {
+        self.seen         = seen
         self.imgUrl       = imgURL
         self.recipientID  = recipientID
         self.reciverImage = reciverImage

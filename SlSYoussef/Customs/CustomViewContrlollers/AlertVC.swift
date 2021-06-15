@@ -11,29 +11,25 @@ import UIKit
 class AlertVC: UIViewController {
     
     let containerView = UIView()
-    //let titleLabel    = TitleLabel(textAlignment: .center, fontSize: 20)
     let messageLabel  = BodyLabel(textAlignment: .center)
     let leftButton    = CustomButton(background: .systemBlue, title: "Yes")
     let rightButton   = CustomButton(background: .systemPink, title: "No")
     let buttonStack   = UIStackView()
 
-    
-    var alertTitle   : String?
     var messageTitle : String?
     var leftButtonTitle  : String?
     var rightButtonTitle : String?
     
-    let padding : CGFloat = 20 //For Constraints
+    let padding : CGFloat = 20
     
     required init?(coder: NSCoder) {
         fatalError("init(coder:) has not been implemented")
     }
     
     
-    init(title : String , message : String , leftTitle : String , rightTitle : String){
+    init(message : String , leftTitle : String , rightTitle : String){
         super.init(nibName: nil, bundle: nil)
         
-        self.alertTitle       = title
         self.messageTitle     = message
         self.leftButtonTitle  = leftTitle
         self.rightButtonTitle = rightTitle
@@ -119,16 +115,15 @@ class AlertVC: UIViewController {
         ])
     }
     
-
-    
     @objc func dismissVC() {
-        dismiss(animated: true)
+        dismiss(animated: true , completion: nil)
+        print("Dismised")
     }
     
     func configureMessageLabel() {
         containerView.addSubview(messageLabel)
         messageLabel.numberOfLines = 4
-        messageLabel.text = messageTitle ?? "WTF is Going On!"
+        messageLabel.text = messageTitle ?? "Error!"
         
         NSLayoutConstraint.activate([
             messageLabel.topAnchor.constraint(equalTo: containerView.topAnchor, constant: 0),
