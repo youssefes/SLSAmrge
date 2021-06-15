@@ -387,6 +387,10 @@ class Messages: UIViewController ,UITableViewDelegate , UITableViewDataSource {
                 //    self.tableView.deleteRows(at: [indexPath], with: .automatic)
                 //   self.numOfMessages = self.messages.count
                 self.deleteMsgIndexPath = nil
+                
+                self.numberOfNewMessages -= 1
+                self.numberOfMessagesLabel.text = "You have \(self.numberOfNewMessages) new Messages"
+                
                 if self.messages.count == 0 { self.isMessagesExist = false }
                 self.emptyStateFunctionality()
             }

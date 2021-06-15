@@ -954,8 +954,8 @@
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "397"
-            endingLineNumber = "397"
+            startingLineNumber = "401"
+            endingLineNumber = "401"
             landmarkName = "handleDeleteChat(alertAction:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -970,8 +970,8 @@
             filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
             startingColumnNumber = "9223372036854775807"
             endingColumnNumber = "9223372036854775807"
-            startingLineNumber = "393"
-            endingLineNumber = "393"
+            startingLineNumber = "397"
+            endingLineNumber = "397"
             landmarkName = "handleDeleteChat(alertAction:)"
             landmarkType = "7">
          </BreakpointContent>
@@ -1136,7 +1136,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - e1991db19f4348bc"
+                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - e1991db19f434861"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1146,12 +1146,12 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "199"
-                  endingLineNumber = "199"
+                  startingLineNumber = "204"
+                  endingLineNumber = "204"
                   offsetFromSymbolStart = "2285">
                </Location>
                <Location
-                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - 68e9aad9dc8f9d21"
+                  uuid = "A930A735-ABD3-46D3-92EF-0F75864034A1 - 68e9aad9dc8f9dfa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1161,8 +1161,8 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "366">
                </Location>
             </Locations>
@@ -1184,7 +1184,7 @@
             landmarkType = "7">
             <Locations>
                <Location
-                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 68e9aad9dc8f9d21"
+                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 68e9aad9dc8f9dfa"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1194,12 +1194,12 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "200"
-                  endingLineNumber = "200"
+                  startingLineNumber = "205"
+                  endingLineNumber = "205"
                   offsetFromSymbolStart = "366">
                </Location>
                <Location
-                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 88e57fa207169f39"
+                  uuid = "1EDAA033-950F-48B2-A5C7-E7AA8D7C8F26 - 88e57fa207169e9e"
                   shouldBeEnabled = "Yes"
                   ignoreCount = "0"
                   continueAfterRunningActions = "No"
@@ -1209,8 +1209,8 @@
                   urlString = "file:///Users/hadyhelal/Desktop/Github%20Project/SLSAmrge/SlSYoussef/ViewControllers/Messages/Messages.swift"
                   startingColumnNumber = "9223372036854775807"
                   endingColumnNumber = "9223372036854775807"
-                  startingLineNumber = "202"
-                  endingLineNumber = "202"
+                  startingLineNumber = "207"
+                  endingLineNumber = "207"
                   offsetFromSymbolStart = "567">
                </Location>
             </Locations>
@@ -1389,6 +1389,54 @@
             startingLineNumber = "336"
             endingLineNumber = "336"
             landmarkName = "tableView(_:cellForRowAt:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "25ED4819-001F-4C56-9E72-BAECFDFD939C"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "379"
+            endingLineNumber = "379"
+            landmarkName = "handleDeleteChat(alertAction:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "0312996A-A216-45A9-847B-88CA7D8EA72B"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "380"
+            endingLineNumber = "380"
+            landmarkName = "handleDeleteChat(alertAction:)"
+            landmarkType = "7">
+         </BreakpointContent>
+      </BreakpointProxy>
+      <BreakpointProxy
+         BreakpointExtensionID = "Xcode.Breakpoint.FileBreakpoint">
+         <BreakpointContent
+            uuid = "23E4100B-7784-4EC0-8F65-FDB0FBF0C1E3"
+            shouldBeEnabled = "Yes"
+            ignoreCount = "0"
+            continueAfterRunningActions = "No"
+            filePath = "SlSYoussef/ViewControllers/Messages/Messages.swift"
+            startingColumnNumber = "9223372036854775807"
+            endingColumnNumber = "9223372036854775807"
+            startingLineNumber = "381"
+            endingLineNumber = "381"
+            landmarkName = "handleDeleteChat(alertAction:)"
             landmarkType = "7">
          </BreakpointContent>
       </BreakpointProxy>
