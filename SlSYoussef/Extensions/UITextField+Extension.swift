@@ -8,7 +8,7 @@
 
 import Foundation
 import UIKit
-
+import InputBarAccessoryView
 class TextField: UITextField {
 
     let padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
@@ -24,5 +24,15 @@ class TextField: UITextField {
     override open func editingRect(forBounds bounds: CGRect) -> CGRect {
         return bounds.inset(by: padding)
     }
+    
+}
+let padding = UIEdgeInsets(top: 0, left: 20, bottom: 0, right: 20)
+
+extension InputBarAccessoryView {
+    
+    open override func alignmentRect(forFrame frame: CGRect) -> CGRect {
+        return bounds.inset(by: padding)
+    }
+    
     
 }

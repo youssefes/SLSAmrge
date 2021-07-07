@@ -8,12 +8,12 @@
 
 import Foundation
 struct User {
-    static let user = "user"
+    static let user = "Users"
     static let fullName    = "fullName"
     static let userName    = "userName"
     static let email       = "email"
     static let pass        = "password"
-    static let profilePic  = "profilPic"
+    static let profilePic  = "profileImg"
     static let phoneNumber = "phoneNumber"
     static let dateOfBirth = "DOP"
     static let shippingAddress = "shippingAddress"

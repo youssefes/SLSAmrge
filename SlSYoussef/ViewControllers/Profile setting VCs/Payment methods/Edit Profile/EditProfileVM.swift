@@ -11,7 +11,7 @@ import UIKit
 class EditProfileVM {
     
     func configureImageView(userImage : UIImageView){
-           userImage.layer.cornerRadius = 50
+           userImage.layer.cornerRadius = 60
            userImage.clipsToBounds = true
        }
     //MARK: - VC Gestures on screen

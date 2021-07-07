@@ -18,7 +18,6 @@ class messageCell: UITableViewCell {
     
     override func awakeFromNib() {
         super.awakeFromNib()
-        
         messageLabel.layer.cornerRadius   = 10
         messageLabel.layer.masksToBounds  = true
 

@@ -7,13 +7,24 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		073C5F3725E703320006DF72 /* ChatVC Picker+Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073C5F3625E703320006DF72 /* ChatVC Picker+Ext.swift */; };
+		073D132C25E5087300C437DA /* MessageFB.swift in Sources */ = {isa = PBXBuildFile; fileRef = 073D132B25E5087300C437DA /* MessageFB.swift */; };
 		075B2D7225DBDEF10083B3E0 /* Messages.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7025DBDEF10083B3E0 /* Messages.swift */; };
 		075B2D7325DBDEF10083B3E0 /* Messages.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075B2D7125DBDEF10083B3E0 /* Messages.xib */; };
 		075B2D7625DBDFD90083B3E0 /* Notifications.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7425DBDFD90083B3E0 /* Notifications.swift */; };
 		075B2D7725DBDFD90083B3E0 /* Notifications.xib in Resources */ = {isa = PBXBuildFile; fileRef = 075B2D7525DBDFD90083B3E0 /* Notifications.xib */; };
 		075B2D7B25DBE10E0083B3E0 /* Orders.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7925DBE10E0083B3E0 /* Orders.swift */; };
 		075B2D7C25DBE10E0083B3E0 /* User.swift in Sources */ = {isa = PBXBuildFile; fileRef = 075B2D7A25DBE10E0083B3E0 /* User.swift */; };
+		0783CFF225DED084004623DF /* ChatVCvm.swift in Sources */ = {isa = PBXBuildFile; fileRef = 0783CFF125DED084004623DF /* ChatVCvm.swift */; };
+		07CF2B3325E6CC5F00389F53 /* ImageMediaItem.swift in Sources */ = {isa = PBXBuildFile; fileRef = 07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */; };
 		2711C44F918C5579B2907782 /* Pods_SlSYoussef.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */; };
+		B65F619E26135D2900D33A95 /* ImagesOperations.swift in Sources */ = {isa = PBXBuildFile; fileRef = B65F619D26135D2900D33A95 /* ImagesOperations.swift */; };
+		B66266092635CC750064ADDC /* RetrievedData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66266082635CC750064ADDC /* RetrievedData.swift */; };
+		B663B9A1260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift in Sources */ = {isa = PBXBuildFile; fileRef = B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */; };
+		B66A4A7626134C1A005F3118 /* MessageData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A4A7526134C1A005F3118 /* MessageData.swift */; };
+		B66A4A7A261350EE005F3118 /* ChannelData.swift in Sources */ = {isa = PBXBuildFile; fileRef = B66A4A79261350EE005F3118 /* ChannelData.swift */; };
+		B676949C261B36A900E4C483 /* ChatVC + RetrieveMessages.swift in Sources */ = {isa = PBXBuildFile; fileRef = B676949B261B36A900E4C483 /* ChatVC + RetrieveMessages.swift */; };
+		B6824CD02646BC7E00F614D3 /* DateExtension.swift in Sources */ = {isa = PBXBuildFile; fileRef = B6824CCF2646BC7E00F614D3 /* DateExtension.swift */; };
 		E83749EF25D74B7600809B4E /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749EE25D74B7600809B4E /* AppDelegate.swift */; };
 		E83749F125D74B7600809B4E /* SceneDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = E83749F025D74B7600809B4E /* SceneDelegate.swift */; };
 		E83749F825D74B7B00809B4E /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = E83749F725D74B7B00809B4E /* Assets.xcassets */; };
@@ -150,7 +161,6 @@
 		E840A66B25DBF7C8003C2270 /* HomeViewModel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */; };
 		E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */ = {isa = PBXBuildFile; fileRef = E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */; };
 		E843CF7225DC27F0001E4E53 /* PostModuel.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843CF7125DC27F0001E4E53 /* PostModuel.swift */; };
-		E843CF7425DC3CFD001E4E53 /* user.swift in Sources */ = {isa = PBXBuildFile; fileRef = E843CF7325DC3CFD001E4E53 /* user.swift */; };
 		E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */ = {isa = PBXBuildFile; fileRef = E844D99325D7F0E0008DEFD7 /* LogIn.swift */; };
 		E845132825D7E85C00B0E8D9 /* GoogleService-Info.plist in Resources */ = {isa = PBXBuildFile; fileRef = E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */; };
 		E8483E7A25D91FCA001903FD /* adminTableViewCell.swift in Sources */ = {isa = PBXBuildFile; fileRef = E8483E7825D91FCA001903FD /* adminTableViewCell.swift */; };
@@ -160,14 +170,25 @@
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
-		075B2D7025DBDEF10083B3E0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; };
+		073C5F3625E703320006DF72 /* ChatVC Picker+Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC Picker+Ext.swift"; sourceTree = "<group>"; };
+		073D132B25E5087300C437DA /* MessageFB.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageFB.swift; sourceTree = "<group>"; };
+		075B2D7025DBDEF10083B3E0 /* Messages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Messages.swift; sourceTree = "<group>"; wrapsLines = 0; };
 		075B2D7125DBDEF10083B3E0 /* Messages.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Messages.xib; sourceTree = "<group>"; };
 		075B2D7425DBDFD90083B3E0 /* Notifications.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Notifications.swift; sourceTree = "<group>"; };
 		075B2D7525DBDFD90083B3E0 /* Notifications.xib */ = {isa = PBXFileReference; lastKnownFileType = file.xib; path = Notifications.xib; sourceTree = "<group>"; };
 		075B2D7925DBE10E0083B3E0 /* Orders.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = Orders.swift; sourceTree = "<group>"; };
 		075B2D7A25DBE10E0083B3E0 /* User.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = User.swift; sourceTree = "<group>"; };
+		0783CFF125DED084004623DF /* ChatVCvm.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChatVCvm.swift; sourceTree = "<group>"; };
+		07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImageMediaItem.swift; sourceTree = "<group>"; };
 		69276F81CB0AE9B439828B91 /* Pods-SlSYoussef.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.debug.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.debug.xcconfig"; sourceTree = "<group>"; };
 		7FA25CE29FCCD01A5A478693 /* Pods-SlSYoussef.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-SlSYoussef.release.xcconfig"; path = "Target Support Files/Pods-SlSYoussef/Pods-SlSYoussef.release.xcconfig"; sourceTree = "<group>"; };
+		B65F619D26135D2900D33A95 /* ImagesOperations.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ImagesOperations.swift; sourceTree = "<group>"; };
+		B66266082635CC750064ADDC /* RetrievedData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = RetrievedData.swift; sourceTree = "<group>"; };
+		B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC InbutBar + Ext.swift"; sourceTree = "<group>"; };
+		B66A4A7526134C1A005F3118 /* MessageData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = MessageData.swift; sourceTree = "<group>"; };
+		B66A4A79261350EE005F3118 /* ChannelData.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = ChannelData.swift; sourceTree = "<group>"; };
+		B676949B261B36A900E4C483 /* ChatVC + RetrieveMessages.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = "ChatVC + RetrieveMessages.swift"; sourceTree = "<group>"; };
+		B6824CCF2646BC7E00F614D3 /* DateExtension.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = DateExtension.swift; sourceTree = "<group>"; };
 		D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_SlSYoussef.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EB25D74B7600809B4E /* SlSYoussef.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = SlSYoussef.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		E83749EE25D74B7600809B4E /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
@@ -307,7 +328,6 @@
 		E840A66A25DBF7C8003C2270 /* HomeViewModel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = HomeViewModel.swift; sourceTree = "<group>"; };
 		E841FA8D25D8263800EED598 /* UserRepositotyManger.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = UserRepositotyManger.swift; sourceTree = "<group>"; };
 		E843CF7125DC27F0001E4E53 /* PostModuel.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = PostModuel.swift; sourceTree = "<group>"; };
-		E843CF7325DC3CFD001E4E53 /* user.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; name = user.swift; path = ../../../weNotes/weNotes/Models/user.swift; sourceTree = "<group>"; };
 		E844D99325D7F0E0008DEFD7 /* LogIn.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = LogIn.swift; sourceTree = "<group>"; };
 		E845132725D7E85C00B0E8D9 /* GoogleService-Info.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = "GoogleService-Info.plist"; sourceTree = "<group>"; };
 		E8483E7825D91FCA001903FD /* adminTableViewCell.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = adminTableViewCell.swift; sourceTree = "<group>"; };
@@ -338,11 +358,24 @@
 			path = Pods;
 			sourceTree = "<group>";
 		};
+		073D132D25E5196700C437DA /* View Models */ = {
+			isa = PBXGroup;
+			children = (
+				073D132B25E5087300C437DA /* MessageFB.swift */,
+				E83BBF9625D75B9000F26E2F /* UserDataModel.swift */,
+				07CF2B3225E6CC5F00389F53 /* ImageMediaItem.swift */,
+			);
+			path = "View Models";
+			sourceTree = "<group>";
+		};
 		075B2D6F25DBDED70083B3E0 /* Messages */ = {
 			isa = PBXGroup;
 			children = (
 				075B2D7025DBDEF10083B3E0 /* Messages.swift */,
 				075B2D7125DBDEF10083B3E0 /* Messages.xib */,
+				B66A4A7C26135121005F3118 /* Models */,
+				B65F619D26135D2900D33A95 /* ImagesOperations.swift */,
+				B6824CCF2646BC7E00F614D3 /* DateExtension.swift */,
 			);
 			path = Messages;
 			sourceTree = "<group>";
@@ -360,7 +393,6 @@
 			isa = PBXGroup;
 			children = (
 				075B2D7925DBE10E0083B3E0 /* Orders.swift */,
-				E843CF7325DC3CFD001E4E53 /* user.swift */,
 				075B2D7A25DBE10E0083B3E0 /* User.swift */,
 			);
 			path = "Firebase Manager";
@@ -370,6 +402,10 @@
 			isa = PBXGroup;
 			children = (
 				E83BBFCA25D75CED00F26E2F /* ChatVC.swift */,
+				0783CFF125DED084004623DF /* ChatVCvm.swift */,
+				B676949B261B36A900E4C483 /* ChatVC + RetrieveMessages.swift */,
+				073C5F3625E703320006DF72 /* ChatVC Picker+Ext.swift */,
+				B663B9A0260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift */,
 			);
 			path = Chat;
 			sourceTree = "<group>";
@@ -390,6 +426,16 @@
 				D4D8545B69BB1086F5F3B3F4 /* Pods_SlSYoussef.framework */,
 			);
 			name = Frameworks;
+			sourceTree = "<group>";
+		};
+		B66A4A7C26135121005F3118 /* Models */ = {
+			isa = PBXGroup;
+			children = (
+				B66A4A7526134C1A005F3118 /* MessageData.swift */,
+				B66A4A79261350EE005F3118 /* ChannelData.swift */,
+				B66266082635CC750064ADDC /* RetrievedData.swift */,
+			);
+			path = Models;
 			sourceTree = "<group>";
 		};
 		E83749E225D74B7600809B4E = {
@@ -413,6 +459,7 @@
 		E83749ED25D74B7600809B4E /* SlSYoussef */ = {
 			isa = PBXGroup;
 			children = (
+				073D132D25E5196700C437DA /* View Models */,
 				E83BBF9325D75B9000F26E2F /* Utilities */,
 				075B2D7D25DBE1140083B3E0 /* Firebase Manager */,
 				E8CA34FC25D9AC8800192582 /* SlSYoussef.entitlements */,
@@ -769,7 +816,6 @@
 			children = (
 				E83BBF9425D75B9000F26E2F /* UtilityFunctions.swift */,
 				E83BBF9525D75B9000F26E2F /* FetchUserData.swift */,
-				E83BBF9625D75B9000F26E2F /* UserDataModel.swift */,
 				E83BBF9725D75B9000F26E2F /* Utility.swift */,
 			);
 			path = Utilities;
@@ -812,7 +858,7 @@
 			children = (
 				E83FFCE425DAFE8B00F6F7FA /* CheckoutVcs */,
 				E83BBFB725D75CED00F26E2F /* Profile settings */,
-				E83BBFE325D75DDB00F26E2F /* Profile */,
+				E83BBFE325D75DDB00F26E2F /* Edit Profile */,
 				E83BBFB225D75CED00F26E2F /* Payment methods */,
 				E83BBFC525D75CED00F26E2F /* Shipping address */,
 				E83BBFC225D75CED00F26E2F /* My orders */,
@@ -880,15 +926,15 @@
 			path = "Shipping address";
 			sourceTree = "<group>";
 		};
-		E83BBFE325D75DDB00F26E2F /* Profile */ = {
+		E83BBFE325D75DDB00F26E2F /* Edit Profile */ = {
 			isa = PBXGroup;
 			children = (
 				E83BBFB625D75CED00F26E2F /* EditProfileVM.swift */,
 				E83BBFC825D75CED00F26E2F /* EditProfile.xib */,
 				E83BBFC125D75CED00F26E2F /* EditProfile.swift */,
 			);
-			name = Profile;
-			path = "Payment methods/Profile";
+			name = "Edit Profile";
+			path = "Payment methods/Edit Profile";
 			sourceTree = "<group>";
 		};
 		E83BBFE425D75E3B00F26E2F /* Customs */ = {
@@ -1097,7 +1143,7 @@
 			isa = PBXProject;
 			attributes = {
 				LastSwiftUpdateCheck = 1130;
-				LastUpgradeCheck = 1130;
+				LastUpgradeCheck = 1240;
 				ORGANIZATIONNAME = youssef;
 				TargetAttributes = {
 					E83749EA25D74B7600809B4E = {
@@ -1264,9 +1310,9 @@
 				075B2D7625DBDFD90083B3E0 /* Notifications.swift in Sources */,
 				E83BBF5625D7592900F26E2F /* Color.swift in Sources */,
 				E8374A6A25D74C6600809B4E /* CommentsOfPostViewController.swift in Sources */,
-				E843CF7425DC3CFD001E4E53 /* user.swift in Sources */,
 				E841FA8E25D8263800EED598 /* UserRepositotyManger.swift in Sources */,
 				E8374A6B25D74C6600809B4E /* OptionVCViewController.swift in Sources */,
+				B66A4A7626134C1A005F3118 /* MessageData.swift in Sources */,
 				E8374A6125D74C6600809B4E /* StoresCollectionViewCell.swift in Sources */,
 				075B2D7C25DBE10E0083B3E0 /* User.swift in Sources */,
 				E83FFCEB25DB011A00F6F7FA /* summeryCheckoutViewController.swift in Sources */,
@@ -1283,8 +1329,10 @@
 				E83BBF8E25D75B1500F26E2F /* UITextField+Extension.swift in Sources */,
 				E843CF7225DC27F0001E4E53 /* PostModuel.swift in Sources */,
 				E83BBFA925D75C6F00F26E2F /* SignUp.swift in Sources */,
+				073D132C25E5087300C437DA /* MessageFB.swift in Sources */,
 				075B2D7225DBDEF10083B3E0 /* Messages.swift in Sources */,
 				E83BC00B25D75E3C00F26E2F /* CustomButton.swift in Sources */,
+				B676949C261B36A900E4C483 /* ChatVC + RetrieveMessages.swift in Sources */,
 				E8374A6425D74C6600809B4E /* liveView.swift in Sources */,
 				E83BBF8B25D75AE900F26E2F /* ViewController+Ext.swift in Sources */,
 				075B2D7B25DBE10E0083B3E0 /* Orders.swift in Sources */,
@@ -1292,6 +1340,7 @@
 				E83BC00C25D75E3C00F26E2F /* SecondaryLabel.swift in Sources */,
 				E83BBFCD25D75CED00F26E2F /* PaymentMethodsVM.swift in Sources */,
 				E83BBF9D25D75BD300F26E2F /* Customs.swift in Sources */,
+				07CF2B3325E6CC5F00389F53 /* ImageMediaItem.swift in Sources */,
 				E83FFCE325DACE8500F6F7FA /* PostViewModel.swift in Sources */,
 				E83BBFD325D75CED00F26E2F /* ProfileSetting.swift in Sources */,
 				E83BBF9B25D75B9000F26E2F /* Utility.swift in Sources */,
@@ -1299,6 +1348,7 @@
 				E83BC00425D75E3C00F26E2F /* ProfileSettingCell.swift in Sources */,
 				E8374A5C25D74C6600809B4E /* ContainerImageView.swift in Sources */,
 				E8374A5025D74C6600809B4E /* CameraController.swift in Sources */,
+				B66A4A7A261350EE005F3118 /* ChannelData.swift in Sources */,
 				E83BBF5525D7592900F26E2F /* DesignSystem.swift in Sources */,
 				E83BBF5825D7592900F26E2F /* CustomFontDiscriptor.swift in Sources */,
 				E8374A6E25D74C6600809B4E /* HomeViewController.swift in Sources */,
@@ -1315,12 +1365,15 @@
 				E83BBFDF25D75CEE00F26E2F /* ChatVC.swift in Sources */,
 				E83BBFD425D75CED00F26E2F /* CustomerSupport.swift in Sources */,
 				E83BBFAE25D75CC600F26E2F /* FirstView.swift in Sources */,
+				B6824CD02646BC7E00F614D3 /* DateExtension.swift in Sources */,
 				E83BBF9225D75B5400F26E2F /* UIview+Extensions.swift in Sources */,
 				E83BBFA825D75C6F00F26E2F /* SignUpVM.swift in Sources */,
 				E8374A5325D74C6600809B4E /* OederToSellerViewController.swift in Sources */,
 				E83BC00825D75E3C00F26E2F /* RegisterationCompletedViewController.swift in Sources */,
+				073C5F3725E703320006DF72 /* ChatVC Picker+Ext.swift in Sources */,
 				E83BBF5725D7592900F26E2F /* Typography.swift in Sources */,
 				E83BBFD825D75CEE00F26E2F /* EditProfile.swift in Sources */,
+				B663B9A1260A1E17001E9C37 /* ChatVC InbutBar + Ext.swift in Sources */,
 				E8374A6625D74C6600809B4E /* CommentofPostCellCollectionViewCell.swift in Sources */,
 				E8374A5925D74C6600809B4E /* CellFoodsWithCollectionOfImage.swift in Sources */,
 				E83BC01025D75E3C00F26E2F /* TopMessagesView.swift in Sources */,
@@ -1335,13 +1388,16 @@
 				E8374A4C25D74C6600809B4E /* LiveEndViewController.swift in Sources */,
 				E83BBF5925D7592900F26E2F /* Font.swift in Sources */,
 				E844D99425D7F0E0008DEFD7 /* LogIn.swift in Sources */,
+				B66266092635CC750064ADDC /* RetrievedData.swift in Sources */,
 				E83BBF8C25D75AE900F26E2F /* VController BarBtn+Ext.swift in Sources */,
 				E83BC00D25D75E3C00F26E2F /* TitleLabel.swift in Sources */,
 				E83BBFCE25D75CED00F26E2F /* PaymentMethods.swift in Sources */,
 				E8374A5F25D74C6600809B4E /* headerCollectionViewCell.swift in Sources */,
 				E83FFCEF25DB113C00F6F7FA /* OrderDoneViewController.swift in Sources */,
 				E83BBF9825D75B9000F26E2F /* UtilityFunctions.swift in Sources */,
+				0783CFF225DED084004623DF /* ChatVCvm.swift in Sources */,
 				E83BC00A25D75E3C00F26E2F /* EmptyStateVC.swift in Sources */,
+				B65F619E26135D2900D33A95 /* ImagesOperations.swift in Sources */,
 				E83BBF3825D7590C00F26E2F /* LoadingView.swift in Sources */,
 				E83BBFDC25D75CEE00F26E2F /* ShippingAdress.swift in Sources */,
 				E83BBFDE25D75CEE00F26E2F /* PostVC.swift in Sources */,
@@ -1389,6 +1445,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1449,6 +1506,7 @@
 				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
 				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
 				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
 				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
 				CLANG_WARN_STRICT_PROTOTYPES = YES;
 				CLANG_WARN_SUSPICIOUS_MOVE = YES;
@@ -1484,14 +1542,14 @@
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SlSYoussef/SlSYoussef.entitlements;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L6VZS75SYY;
+				DEVELOPMENT_TEAM = D5R69Q32RG;
 				INFOPLIST_FILE = SlSYoussef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.slss;
+				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.sls;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
@@ -1504,8 +1562,8 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_ENTITLEMENTS = SlSYoussef/SlSYoussef.entitlements;
-				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = L6VZS75SYY;
+				CODE_SIGN_STYLE = Manual;
+				DEVELOPMENT_TEAM = "";
 				INFOPLIST_FILE = SlSYoussef/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 12.4;
 				LD_RUNPATH_SEARCH_PATHS = (
@@ -1514,6 +1572,7 @@
 				);
 				PRODUCT_BUNDLE_IDENTIFIER = com.yousse.slss;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE_SPECIFIER = "";
 				SWIFT_VERSION = 5.0;
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};

@@ -1,9 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15705" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
+<document type="com.apple.InterfaceBuilder3.CocoaTouch.XIB" version="3.0" toolsVersion="15400" targetRuntime="iOS.CocoaTouch" propertyAccessControl="none" useAutolayout="YES" useTraitCollections="YES" useSafeAreas="YES" colorMatched="YES">
     <device id="retina4_0" orientation="portrait" appearance="light"/>
     <dependencies>
         <deployment identifier="iOS"/>
-        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15706"/>
+        <plugIn identifier="com.apple.InterfaceBuilder.IBCocoaTouchPlugin" version="15404"/>
         <capability name="Safe area layout guides" minToolsVersion="9.0"/>
         <capability name="documents saved in the Xcode 8 format" minToolsVersion="8.0"/>
     </dependencies>
@@ -53,7 +53,7 @@
                                             </constraints>
                                             <state key="normal" image="Group 16012"/>
                                             <connections>
-                                                <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="ZWC-He-29G"/>
+                                                <action selector="dismiswbtn:" destination="-1" eventType="touchUpInside" id="opr-69-sn9"/>
                                             </connections>
                                         </button>
                                         <label opaque="NO" userInteractionEnabled="NO" contentMode="left" horizontalHuggingPriority="1" verticalHuggingPriority="251" text="Edit Profile" textAlignment="center" lineBreakMode="tailTruncation" baselineAdjustment="alignBaselines" adjustsFontSizeToFit="NO" translatesAutoresizingMaskIntoConstraints="NO" id="b4y-Zw-VLL">
@@ -66,7 +66,7 @@
                                             <rect key="frame" x="282" y="0.0" width="18" height="30"/>
                                             <state key="normal" image="closeBlue"/>
                                             <connections>
-                                                <action selector="classBtn:" destination="-1" eventType="touchUpInside" id="qPA-Zt-1I6"/>
+                                                <action selector="closeBtn:" destination="-1" eventType="touchUpInside" id="Q7D-KO-MKg"/>
                                             </connections>
                                         </button>
                                     </subviews>

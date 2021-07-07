@@ -37,15 +37,15 @@ class CellFoodsWithCollectionOfImage : UICollectionViewCell, ShowMoreProtocal{
                 }
                 print(post)
                 
-                Database.fetchUserWithUid(Uid: user) { [weak self] (DataOfUser) in
-                    guard let self = self else {return}
-                    guard let url  = URL(string: DataOfUser.prrofilURlImage) else {return}
-                    let resouece = ImageResource(downloadURL: url)
-                    self.profileImage.kf.setImage(with: resouece)
-                    
-                    self.userNameLbl.text = DataOfUser.userName
-                }
-                
+//                Database.fetchUserWithUid(Uid: user) { [weak self] (DataOfUser) in
+//                    guard let self = self else {return}
+//                    guard let url  = URL(string: DataOfUser.prrofilURlImage) else {return}
+//                    let resouece = ImageResource(downloadURL: url)
+//                    self.profileImage.kf.setImage(with: resouece)
+//                    
+//                    self.userNameLbl.text = DataOfUser.userName
+//                }
+//                
                 if  let images = post.postContext.image  {
                      CollectionViewContainer.arrayOfimage = images
                 }

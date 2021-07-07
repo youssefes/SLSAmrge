@@ -12,7 +12,6 @@ import FirebaseDatabase
 
 class UserRepositoryManger {
     
-    
     static func createUser(withEmail: String, WithUsername : String, data : Data, copmlatiomHandler  :@escaping(_ error : String?,_ Seccess :Bool) -> Void){
         let dp  = Firestore.firestore()
         

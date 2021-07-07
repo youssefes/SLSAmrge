@@ -16,8 +16,9 @@ import FBSDKLoginKit
 struct UtilityFunctions {
     
     public static var isLoggedIn = false
+    public static var user : UserDataModel?
     //MARK: - to Retreve UIImage from PHAsset
-    static  func handlePHImageManager(asset : PHAsset) -> UIImage?{
+    static func handlePHImageManager(asset : PHAsset) -> UIImage?{
         var returnedImage : UIImage?
         
         PHImageManager.default().requestImage(for: asset, targetSize: PHImageManagerMaximumSize, contentMode: .aspectFit, options: nil) { (image, _) in
@@ -92,5 +93,20 @@ struct UtilityFunctions {
          }
          
     }
+    
+    
+    static func FetchCurrentUserAuthData(){
+        if isLoggedIn {
+            FetchUserData.fetchFBUserData { (user) in
+                if user != nil {
+                    UtilityFunctions.user = user
+                    
+                    print("Helloooo this is the current user data")
+                    print(user!)
+                }
+            }
+        }
+    }
+    
 
 }

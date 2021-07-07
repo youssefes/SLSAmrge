@@ -42,19 +42,14 @@ class EditProfile: UIViewController  {
     }
     override func viewDidLoad() {
         super.viewDidLoad()
-        self.createCustomTitleViewInEditProfile(with: "Edit profile")
         editProfileVM.configureImageView(userImage: userImage)
         editProfileVM.tapGestureOnScreen(view: self.view)
         Utility.designSingsButtons(saveBtn)
-//        Utility.configureProfileTextFields(txtField: fullnameTF)
-//        Utility.configureProfileTextFields(txtField: emailTF)
-//        Utility.configureProfileTextFields(txtField: phoneNumberTF)
         tapGestureInImage()
     }
     
     override func viewWillAppear(_ animated: Bool) {
-        super.viewWillAppear(animated)
-        navigationController?.setNavigationBarHidden(true, animated: true)
+        navigationController?.navigationBar.isHidden = true
     }
     
     override func viewWillDisappear(_ animated: Bool) {
@@ -63,9 +58,12 @@ class EditProfile: UIViewController  {
     }
     
     @IBAction func dismiswbtn(_ sender: Any) {
-           navigationController?.popViewController(animated: true)
-       }
+        navigationController?.popViewController(animated: true)
+    }
     
+    @IBAction func closeBtn(_ sender: UIButton) {
+        navigationController?.popToRootViewController(animated: true)
+    }
     @IBAction func uploadImageButton(_ sender: Any) {
         handleUploadImage()
     }

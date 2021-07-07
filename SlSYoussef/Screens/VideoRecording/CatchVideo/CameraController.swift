@@ -60,7 +60,7 @@ class CameraController : NSObject {
         captureSession.commitConfiguration()
         
     }
-    
+ 
     
     func switchToFrontCamera() throws {
         guard let captureSession = captureSession else {

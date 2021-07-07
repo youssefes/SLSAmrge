@@ -5,12 +5,9 @@
 //  Created by youssef on 2/7/21.
 //  Copyright © 2021 youssef. All rights reserved.
 //
-
 import UIKit
 
-class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtocal,HomeCellProtocal  {
-   
-    
+class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtocal,HomeCellProtocal {
     
     var arrayOfPosts : [PostModel] = []
     @IBOutlet weak var loading: LoadingView!
@@ -25,6 +22,7 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
     var isShowMore : Bool = false
     override func viewDidLoad() {
         super.viewDidLoad()
+        UtilityFunctions.FetchCurrentUserAuthData()
         setUpTableView()
         creatNavigationBarButtons()
         viewModel.viewDidLoad()
@@ -33,6 +31,12 @@ class HomeViewController: UIViewController, CellFoodsWithCollectionOfImageProtoc
     
     func reloadCollection() {
         homeCollectionView.reloadData()
+    }
+    
+    func fetchUserData() {
+        FetchUserData.fetchFBUserData { (user) in
+            
+        }
     }
     
     override func viewWillAppear(_ animated: Bool) {
@@ -178,11 +182,8 @@ extension HomeViewController : UICollectionViewDelegate, UICollectionViewDelegat
         }else{
             
         }
-        
-        
-      
-        
-        
+
+        return CGSize(width: 200, height: 200)
     }
     
     

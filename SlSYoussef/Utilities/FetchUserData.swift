@@ -24,6 +24,13 @@ struct FetchUserData {
                 userData.email = user.email
                 userData.photoURL = user.photoURL
                 userData.uid = user.uid
+                print("=========================")
+                print("=========================")
+                
+                print(user.uid)
+                
+                print("=========================")
+                print("=========================")
                 complation(userData)
             }
             else {
@@ -37,22 +44,22 @@ struct FetchUserData {
 }
 
 extension Database {
-    static func fetchUserWithUid(Uid : String, complation : @escaping (SampleDataOfUser)-> Void){
-        let collectionOfFireStor = Firestore.firestore().collection("Users").document(Uid)
-        
-        collectionOfFireStor.getDocument { (user, error) in
-            if error == nil{
-                guard  let user =  user?.data() else {
-                    return
-                }
-                    let data = SampleDataOfUser(userId: Uid, dictionary: user)
-                print(data)
-                complation(data)
-            }else{
-                print("error in fatch data")
-            }
-           
-        }
-            
-    }
+//    static func fetchUserWithUid(Uid : String, complation : @escaping (SampleDataOfUser)-> Void){
+//        let collectionOfFireStor = Firestore.firestore().collection("Users").document(Uid)
+//
+//        collectionOfFireStor.getDocument { (user, error) in
+//            if error == nil{
+//                guard  let user =  user?.data() else {
+//                    return
+//                }
+//                    let data = SampleDataOfUser(userId: Uid, dictionary: user)
+//                print(data)
+//                complation(data)
+//            }else{
+//                print("error in fatch data")
+//            }
+//
+//        }
+//
+//    }
 }

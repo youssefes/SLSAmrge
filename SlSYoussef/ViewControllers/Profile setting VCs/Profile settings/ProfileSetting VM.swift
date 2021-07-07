@@ -22,5 +22,4 @@ public struct  ProfileSettingVM {
          return  [editVC , shippingVc , paymentVc , myOrder , notificationVc , customerVC]
     }
 
-    
 }

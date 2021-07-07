@@ -20,6 +20,7 @@ pod 'MessageKit'
  pod 'IQKeyboardManagerSwift'
  pod 'NVActivityIndicatorView'
  pod 'PaddingLabel'
+  pod 'CodableFirebase'
 pod 'Firebase/Auth'
   pod 'Kingfisher', '~> 5.0'
 end

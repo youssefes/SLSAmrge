@@ -61,14 +61,14 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
                     }else{
                         guard let userData = authresult?.user else{return}
                         guard let photoUrl = userData.photoURL?.absoluteString else {return}
-                        self.dp.collection("Users").document(userData.uid).setData(["userName" : userData.displayName ?? "" , "email" : userData.email ?? "", "profileImg" : photoUrl, "DOB": Date().timeIntervalSince1970]){ (er) in
+                        self.dp.collection(User.user).document(userData.uid).setData(["userName" : userData.displayName ?? "" , "email" : userData.email ?? "", "profileImg" : photoUrl, "DOB": Date().timeIntervalSince1970 ,"uid" : userData.uid] ){ (er) in
                             if er == nil {
                                 let home = HomeViewController()
                                 let navigation = UINavigationController(rootViewController: home)
                                 navigation.modalPresentationStyle = .overFullScreen
                                 self.present(navigation, animated: true, completion: nil)
                                 UtilityFunctions.isLoggedIn = true
-                             
+                                
                             }else{
                                 self.loadingView.loadingView.stopAnimating()
                                 self.showAlert(title: "error in SignIn", message: er?.localizedDescription ?? "unKonw error")
@@ -113,9 +113,8 @@ class SignUpViewController: UIViewController , GIDSignInDelegate{
                 return
             }else{
                 guard let imageUrl = user.profile.imageURL(withDimension: .min),let data = try? Data(contentsOf: imageUrl) else{return}
-                guard let uid = user.userID else {return}
-                self.dp.collection("Users").document(uid).setData(["userName" : user.profile.name ?? " " , "email" : user.profile.email ?? "", "DOB": Date().timeIntervalSince1970]){ (er) in
-                    print(er?.localizedDescription)
+                guard let authUser = authResult else {return}
+                self.dp.collection(User.user).document(authUser.user.uid).setData(["userName" : user.profile.name ?? " " , "email" : user.profile.email ?? "", "DOB": Date().timeIntervalSince1970 , "uid" : authUser.user.uid ]  ){ (er) in
                     if er == nil{
                         UserRepositoryManger.uploadImage(userUid: user.userID, Image: data) { (error, secsess) in
                             if secsess{

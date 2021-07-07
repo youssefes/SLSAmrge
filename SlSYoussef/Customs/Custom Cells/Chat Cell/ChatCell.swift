@@ -17,7 +17,13 @@ class ChatCell: UITableViewCell {
     @IBOutlet weak var senderName: UILabel!
     
     @IBOutlet weak var messageBody: UILabel!
-      
+    
+    @IBOutlet weak var onlineStateImage: UIImageView!
+    
+    var array : [Int] = []
+    var arrays = [Int]()
+    var arrayFour = [Int](repeating: 5, count: 2)
+    var multiDimentsion = [[Int]] ()
     static let cellIdentifier = "Chat cell ID"
     
     override func awakeFromNib() {
